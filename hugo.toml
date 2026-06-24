@@ -1,0 +1,4 @@
+baseURL = 'https://os5733203.github.io/aiseo/blog/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+theme = "ananke"
