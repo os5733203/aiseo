@@ -9,7 +9,19 @@
 <title>aiseoa — SEO Specialist | Rank Higher. Grow Faster.</title>
 <link rel="stylesheet" href="style.css"/>
 <style>
-  .hero { padding: 6rem 2.5rem 4.5rem; max-width: 1040px; margin: 0 auto; text-align: center; }
+  .hero {
+  padding: 6rem 2.5rem 4.5rem;
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-wrapper {
+  width: 100%;
+  background-image: url("images/hero-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
   .hero h1 { font-size: clamp(2.6rem,6vw,4.2rem); font-weight: 700; line-height: 1.08; letter-spacing: -2px; margin-bottom: 1.3rem; }
   .hero h1 em { color: var(--accent2); font-style: normal; background: linear-gradient(135deg,var(--accent2),var(--accent3)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
   .hero > p { color: var(--muted); font-size: 1.15rem; max-width: 620px; margin: 0 auto 2.4rem; }
@@ -139,7 +151,8 @@
 </div>
 
 <!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero">
+<section class="hero-wrapper">
+<div class="hero">
   <div class="badge"><span class="badge-dot"></span> <span data-en="Available for new clients" data-ar="متاح لعملاء جدد">Available for new clients</span></div>
   <h1>
     <span data-en="Rank Higher." data-ar="تصدّر جوجل.">Rank Higher.</span><br>
@@ -149,6 +162,7 @@
   <div class="hero-btns">
     <a class="btn-primary" href="#booking" data-en="Get a Free SEO Audit" data-ar="احصل على تدقيق مجاني">Get a Free SEO Audit</a>
     <a class="btn-outline" href="portfolio.html" data-en="View Our Work" data-ar="شاهد أعمالنا">View Our Work</a>
+  </div>
   </div>
 </section>
 
