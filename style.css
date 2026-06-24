@@ -235,12 +235,8 @@ body[dir="rtl"] .section-tag::before { order: 2; }
 }
 .hero {
   min-height: 700px !important;
-<<<<<<< HEAD
-  background-image: url("images/hero-bg.png") !important;
-=======
   width: 100% !important;
-  background-image: url("hero-bg.webp") !important;
->>>>>>> 43ed209c1bc566d21b1275e21035dba12157e610
+  background-image: url("images/hero-bg.webp") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
