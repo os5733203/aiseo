@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://seowithomar.com/sitemap.xml
