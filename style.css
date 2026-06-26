@@ -233,3 +233,11 @@ body[dir="rtl"] .section-tag::before { order: 2; }
     max-width: 100px !important;
     height: auto !important;
 }
+
+body {
+  background-image: url('portfolio.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
