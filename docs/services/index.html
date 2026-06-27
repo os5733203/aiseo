@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Professional SEO services by OS SEO — Technical SEO, Link Building, Local SEO, AI-Powered SEO, Content Strategy & International SEO. Real results for businesses worldwide."/>
+<meta property="og:title" content="SEO Services — OS SEO | Technical, Local & AI-Powered SEO"/>
+<meta property="og:description" content="Data-driven SEO services for businesses in Europe, Australia & beyond. From technical audits to full SEO management."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://seowithomar.com/services/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="SEO Services — OS SEO"/>
+<meta name="twitter:description" content="Professional SEO services: Technical SEO, Link Building, Local SEO, AI SEO, Content Strategy & International SEO."/>
+<title>SEO Services — OS SEO | Technical, Local & AI-Powered SEO</title>
+<link rel="canonical" href="https://seowithomar.com/services/"/>
+<link rel="icon" type="image/png" href="../images/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Cairo:wght@400;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Cairo:wght@400;600;700;900&display=swap"></noscript>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+.services-hero { padding:5.5rem 2.5rem 3rem; max-width:1040px; margin:0 auto; text-align:center; }
+.services-hero h1 { font-size:clamp(2.4rem,5vw,3.6rem); font-weight:700; letter-spacing:-1.5px; margin-bottom:1rem; line-height:1.1; }
+.services-hero h1 em { color:var(--accent2); font-style:normal; background:linear-gradient(135deg,var(--accent2),var(--accent3)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.services-hero p { color:var(--muted); font-size:1.08rem; max-width:580px; margin:0 auto 2rem; line-height:1.75; }
+
+.services-hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.6rem; max-width:1040px; margin:0 auto; padding:0 2.5rem 5rem; }
+.svc-hub-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:2rem; transition:all .3s cubic-bezier(.2,.8,.2,1); position:relative; overflow:hidden; display:flex; flex-direction:column; }
+.svc-hub-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3)); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
+.svc-hub-card:hover { border-color:var(--border-strong); transform:translateY(-6px); box-shadow:var(--glow); }
+.svc-hub-card:hover::before { transform:scaleX(1); }
+.svc-hub-icon { width:54px; height:54px; background:linear-gradient(135deg,rgba(79,107,255,.2),rgba(0,229,255,.12)); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:1.2rem; }
+.svc-hub-title { font-size:1.15rem; font-weight:700; margin-bottom:.5rem; }
+.svc-hub-desc { color:var(--muted); font-size:.88rem; line-height:1.65; flex:1; margin-bottom:1.3rem; }
+.svc-hub-price { font-size:.8rem; font-weight:700; color:var(--accent2); background:rgba(0,229,255,.1); padding:.3rem .85rem; border-radius:999px; display:inline-block; margin-bottom:1.2rem; }
+.svc-hub-link { display:inline-flex; align-items:center; gap:.5rem; color:var(--accent2); font-size:.88rem; font-weight:700; transition:gap .2s; }
+.svc-hub-link:hover { gap:.85rem; }
+.svc-hub-link::after { content:'→'; }
+
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.2rem; }
+.why-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:16px; padding:1.5rem; text-align:center; }
+.why-icon { font-size:2rem; margin-bottom:.75rem; }
+.why-title { font-weight:700; font-size:.97rem; margin-bottom:.4rem; }
+.why-desc { color:var(--muted); font-size:.83rem; line-height:1.6; }
+
+.stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; max-width:1040px; margin:0 auto; padding:0 2.5rem 4rem; }
+.stat-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:1.5rem; text-align:center; }
+.stat-box-num { font-family:'Space Grotesk',sans-serif; font-size:2.2rem; font-weight:700; color:var(--accent2); }
+.stat-box-label { font-size:.78rem; color:var(--muted); margin-top:.3rem; }
+
+.breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.82rem; color:var(--muted); max-width:1040px; margin:0 auto; padding:1.5rem 2.5rem 0; flex-wrap:wrap; }
+.breadcrumb a { color:var(--muted); transition:color .2s; }
+.breadcrumb a:hover { color:var(--accent2); }
+.breadcrumb span { color:var(--white); }
+.breadcrumb-sep { color:var(--border-strong); }
+
+@media(max-width:680px){ .services-hub-grid{padding:0 1.2rem 3rem;} .stats-row{grid-template-columns:1fr 1fr; padding:0 1.2rem 3rem;} .breadcrumb{padding:1.2rem 1.2rem 0;} }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://seowithomar.com/services/",
+      "url": "https://seowithomar.com/services/",
+      "name": "SEO Services — OS SEO",
+      "description": "Professional SEO services including Technical SEO, Link Building, Local SEO, AI-Powered SEO, Content Strategy and International SEO.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seowithomar.com" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://seowithomar.com/services/" }
+        ]
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "OS SEO",
+      "url": "https://seowithomar.com",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "SEO Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical SEO Audit", "url": "https://seowithomar.com/services/technical-seo-audit/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Strategy", "url": "https://seowithomar.com/services/content-strategy/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Link Building", "url": "https://seowithomar.com/services/link-building/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Local SEO", "url": "https://seowithomar.com/services/local-seo/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Powered SEO", "url": "https://seowithomar.com/services/ai-powered-seo/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "International SEO", "url": "https://seowithomar.com/services/international-seo/" } }
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="site-logo" href="/">
+    <img src="../images/logo.webp" alt="OS SEO logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+    <span class="logo-text" style="display:none;align-items:center;gap:8px"><span class="logo-dot"></span>ai<span>SEO</span>a</span>
+  </a>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="/" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="/about/" data-en="About" data-ar="من نحن">About</a>
+    <a href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
+    <a href="/services/" class="active" data-en="Services" data-ar="الخدمات">Services</a>
+    <a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a>
+    <a href="/#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language switch">
+      <span class="lang-opt active" data-lang="en" onclick="setLang('en')">EN</span>
+      <span class="lang-opt" data-lang="ar" onclick="setLang('ar')">AR</span>
+    </div>
+    <a class="nav-cta" href="/#booking" data-en="Free Audit" data-ar="تدقيق مجاني">Free Audit</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a href="/about/" data-en="About" data-ar="من نحن">About</a>
+  <a href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
+  <a href="/services/" data-en="Services" data-ar="الخدمات">Services</a>
+  <a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a>
+  <a href="/#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+  <div class="lang-toggle">
+    <span class="lang-opt active" data-lang="en" onclick="setLang('en')">EN</span>
+    <span class="lang-opt" data-lang="ar" onclick="setLang('ar')">AR</span>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/" data-en="Home" data-ar="الرئيسية">Home</a>
+  <span class="breadcrumb-sep">›</span>
+  <span data-en="Services" data-ar="الخدمات">Services</span>
+</nav>
+
+<!-- HERO -->
+<div class="services-hero fade-in">
+  <div class="section-tag" data-en="What We Do" data-ar="ماذا نقدم">What We Do</div>
+  <h1 data-en="SEO Services That <em>Actually Work</em>" data-ar="خدمات SEO <em>تحقق نتائج فعلية</em>">SEO Services That <em>Actually Work</em></h1>
+  <p data-en="No fluff. No shortcuts. Data-driven SEO strategies built to push your website to page 1 and keep it there — in any market, any language." data-ar="بدون حشو وبدون اختصارات. استراتيجيات SEO مبنية على البيانات لتضع موقعك في الصفحة الأولى في أي سوق وأي لغة.">No fluff. No shortcuts. Data-driven SEO strategies built to push your website to page 1 and keep it there — in any market, any language.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a class="btn-primary" href="/#booking" data-en="Get a Free Audit →" data-ar="احصل على تدقيق مجاني ←">Get a Free Audit →</a>
+    <a class="btn-outline" href="/portfolio/" data-en="See Our Results" data-ar="شاهد نتائجنا">See Our Results</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row fade-in">
+  <div class="stat-box"><div class="stat-box-num">47+</div><div class="stat-box-label" data-en="Clients Worldwide" data-ar="عملاء حول العالم">Clients Worldwide</div></div>
+  <div class="stat-box"><div class="stat-box-num">+280%</div><div class="stat-box-label" data-en="Avg Traffic Growth" data-ar="متوسط نمو الزيارات">Avg Traffic Growth</div></div>
+  <div class="stat-box"><div class="stat-box-num">12+</div><div class="stat-box-label" data-en="Countries Served" data-ar="دولة تم خدمتها">Countries Served</div></div>
+  <div class="stat-box"><div class="stat-box-num">850+</div><div class="stat-box-label" data-en="Keywords Ranked" data-ar="كلمة مفتاحية متصدرة">Keywords Ranked</div></div>
+</div>
+
+<!-- SERVICES GRID -->
+<div class="services-hub-grid fade-in">
+
+  <div class="svc-hub-card">
+    <div class="svc-hub-icon">🔍</div>
+    <div class="svc-hub-title" data-en="Technical SEO Audit" data-ar="تدقيق SEO تقني">Technical SEO Audit</div>
+    <div class="svc-hub-desc" data-en="Deep-dive audits covering Core Web Vitals, crawl errors, indexing issues, site architecture and page speed — with a clear action plan to fix everything." data-ar="تدقيق شامل يغطي مؤشرات الأداء الأساسية وأخطاء الزحف ومشاكل الفهرسة وبنية الموقع وسرعة التحميل — مع خطة عمل واضحة لإصلاح كل شيء.">Deep-dive audits covering Core Web Vitals, crawl errors, indexing issues, site architecture and page speed — with a clear action plan to fix everything.</div>
+    <span class="svc-hub-price" data-en="From $299" data-ar="يبدأ من 299$">From $299</span>
+    <a class="svc-hub-link" href="/services/technical-seo-audit/" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+  </div>
+
+  <div class="svc-hub-card">
+    <div class="svc-hub-icon">📝</div>
+    <div class="svc-hub-title" data-en="Content Strategy" data-ar="استراتيجية المحتوى">Content Strategy</div>
+    <div class="svc-hub-desc" data-en="Keyword research, content planning and SEO-optimized writing that attracts the right audience, builds topical authority, and converts visitors into customers." data-ar="بحث الكلمات المفتاحية وتخطيط المحتوى والكتابة المحسّنة لمحركات البحث لجذب الجمهور المناسب وبناء السلطة الموضوعية وتحويل الزوار لعملاء.">Keyword research, content planning and SEO-optimized writing that attracts the right audience, builds topical authority, and converts visitors into customers.</div>
+    <span class="svc-hub-price" data-en="From $199/mo" data-ar="يبدأ من 199$/شهر">From $199/mo</span>
+    <a class="svc-hub-link" href="/services/content-strategy/" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+  </div>
+
+  <div class="svc-hub-card">
+    <div class="svc-hub-icon">🔗</div>
+    <div class="svc-hub-title" data-en="Link Building" data-ar="بناء الروابط">Link Building</div>
+    <div class="svc-hub-desc" data-en="High-authority backlinks using white-hat outreach methods — sustainable, Google-approved, and built to increase your domain authority and keyword rankings." data-ar="روابط خلفية موثوقة بأساليب تواصل آمنة ومستدامة ومقبولة من جوجل، مبنية لزيادة سلطة نطاقك وترتيب كلماتك المفتاحية.">High-authority backlinks using white-hat outreach methods — sustainable, Google-approved, and built to increase your domain authority and keyword rankings.</div>
+    <span class="svc-hub-price" data-en="From $399/mo" data-ar="يبدأ من 399$/شهر">From $399/mo</span>
+    <a class="svc-hub-link" href="/services/link-building/" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+  </div>
+
+  <div class="svc-hub-card">
+    <div class="svc-hub-icon">📍</div>
+    <div class="svc-hub-title" data-en="Local SEO" data-ar="السيو المحلي">Local SEO</div>
+    <div class="svc-hub-desc" data-en="Dominate Google Maps and local search results in your target cities. From Google Business Profile optimization to local citations and review management." data-ar="تصدّر خرائط جوجل ونتائج البحث المحلي في مدنك المستهدفة. من تحسين ملف Google Business إلى الاستشهادات المحلية وإدارة التقييمات.">Dominate Google Maps and local search results in your target cities. From Google Business Profile optimization to local citations and review management.</div>
+    <span class="svc-hub-price" data-en="From $249/mo" data-ar="يبدأ من 249$/شهر">From $249/mo</span>
+    <a class="svc-hub-link" href="/services/local-seo/" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+  </div>
+
+  <div class="svc-hub-card">
+    <div class="svc-hub-icon">🤖</div>
+    <div class="svc-hub-title" data-en="AI-Powered SEO" data-ar="سيو بالذكاء الاصطناعي">AI-Powered SEO</div>
+    <div class="svc-hub-desc" data-en="Leveraging cutting-edge AI tools to automate technical audits, generate optimized content at scale, predict keyword trends and outpace competitors faster than ever." data-ar="استخدام أدوات الذكاء الاصطناعي الحديثة لأتمتة التدقيق التقني وإنشاء محتوى محسّن وتوقع اتجاهات الكلمات المفتاحية والتفوق على المنافسين بشكل أسرع.">Leveraging cutting-edge AI tools to automate technical audits, generate optimized content at scale, predict keyword trends and outpace competitors faster than ever.</div>
+    <span class="svc-hub-price" data-en="From $499/mo" data-ar="يبدأ من 499$/شهر">From $499/mo</span>
+    <a class="svc-hub-link" href="/services/ai-powered-seo/" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+  </div>
+
+  <div class="svc-hub-card">
+    <div class="svc-hub-icon">🌍</div>
+    <div class="svc-hub-title" data-en="International SEO" data-ar="السيو الدولي">International SEO</div>
+    <div class="svc-hub-desc" data-en="Hreflang implementation, geo-targeting, multilingual content optimization and market-specific keyword research — built for businesses expanding globally." data-ar="تنفيذ Hreflang والاستهداف الجغرافي وتحسين المحتوى متعدد اللغات وبحث الكلمات المفتاحية الخاص بكل سوق — لشركات التوسع العالمي.">Hreflang implementation, geo-targeting, multilingual content optimization and market-specific keyword research — built for businesses expanding globally.</div>
+    <span class="svc-hub-price" data-en="From $599/mo" data-ar="يبدأ من 599$/شهر">From $599/mo</span>
+    <a class="svc-hub-link" href="/services/international-seo/" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+  </div>
+
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="stripe fade-in">
+  <div class="section">
+    <div class="section-tag" data-en="Why OS SEO" data-ar="لماذا OS SEO">Why OS SEO</div>
+    <div class="section-title" data-en="What Makes Us Different" data-ar="ما الذي يميزنا">What Makes Us Different</div>
+    <div class="section-sub" data-en="We don't sell packages — we build SEO systems that grow with your business." data-ar="لا نبيع باقات — نبني أنظمة SEO تنمو مع عملك.">We don't sell packages — we build SEO systems that grow with your business.</div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <div class="why-title" data-en="Results-Focused" data-ar="نتائج فعلية">Results-Focused</div>
+        <div class="why-desc" data-en="Every decision is tied to rankings, traffic and revenue — not vanity metrics." data-ar="كل قرار مرتبط بالترتيب والزيارات والإيرادات، وليس بمؤشرات وهمية.">Every decision is tied to rankings, traffic and revenue — not vanity metrics.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <div class="why-title" data-en="Data-Driven" data-ar="مبني على البيانات">Data-Driven</div>
+        <div class="why-desc" data-en="Advanced analytics and AI tools power every strategy we build." data-ar="تحليلات متقدمة وأدوات ذكاء اصطناعي تدعم كل استراتيجية نبنيها.">Advanced analytics and AI tools power every strategy we build.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <div class="why-title" data-en="Full Transparency" data-ar="شفافية كاملة">Full Transparency</div>
+        <div class="why-desc" data-en="Monthly reports showing exactly what was done and what it achieved." data-ar="تقارير شهرية توضح بالضبط ما تم تنفيذه وما حققه.">Monthly reports showing exactly what was done and what it achieved.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <div class="why-title" data-en="Long-Term Growth" data-ar="نمو طويل الأمد">Long-Term Growth</div>
+        <div class="why-desc" data-en="SEO foundations that compound over time — not tricks that vanish with updates." data-ar="أساسات SEO تتراكم مع الوقت، وليست حيلاً تتلاشى مع التحديثات.">SEO foundations that compound over time — not tricks that vanish with updates.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section fade-in" style="text-align:center">
+  <div class="section-tag" style="justify-content:center" data-en="Ready to Grow?" data-ar="جاهز للنمو؟">Ready to Grow?</div>
+  <div class="section-title" data-en="Start With a Free SEO Audit" data-ar="ابدأ بتدقيق SEO مجاني">Start With a Free SEO Audit</div>
+  <p style="color:var(--muted);font-size:.96rem;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto" data-en="Tell us about your website and goals. We'll review your current SEO performance and show you exactly where the opportunities are — no commitment required." data-ar="أخبرنا عن موقعك وأهدافك. سنراجع أداء SEO الحالي ونريك بالضبط أين الفرص — بدون أي التزام.">Tell us about your website and goals. We'll review your current SEO performance and show you exactly where the opportunities are — no commitment required.</p>
+  <a class="btn-primary" href="/#booking" data-en="Apply for a Free Audit →" data-ar="قدّم على تدقيق مجاني ←">Apply for a Free Audit →</a>
+</section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="site-logo">
+        <img src="../images/logo.webp" alt="OS SEO logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+        <span class="logo-text" style="display:none;align-items:center;gap:8px"><span class="logo-dot"></span>ai<span style="color:var(--accent2)">SEO</span>a</span>
+      </div>
+      <p data-en="Professional SEO specialist helping businesses across Europe, Australia & the Arab world rank higher and grow faster." data-ar="متخصص SEO محترف يساعد الشركات في أوروبا وأستراليا والعالم العربي على التصدر في جوجل والنمو بشكل أسرع.">Professional SEO specialist helping businesses across Europe, Australia & the Arab world rank higher and grow faster.</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+        <a href="mailto:os5733203@gmail.com" aria-label="Email">✉</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Services" data-ar="الخدمات">Services</h4>
+      <a href="/services/technical-seo-audit/" data-en="Technical SEO" data-ar="سيو تقني">Technical SEO</a>
+      <a href="/services/link-building/" data-en="Link Building" data-ar="بناء الروابط">Link Building</a>
+      <a href="/services/local-seo/" data-en="Local SEO" data-ar="السيو المحلي">Local SEO</a>
+      <a href="/services/ai-powered-seo/" data-en="AI SEO" data-ar="سيو الذكاء الاصطناعي">AI SEO</a>
+      <a href="/services/content-strategy/" data-en="Content Strategy" data-ar="استراتيجية المحتوى">Content Strategy</a>
+      <a href="/services/international-seo/" data-en="International SEO" data-ar="السيو الدولي">International SEO</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Pages" data-ar="الصفحات">Pages</h4>
+      <a href="/" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="/about/" data-en="About" data-ar="من نحن">About</a>
+      <a href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
+      <a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h4>
+      <div class="footer-contact-item"><span class="icon">🌐</span><span data-en="Online SEO Agency - Serving Clients Worldwide" data-ar="وكالة سيو أونلاين - نخدم العملاء حول العالم">Online SEO Agency - Serving Clients Worldwide</span></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><span>+201221403257</span></div>
+      <div class="footer-contact-item"><span class="icon">✉️</span><span>os5733203@gmail.com</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-en="© 2026 OS SEO — All rights reserved." data-ar="© 2026 OS SEO — جميع الحقوق محفوظة.">© 2026 OS SEO — All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://x.com" target="_blank">Twitter</a>
+      <a href="mailto:os5733203@gmail.com" data-en="Email" data-ar="إيميل">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../aiseoa.js"></script>
+</body>
+</html>
