@@ -238,13 +238,6 @@ body[dir="rtl"] .section-tag::before { order: 2; }
     height: auto !important;
 }
 
-body {
-  background-image: url('images/portfolio.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 #typed-text { display: inline-block; min-width: 180px; }
