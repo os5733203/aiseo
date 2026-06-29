@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://seowithomar.com/sitemap.xml
+Sitemap: https://seowithomar.com/blog/sitemap.xml
