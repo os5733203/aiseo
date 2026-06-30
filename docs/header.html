@@ -1,0 +1,205 @@
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" id="site-header" role="banner">
+  <a class="site-logo" href="/" aria-label="OS SEO — Home">
+    <img src="/images/logo.webp" alt="OS SEO — Professional SEO Services" width="100" height="40" loading="eager"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+    <span class="logo-text" style="display:none;align-items:center;gap:8px" aria-hidden="true">
+      <span class="logo-dot"></span>ai<span>SEO</span>a
+    </span>
+  </a>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="/" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="/about/" data-en="About" data-ar="من نحن">About</a></li>
+
+      <!-- Services Mega Menu -->
+      <li class="nav-dd-li" id="dd-services">
+        <button class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false"
+          aria-controls="mega-services" onclick="toggleMega('dd-services',event)">
+          <span data-en="Services" data-ar="الخدمات">Services</span>
+          <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mega-menu" id="mega-services" role="menu" aria-label="SEO Services">
+          <div class="mega-services-grid">
+            <a class="mega-item" href="/services/technical-seo-audit/" role="menuitem">
+              <div class="mega-icon" aria-hidden="true">🔍</div>
+              <div class="mega-text">
+                <strong data-en="Technical SEO Audit" data-ar="تدقيق سيو تقني">Technical SEO Audit</strong>
+                <span data-en="Fix crawl errors & Core Web Vitals" data-ar="إصلاح أخطاء الزحف والأداء">Fix crawl errors & Core Web Vitals</span>
+              </div>
+            </a>
+            <a class="mega-item" href="/services/local-seo/" role="menuitem">
+              <div class="mega-icon" aria-hidden="true">📍</div>
+              <div class="mega-text">
+                <strong data-en="Local SEO" data-ar="السيو المحلي">Local SEO</strong>
+                <span data-en="Rank #1 on Google Maps" data-ar="تصدر #1 في خرائط جوجل">Rank #1 on Google Maps</span>
+              </div>
+            </a>
+            <a class="mega-item" href="/services/international-seo/" role="menuitem">
+              <div class="mega-icon" aria-hidden="true">🌍</div>
+              <div class="mega-text">
+                <strong data-en="International SEO" data-ar="السيو الدولي">International SEO</strong>
+                <span data-en="Rank in every global market" data-ar="تصدر في كل الأسواق العالمية">Rank in every global market</span>
+              </div>
+            </a>
+            <a class="mega-item" href="/services/ai-powered-seo/" role="menuitem">
+              <div class="mega-icon" aria-hidden="true">🤖</div>
+              <div class="mega-text">
+                <strong data-en="AI-Powered SEO" data-ar="سيو بالذكاء الاصطناعي">AI-Powered SEO</strong>
+                <span data-en="Scale rankings 10x with AI tools" data-ar="توسّع الترتيب 10 مرات بالذكاء الاصطناعي">Scale rankings 10x with AI tools</span>
+              </div>
+            </a>
+            <a class="mega-item" href="/services/content-strategy/" role="menuitem">
+              <div class="mega-icon" aria-hidden="true">📝</div>
+              <div class="mega-text">
+                <strong data-en="Content Strategy" data-ar="استراتيجية المحتوى">Content Strategy</strong>
+                <span data-en="Build topical authority & rank" data-ar="بناء السلطة الموضوعية والترتيب">Build topical authority & rank</span>
+              </div>
+            </a>
+            <a class="mega-item" href="/services/link-building/" role="menuitem">
+              <div class="mega-icon" aria-hidden="true">🔗</div>
+              <div class="mega-text">
+                <strong data-en="Link Building" data-ar="بناء الروابط">Link Building</strong>
+                <span data-en="White-hat authority backlinks" data-ar="روابط خلفية آمنة وموثوقة">White-hat authority backlinks</span>
+              </div>
+            </a>
+          </div>
+          <div class="mega-footer">
+            <span style="font-size:.78rem;color:var(--muted)" data-en="6 Professional SEO Services" data-ar="6 خدمات SEO احترافية">6 Professional SEO Services</span>
+            <a class="mega-all" href="/services/" role="menuitem" data-en="View All Services →" data-ar="عرض كل الخدمات ←">View All Services →</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Locations Mega Menu -->
+      <li class="nav-dd-li" id="dd-locations">
+        <button class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false"
+          aria-controls="mega-locations" onclick="toggleMega('dd-locations',event)">
+          <span data-en="Locations" data-ar="المواقع">Locations</span>
+          <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mega-menu" id="mega-locations" role="menu" aria-label="Locations we serve" style="min-width:380px">
+          <p style="font-size:.74rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:.75rem" data-en="Popular Locations" data-ar="الأماكن الشائعة">Popular Locations</p>
+          <div class="mega-locations-grid">
+            <a class="loc-item" href="/locations/united-states/" role="menuitem"><span class="loc-flag">🇺🇸</span><span data-en="United States" data-ar="الولايات المتحدة">United States</span></a>
+            <a class="loc-item" href="/locations/united-kingdom/" role="menuitem"><span class="loc-flag">🇬🇧</span><span data-en="United Kingdom" data-ar="المملكة المتحدة">United Kingdom</span></a>
+            <a class="loc-item" href="/locations/canada/" role="menuitem"><span class="loc-flag">🇨🇦</span><span data-en="Canada" data-ar="كندا">Canada</span></a>
+            <a class="loc-item" href="/locations/australia/" role="menuitem"><span class="loc-flag">🇦🇺</span><span data-en="Australia" data-ar="أستراليا">Australia</span></a>
+            <a class="loc-item" href="/locations/saudi-arabia/" role="menuitem"><span class="loc-flag">🇸🇦</span><span data-en="Saudi Arabia" data-ar="السعودية">Saudi Arabia</span></a>
+            <a class="loc-item" href="/locations/uae/" role="menuitem"><span class="loc-flag">🇦🇪</span><span data-en="UAE" data-ar="الإمارات">UAE</span></a>
+            <a class="loc-item" href="/locations/egypt/" role="menuitem"><span class="loc-flag">🇪🇬</span><span data-en="Egypt" data-ar="مصر">Egypt</span></a>
+          </div>
+          <div class="mega-footer">
+            <span style="font-size:.78rem;color:var(--muted)" data-en="12+ countries served" data-ar="خدمة 12+ دولة">12+ countries served</span>
+            <a class="mega-all" href="/locations/" role="menuitem" data-en="View All Locations →" data-ar="عرض كل المواقع ←">View All Locations →</a>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a></li>
+      <li><a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a></li>
+      <li><a href="/faq/" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+      <li><a href="/#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-right">
+    <!-- Search -->
+    <button class="nav-search-btn" onclick="toggleSearch()" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">
+      <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+
+    <!-- Lang -->
+    <div class="lang-toggle" role="group" aria-label="Language switch">
+      <span class="lang-opt active" data-lang="en" onclick="setLang('en')" tabindex="0" role="button" aria-pressed="true">EN</span>
+      <span class="lang-opt" data-lang="ar" onclick="setLang('ar')" tabindex="0" role="button" aria-pressed="false">AR</span>
+    </div>
+
+    <!-- CTA -->
+    <a class="nav-cta" href="/#booking" data-en="Free Audit" data-ar="تدقيق مجاني">Free Audit</a>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger-btn" onclick="toggleDrawer()"
+      aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ═══ SEARCH OVERLAY ═══ -->
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Search" aria-modal="true">
+  <div class="search-box">
+    <input type="search" id="search-input" placeholder="Search services, locations, articles…" aria-label="Search the site" autocomplete="off"/>
+    <button class="search-close" onclick="toggleSearch()" aria-label="Close search">✕</button>
+  </div>
+  <p class="search-hint" data-en="Press Enter to search or Escape to close" data-ar="اضغط Enter للبحث أو Escape للإغلاق">Press Enter to search or Escape to close</p>
+</div>
+
+
+<!-- ═══ MOBILE DRAWER ═══ -->
+<div class="mobile-drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()" aria-hidden="true"></div>
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <div class="drawer-header">
+    <a class="site-logo" href="/" onclick="toggleDrawer()" aria-label="OS SEO — Home">
+      <img src="/images/logo.webp" alt="OS SEO" width="80" height="32" loading="lazy"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+      <span class="logo-text" style="display:none;align-items:center;gap:6px;font-size:1.2rem"><span class="logo-dot"></span>OS SEO</span>
+    </a>
+    <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button>
+  </div>
+
+  <a class="drawer-link" href="/" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a class="drawer-link" href="/about/" data-en="About" data-ar="من نحن">About</a>
+
+  <!-- Services accordion -->
+  <div class="drawer-acc" id="dacc-services">
+    <button class="drawer-acc-btn" onclick="toggleDrawerAcc('dacc-services')" aria-expanded="false" aria-controls="dacc-services-content">
+      <span data-en="Services" data-ar="الخدمات">Services</span>
+      <svg class="drawer-acc-chevron" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="drawer-acc-content" id="dacc-services-content">
+      <a href="/services/technical-seo-audit/" data-en="🔍 Technical SEO Audit" data-ar="🔍 تدقيق سيو تقني">🔍 Technical SEO Audit</a>
+      <a href="/services/local-seo/" data-en="📍 Local SEO" data-ar="📍 السيو المحلي">📍 Local SEO</a>
+      <a href="/services/international-seo/" data-en="🌍 International SEO" data-ar="🌍 السيو الدولي">🌍 International SEO</a>
+      <a href="/services/ai-powered-seo/" data-en="🤖 AI-Powered SEO" data-ar="🤖 سيو بالذكاء الاصطناعي">🤖 AI-Powered SEO</a>
+      <a href="/services/content-strategy/" data-en="📝 Content Strategy" data-ar="📝 استراتيجية المحتوى">📝 Content Strategy</a>
+      <a href="/services/link-building/" data-en="🔗 Link Building" data-ar="🔗 بناء الروابط">🔗 Link Building</a>
+      <a href="/services/" class="drawer-acc-all" data-en="View All Services →" data-ar="عرض كل الخدمات ←">View All Services →</a>
+    </div>
+  </div>
+
+  <!-- Locations accordion -->
+  <div class="drawer-acc" id="dacc-locations">
+    <button class="drawer-acc-btn" onclick="toggleDrawerAcc('dacc-locations')" aria-expanded="false" aria-controls="dacc-locations-content">
+      <span data-en="Locations" data-ar="المواقع">Locations</span>
+      <svg class="drawer-acc-chevron" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="drawer-acc-content" id="dacc-locations-content">
+      <a href="/locations/united-states/" data-en="🇺🇸 United States" data-ar="🇺🇸 الولايات المتحدة">🇺🇸 United States</a>
+      <a href="/locations/united-kingdom/" data-en="🇬🇧 United Kingdom" data-ar="🇬🇧 المملكة المتحدة">🇬🇧 United Kingdom</a>
+      <a href="/locations/canada/" data-en="🇨🇦 Canada" data-ar="🇨🇦 كندا">🇨🇦 Canada</a>
+      <a href="/locations/australia/" data-en="🇦🇺 Australia" data-ar="🇦🇺 أستراليا">🇦🇺 Australia</a>
+      <a href="/locations/saudi-arabia/" data-en="🇸🇦 Saudi Arabia" data-ar="🇸🇦 السعودية">🇸🇦 Saudi Arabia</a>
+      <a href="/locations/uae/" data-en="🇦🇪 UAE" data-ar="🇦🇪 الإمارات">🇦🇪 UAE</a>
+      <a href="/locations/egypt/" data-en="🇪🇬 Egypt" data-ar="🇪🇬 مصر">🇪🇬 Egypt</a>
+      <a href="/locations/" class="drawer-acc-all" data-en="View All Locations →" data-ar="عرض كل المواقع ←">View All Locations →</a>
+    </div>
+  </div>
+
+  <a class="drawer-link" href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
+  <a class="drawer-link" href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a>
+  <a class="drawer-link" href="/faq/" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a>
+  <a class="drawer-link" href="/#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+
+  <div class="drawer-lang">
+    <button class="drawer-lang-btn" onclick="setLang('en')" id="drawer-en"
+      style="background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04101f">EN</button>
+    <button class="drawer-lang-btn" onclick="setLang('ar')" id="drawer-ar"
+      style="background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--border)">AR</button>
+  </div>
+
+  <a class="btn-primary" href="/#booking" style="margin-top:1rem;text-align:center;display:block"
+    data-en="Get Free SEO Audit" data-ar="احصل على تدقيق مجاني">Get Free SEO Audit</a>
+</nav>
