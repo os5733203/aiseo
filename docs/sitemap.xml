@@ -16,8 +16,33 @@
   <url><loc>https://seowithomar.com/services/ai-powered-seo/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://seowithomar.com/services/international-seo/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <!-- Locations hub + country pages -->
+    <!-- Locations hub + country pages -->
   <url><loc>https://seowithomar.com/locations/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <url>
+    <loc>https://seowithomar.com/locations/canada/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://seowithomar.com/locations/canada/london-ontario/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://seowithomar.com/locations/canada/oshawa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://seowithomar.com/locations/canada/sudbury/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
   <url><loc>https://seowithomar.com/locations/ireland/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- Blog hub -->
@@ -46,4 +71,5 @@
     in Hugo's own blog/sitemap.xml after a fresh `hugo` build.
   -->
 
+  
 </urlset>
