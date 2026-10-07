@@ -114,8 +114,8 @@ img{max-width:100%;display:block}
 }
 .hero .hero-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);
-  gap:42px;
+  grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);
+  gap:44px;
   align-items:center;
   position:relative;
   z-index:1;
@@ -159,10 +159,13 @@ img{max-width:100%;display:block}
   display:block;
   line-height:1.45;
 }
+.hero .proof-icon{flex:0 0 38px}
 .hero .hero-photo-wrap{
   position:relative;
   width:100%;
-  height:clamp(390px,34vw,505px);
+  height:auto;
+  aspect-ratio:16/11;
+  max-height:540px;
   min-height:0;
   margin:0;
   overflow:hidden;
@@ -180,7 +183,7 @@ img{max-width:100%;display:block}
   max-width:none;
   display:block;
   object-fit:cover;
-  object-position:73% 50%;
+  object-position:70% 50%;
 }
 .hero .hero-photo-note{
   position:absolute;
@@ -205,7 +208,7 @@ img{max-width:100%;display:block}
   .hero{padding:40px 0 36px}
   .hero .container{width:min(1080px,calc(100% - 36px))}
   .hero .hero-grid{
-    grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);
+    grid-template-columns:minmax(0,1fr) minmax(0,.95fr);
     gap:28px;
   }
   .hero h1{
@@ -216,8 +219,8 @@ img{max-width:100%;display:block}
   .hero .hero-actions{margin-top:18px}
   .hero .hero-proof{gap:10px;margin-top:18px;padding-top:16px}
   .hero .proof-item{font-size:.82rem}
-  .hero .hero-photo-wrap{height:clamp(360px,39vw,455px);border-radius:22px}
-  .hero .hero-photo{object-position:75% 50%}
+  .hero .hero-photo-wrap{aspect-ratio:4/3;max-height:none;border-radius:22px}
+  .hero .hero-photo{object-position:72% 50%}
 }
 
 /* Tablet and mobile: stack content, then visual */
@@ -240,11 +243,11 @@ img{max-width:100%;display:block}
     gap:12px;
   }
   .hero .hero-photo-wrap{
-    height:auto;
     aspect-ratio:16/9;
+    max-height:none;
     border-radius:22px;
   }
-  .hero .hero-photo{object-position:72% 50%}
+  .hero .hero-photo{object-position:center}
 }
 
 /* Mobile */
@@ -285,11 +288,11 @@ img{max-width:100%;display:block}
     padding-top:16px;
   }
   .hero .hero-photo-wrap{
-    aspect-ratio:16/10;
+    aspect-ratio:16/9;
     border-radius:18px;
     box-shadow:0 16px 36px rgba(13,34,56,.13);
   }
-  .hero .hero-photo{object-position:74% 50%}
+  .hero .hero-photo{object-position:center}
   .hero .hero-photo-note{
     left:10px;
     bottom:10px;
@@ -304,7 +307,7 @@ img{max-width:100%;display:block}
 
 @media (max-width:380px){
   .hero h1{font-size:2.15rem}
-  .hero .hero-photo-wrap{aspect-ratio:4/3}
-  .hero .hero-photo{object-position:76% 50%}
+  .hero .hero-photo-wrap{aspect-ratio:16/10}
+  .hero .hero-photo{object-position:60% 50%}
   .hero .hero-photo-note{display:none}
 }
