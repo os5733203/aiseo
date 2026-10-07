@@ -1,1121 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Omar Salah — SEO Specialist helping businesses in Europe, Australia & worldwide rank higher on Google."/>
-<meta property="og:title" content="OS SEO— SEO Specialist | Rank Higher. Grow Faster."/>
-<meta property="og:description" content="Data-driven SEO strategies for businesses in Europe, Australia & beyond."/>
-<title>OS SEO— SEO Specialist | Rank Higher. Grow Faster.</title>
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="stylesheet" href="style.css"/>
-
-<style>
-/* ─── Reset & Shared ─── */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-/* ─── Sticky Header ─── */
-.site-header{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1rem 2.5rem;
-  position:sticky;top:0;z-index:300;
-  background:rgba(6,9,26,.82);
-  backdrop-filter:blur(18px) saturate(140%);
-  -webkit-backdrop-filter:blur(18px) saturate(140%);
-  border-bottom:1px solid var(--border);
-  transition:padding .3s,box-shadow .3s,background .3s;
-  gap:1.2rem;
-}
-.site-header.scrolled{
-  padding-top:.6rem;padding-bottom:.6rem;
-  background:rgba(6,9,26,.96);
-  box-shadow:0 4px 32px rgba(0,0,0,.45);
-}
-
-/* ─── Logo ─── */
-.site-logo{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.site-logo img{width:100px;height:auto;display:block}
-.logo-dot{width:9px;height:9px;background:var(--accent2);border-radius:50%;box-shadow:0 0 12px var(--accent2);animation:blip 2.4s infinite}
-@keyframes blip{0%,100%{opacity:1}50%{opacity:.35}}
-.logo-text{font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-1px;color:var(--white)}
-
-/* ─── Main Nav ─── */
-.main-nav{display:flex;align-items:center;gap:1.6rem;flex:1;justify-content:center}
-.main-nav>ul{display:flex;align-items:center;gap:1.6rem;list-style:none;margin:0;padding:0}
-.main-nav a,.nav-dd-trigger{
-  color:var(--muted);font-size:.9rem;font-weight:600;
-  text-decoration:none;position:relative;padding:6px 0;
-  display:inline-flex;align-items:center;gap:3px;
-  transition:color .2s;cursor:pointer;
-  background:none;border:none;font-family:inherit;
-}
-.main-nav a::after,.nav-dd-trigger::after{
-  content:'';position:absolute;left:0;right:0;bottom:-2px;
-  height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent3));
-  transform:scaleX(0);transform-origin:left;transition:transform .25s;
-}
-.main-nav a:hover,.main-nav a.active,
-.nav-dd-trigger:hover,.nav-dd-li.open .nav-dd-trigger{color:var(--white)}
-.main-nav a:hover::after,.main-nav a.active::after,
-.nav-dd-trigger:hover::after{transform:scaleX(1)}
-.main-nav a.active{font-weight:700}
-
-/* Chevron */
-.nav-chevron{width:13px;height:13px;flex-shrink:0;transition:transform .25s;stroke:currentColor}
-.nav-dd-li.open .nav-chevron{transform:rotate(180deg)}
-
-/* ─── Mega Menu ─── */
-.nav-dd-li{position:relative}
-.mega-menu{
-  position:absolute;top:calc(100% + 14px);left:50%;
-  transform:translateX(-50%) translateY(-10px);
-  min-width:520px;
-  background:var(--navy2);
-  border:1px solid var(--border);
-  border-radius:18px;
-  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(0,229,255,.06);
-  padding:1.2rem;
-  opacity:0;pointer-events:none;
-  transition:opacity .2s,transform .2s;
-  z-index:400;
-}
-.mega-menu::before{
-  content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);
-  width:11px;height:11px;
-  background:var(--navy2);
-  border-left:1px solid var(--border);border-top:1px solid var(--border);
-}
-.nav-dd-li.open .mega-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
-
-/* Services mega */
-.mega-services-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.75rem}
-.mega-item{
-  display:flex;align-items:flex-start;gap:.75rem;
-  padding:.75rem .9rem;border-radius:12px;text-decoration:none;
-  color:var(--muted);transition:background .18s,color .18s;
-}
-.mega-item:hover{background:rgba(0,229,255,.07);color:var(--white)}
-.mega-icon{
-  width:36px;height:36px;flex-shrink:0;
-  background:linear-gradient(135deg,rgba(79,107,255,.2),rgba(0,229,255,.1));
-  border-radius:9px;display:flex;align-items:center;justify-content:center;
-  font-size:1rem;
-}
-.mega-text strong{display:block;font-size:.84rem;font-weight:700;color:var(--white);margin-bottom:2px}
-.mega-text span{font-size:.74rem;color:var(--muted);line-height:1.4}
-.mega-footer{
-  border-top:1px solid var(--border);padding-top:.75rem;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.mega-all{
-  display:inline-flex;align-items:center;gap:.4rem;
-  color:var(--accent2);font-size:.82rem;font-weight:700;text-decoration:none;
-  padding:.45rem .9rem;border-radius:8px;transition:background .18s;
-}
-.mega-all:hover{background:rgba(0,229,255,.08)}
-
-/* Locations mega */
-.mega-locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-bottom:.75rem}
-.loc-item{
-  display:flex;align-items:center;gap:.5rem;
-  padding:.6rem .75rem;border-radius:10px;text-decoration:none;
-  color:var(--muted);font-size:.84rem;font-weight:600;
-  transition:background .18s,color .18s;
-}
-.loc-item:hover{background:rgba(0,229,255,.07);color:var(--white)}
-.loc-flag{font-size:1.1rem;flex-shrink:0;font-family:"Segoe UI Emoji","Noto Color Emoji","Apple Color Emoji",sans-serif;font-style:normal}
-
-/* ─── Nav Right ─── */
-.nav-right{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
-
-/* Search */
-.nav-search-btn{
-  background:none;border:none;color:var(--muted);cursor:pointer;
-  padding:6px;border-radius:8px;transition:color .2s,background .2s;
-  display:flex;align-items:center;justify-content:center;
-}
-.nav-search-btn:hover{color:var(--white);background:rgba(255,255,255,.06)}
-.nav-search-btn svg{width:18px;height:18px;stroke:currentColor;fill:none}
-
-/* Search overlay */
-.search-overlay{
-  position:fixed;inset:0;z-index:600;
-  background:rgba(6,9,26,.92);backdrop-filter:blur(20px);
-  display:flex;flex-direction:column;align-items:center;
-  padding:6rem 2rem 2rem;
-  opacity:0;pointer-events:none;transition:opacity .25s;
-}
-.search-overlay.open{opacity:1;pointer-events:auto}
-.search-box{
-  width:100%;max-width:620px;
-  background:var(--card);border:1px solid var(--border-strong);
-  border-radius:16px;display:flex;align-items:center;
-  overflow:hidden;box-shadow:0 0 40px rgba(0,229,255,.15);
-}
-.search-box input{
-  flex:1;background:none;border:none;outline:none;
-  padding:1.1rem 1.4rem;color:var(--white);font-size:1.1rem;font-family:inherit;
-}
-.search-box input::placeholder{color:var(--muted)}
-.search-close{
-  padding:1rem 1.2rem;background:none;border:none;
-  color:var(--muted);cursor:pointer;font-size:1.1rem;
-  transition:color .2s;
-}
-.search-close:hover{color:var(--white)}
-.search-hint{color:var(--muted);font-size:.85rem;margin-top:1rem}
-
-/* Lang toggle */
-.lang-toggle{
-  display:flex;align-items:center;
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--border);border-radius:999px;
-  padding:3px;gap:2px;
-}
-.lang-opt{
-  padding:.32rem .75rem;border-radius:999px;
-  font-size:.75rem;font-weight:700;color:var(--muted);
-  transition:all .2s;cursor:pointer;user-select:none;letter-spacing:.5px;
-}
-.lang-opt.active{
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#04101f;box-shadow:0 2px 10px rgba(0,229,255,.3);
-}
-
-/* CTA */
-.nav-cta{
-  background:linear-gradient(135deg,var(--accent),var(--accent3));
-  color:#fff;border:none;padding:.58rem 1.25rem;border-radius:10px;
-  font-weight:700;font-size:.84rem;cursor:pointer;transition:all .2s;
-  text-decoration:none;white-space:nowrap;
-  box-shadow:0 4px 18px rgba(79,107,255,.35);
-}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,107,255,.5)}
-
-/* Hamburger */
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
-.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-
-/* ─── Side Drawer (Mobile) ─── */
-.mobile-drawer-overlay{
-  position:fixed;inset:0;z-index:9998;
-  background:rgba(0,0,0,.6);
-  opacity:0;pointer-events:none;transition:opacity .3s;
-}
-.mobile-drawer-overlay.open{opacity:1;pointer-events:auto}
-.mobile-drawer{
-  display:flex !important;
-  position:fixed;top:0;right:0;z-index:9999;
-  width:min(320px,88vw);height:100%;
-  background:var(--navy2);
-  border-left:1px solid var(--border);
-  padding:1.2rem;
-  overflow-y:auto;
-  transform:translateX(100%);
-  transition:transform .32s cubic-bezier(.4,0,.2,1);
-  flex-direction:column;gap:.1rem;
-  visibility:visible;
-}
-.mobile-drawer.open{transform:translateX(0)}
-.drawer-header{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:1.1rem;padding-bottom:1rem;
-  border-bottom:1px solid var(--border);
-}
-.drawer-close{
-  background:rgba(255,255,255,.06);border:1px solid var(--border);
-  border-radius:8px;color:var(--white);width:34px;height:34px;
-  cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;
-}
-.drawer-link{
-  display:block;color:var(--muted);font-weight:600;font-size:.95rem;
-  padding:.7rem .5rem;border-radius:10px;text-decoration:none;
-  transition:background .18s,color .18s;
-}
-.drawer-link:hover,.drawer-link.active{background:rgba(0,229,255,.07);color:var(--white)}
-
-/* Drawer accordion */
-.drawer-acc{margin:.1rem 0}
-.drawer-acc-btn{
-  display:flex;align-items:center;justify-content:space-between;
-  width:100%;background:none;border:none;
-  color:var(--muted);font-weight:600;font-size:.95rem;
-  padding:.7rem .5rem;border-radius:10px;cursor:pointer;font-family:inherit;
-  transition:background .18s,color .18s;
-}
-.drawer-acc-btn:hover{background:rgba(0,229,255,.07);color:var(--white)}
-.drawer-acc-chevron{width:13px;height:13px;flex-shrink:0;transition:transform .25s;stroke:currentColor;fill:none}
-.drawer-acc.open .drawer-acc-chevron{transform:rotate(180deg)}
-.drawer-acc-content{display:none;flex-direction:column;gap:.05rem;padding:.2rem 0 .4rem .8rem}
-.drawer-acc.open .drawer-acc-content{display:flex}
-.drawer-acc-content a{
-  display:flex;align-items:center;gap:.55rem;
-  color:var(--muted);font-size:.87rem;padding:.55rem .6rem;
-  border-radius:8px;text-decoration:none;transition:background .18s,color .18s;
-}
-.drawer-acc-content a:hover{background:rgba(0,229,255,.07);color:var(--white)}
-.drawer-acc-all{color:var(--accent2)!important;font-weight:700}
-.drawer-lang{display:flex;gap:.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
-.drawer-lang-btn{
-  flex:1;padding:.5rem;border-radius:8px;text-align:center;
-  font-size:.82rem;font-weight:700;cursor:pointer;transition:all .2s;border:none;
-}
-
-/* ─── Newsletter ─── */
-.newsletter-section{
-  background:linear-gradient(135deg,rgba(79,107,255,.12),rgba(0,229,255,.06) 50%,rgba(168,85,247,.1));
-  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:3.5rem 2.5rem;text-align:center;
-}
-.newsletter-inner{max-width:520px;margin:0 auto}
-.newsletter-inner h2{font-size:1.6rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.5px}
-.newsletter-inner p{color:var(--muted);font-size:.92rem;margin-bottom:1.4rem;line-height:1.65}
-.newsletter-form{display:flex;gap:.65rem;max-width:420px;margin:0 auto}
-.newsletter-form input{
-  flex:1;background:rgba(255,255,255,.05);border:1px solid var(--border);
-  border-radius:10px;padding:.75rem 1.1rem;color:var(--white);font-size:.88rem;
-  font-family:inherit;outline:none;transition:border-color .2s;
-}
-.newsletter-form input:focus{border-color:var(--accent2)}
-.newsletter-form button{
-  background:linear-gradient(135deg,var(--accent),var(--accent3));
-  color:#fff;border:none;padding:.75rem 1.4rem;border-radius:10px;
-  font-weight:700;font-size:.88rem;cursor:pointer;white-space:nowrap;transition:all .2s;
-  font-family:inherit;
-}
-.newsletter-form button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(79,107,255,.4)}
-.newsletter-success{color:var(--green);font-size:.84rem;margin-top:.65rem;display:none}
-
-/* ─── Footer ─── */
-.site-footer{padding:3.5rem 2.5rem 0;background:linear-gradient(180deg,transparent,rgba(13,20,48,.6))}
-.footer-main{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:2.5rem}
-
-.footer-brand .site-logo{margin-bottom:.9rem}
-.footer-brand p{color:var(--muted);font-size:.86rem;line-height:1.75;max-width:260px;margin-bottom:.3rem}
-.footer-mission{color:var(--muted);font-size:.78rem;font-style:italic;margin-bottom:.9rem;max-width:260px;line-height:1.6}
-.footer-social{display:flex;gap:.65rem;margin-top:.9rem}
-.footer-social a{
-  width:36px;height:36px;border-radius:9px;
-  background:rgba(255,255,255,.04);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.9rem;transition:all .2s;color:var(--muted);text-decoration:none;
-}
-.footer-social a:hover{background:rgba(0,229,255,.1);border-color:var(--accent2);color:var(--white);transform:translateY(-2px)}
-
-.footer-col h3{font-size:.78rem;font-weight:800;margin-bottom:.9rem;color:var(--white);text-transform:uppercase;letter-spacing:1.5px}
-.footer-col a{
-  display:block;color:var(--muted);font-size:.85rem;margin-bottom:.6rem;
-  text-decoration:none;transition:color .2s;
-}
-.footer-col a:hover{color:var(--accent2)}
-.footer-col a.fc-all{color:var(--accent2);font-weight:700;font-size:.8rem;margin-top:.3rem}
-
-/* Contact box */
-.footer-contact-box{margin-top:1.6rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-.footer-contact-item{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.75rem}
-.footer-contact-item .icon{color:var(--accent2);flex-shrink:0;font-size:.95rem;margin-top:1px}
-.footer-contact-item span,.footer-contact-item a{color:var(--muted);font-size:.84rem;line-height:1.5;text-decoration:none;transition:color .2s}
-.footer-contact-item a:hover{color:var(--accent2)}
-.footer-hours{font-size:.76rem;color:var(--muted);margin-top:.15rem}
-
-/* Trust bar */
-.footer-trust{
-  max-width:1040px;margin:0 auto;
-  display:flex;flex-wrap:wrap;gap:.75rem;
-  padding:1.4rem 0;border-top:1px solid var(--border);
-}
-.trust-item{
-  display:flex;align-items:center;gap:.45rem;
-  font-size:.77rem;color:var(--muted);font-weight:600;
-}
-.trust-item::before{content:'✓';color:var(--green);font-weight:800}
-
-/* Bottom footer */
-.footer-bottom{
-  border-top:1px solid var(--border);padding:1.3rem 0;
-  max-width:1040px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:.75rem;
-}
-.footer-bottom p{color:var(--muted);font-size:.78rem}
-.footer-bottom-links{display:flex;gap:1.4rem;flex-wrap:wrap}
-.footer-bottom-links a{color:var(--muted);font-size:.78rem;text-decoration:none;transition:color .2s}
-.footer-bottom-links a:hover{color:var(--accent2)}
-
-/* ─── Responsive ─── */
-@media(max-width:960px){
-  .main-nav{display:none}
-  .hamburger{display:flex}
-  .nav-search-btn{display:none}
-  .nav-cta{padding:.5rem 1rem;font-size:.8rem}
-  .site-header{padding:.9rem 1.2rem}
-}
-@media(max-width:680px){
-  .footer-main{grid-template-columns:1fr;gap:2.2rem}
-  .footer-col{padding-bottom:1.4rem;border-bottom:1px solid var(--border)}
-  .footer-col:last-child{border-bottom:none;padding-bottom:0}
-  .footer-brand{padding-bottom:1.4rem;border-bottom:1px solid var(--border)}
-  .newsletter-form{flex-direction:column}
-  .newsletter-section{padding:2.5rem 1.2rem}
-  .footer-trust{justify-content:center;gap:1rem .9rem}
-  .footer-bottom{flex-direction:column;text-align:center}
-  .site-footer{padding:2.5rem 1.2rem 0}
-}
-</style>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xcroemept8");
-</script>
-<style>
-  
-.hero-wrapper {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  min-height: 700px;
-  background-image: url("images/hero-bg.webp") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
-.hero {
-  padding: 6rem 2.5rem 4.5rem;
-  max-width: 1040px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-  .hero h1 { font-size: clamp(2.6rem,6vw,4.2rem); font-weight: 700; line-height: 1.08; letter-spacing: -2px; margin-bottom: 1.3rem; }
-  .hero h1 em { color: var(--accent2); font-style: normal; background: linear-gradient(135deg,var(--accent2),var(--accent3)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .hero > p { color: var(--muted); font-size: 1.15rem; max-width: 620px; margin: 0 auto 2.4rem; }
-  .hero-btns { display: flex; gap: 1.1rem; justify-content: center; flex-wrap: wrap; }
-  .typed-cursor { display: inline-block; width: 3px; height: .9em; background: var(--accent2); animation: blink .8s infinite; margin-left: 3px; vertical-align: text-bottom; }
-  @keyframes blink { 0%,100%{opacity:1}50%{opacity:0} }
-
-  .stats-bar { background: linear-gradient(90deg, var(--navy2), var(--navy3), var(--navy2)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.7rem 2.5rem; display: flex; justify-content: center; gap: 3.8rem; flex-wrap: wrap; }
-  .stat-num { font-family: 'Space Grotesk',sans-serif; font-size: 2.1rem; font-weight: 700; }
-  .stat-num .val { color: var(--accent2); }
-  .stat-label { font-size: .8rem; color: var(--muted); margin-top: 3px; font-weight: 500; }
-
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 1.3rem; }
-  .svc-icon { width: 48px; height: 48px; background: linear-gradient(135deg, rgba(79,107,255,.2), rgba(0,229,255,.12)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; font-size: 1.4rem; }
-  .svc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .5rem; }
-  .svc-desc { color: var(--muted); font-size: .87rem; line-height: 1.6; }
-  .svc-price { display: inline-block; margin-top: .9rem; font-size: .78rem; font-weight: 700; color: var(--accent2); background: rgba(0,229,255,.1); padding: .3rem .8rem; border-radius: 999px; }
-
-  .ai-section { background: linear-gradient(135deg, rgba(79,107,255,.14), rgba(0,229,255,.06) 50%, rgba(168,85,247,.1)); border: 1px solid var(--border); border-radius: 24px; padding: 3.2rem; max-width: 1040px; margin: 0 auto; }
-  .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem; align-items: center; }
-  .ai-features { display: flex; flex-direction: column; gap: .9rem; margin-top: 1.6rem; }
-  .ai-feature { display: flex; gap: .9rem; align-items: flex-start; }
-  .ai-dot { width: 8px; height: 8px; background: var(--accent2); border-radius: 50%; margin-top: 6px; flex-shrink: 0; box-shadow: 0 0 8px var(--accent2); }
-  .ai-feature p { font-size: .89rem; color: var(--muted); line-height: 1.55; }
-  .ai-feature strong { color: var(--white); display: block; font-size: .92rem; margin-bottom: 3px; }
-  .ai-visual { background: rgba(6,9,26,.6); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; font-family: monospace; font-size: .81rem; color: var(--accent2); line-height: 1.85; }
-  .ai-visual .comment { color: var(--muted); }
-
-  .results-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 1.3rem; }
-  .result-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; text-align: center; }
-  .result-num { font-family: 'Space Grotesk',sans-serif; font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg,var(--accent2),var(--accent3)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .result-label { color: var(--muted); font-size: .83rem; margin-top: .4rem; }
-  .testimonials { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.3rem; margin-top: 2.2rem; }
-  .testi { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; }
-  .stars { color: #FBBF24; margin-bottom: .65rem; }
-  .testi-text { color: #C8D8F0; font-size: .89rem; line-height: 1.65; font-style: italic; margin-bottom: 1.1rem; }
-  .testi-author { display: flex; align-items: center; gap: .75rem; }
-  .avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .84rem; flex-shrink: 0; }
-
-  .process-steps { display: flex; flex-direction: column; }
-  .step { display: flex; gap: 1.6rem; padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
-  .step:last-child { border: none; }
-  .step-num { font-size: 2.6rem; font-weight: 800; color: rgba(79,107,255,.28); min-width: 64px; line-height: 1; font-family: 'Space Grotesk',sans-serif; }
-  .step h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: .35rem; }
-  .step p { color: var(--muted); font-size: .88rem; line-height: 1.6; }
-
-  .booking-section { background: linear-gradient(180deg, var(--navy2), var(--navy3)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 2.5rem; }
-  .booking-inner { max-width: 1040px; margin: 0 auto; }
-  .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6rem; margin-top: 2.6rem; }
-  .service-selector { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
-  .service-opt { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem; cursor: pointer; transition: all .2s; }
-  .service-opt:hover { border-color: var(--border-strong); }
-  .service-opt.selected { border-color: var(--accent2); background: rgba(0,229,255,.08); box-shadow: 0 0 0 1px var(--accent2) inset; }
-  .service-opt h4 { font-size: .9rem; font-weight: 700; margin-bottom: 3px; }
-  .service-opt .price { font-size: .81rem; color: var(--accent2); font-weight: 700; }
-  .service-opt .desc { font-size: .76rem; color: var(--muted); margin-top: 3px; }
-  .booking-form { display: flex; flex-direction: column; gap: .95rem; }
-  .booking-form input, .booking-form textarea, .booking-form select {
-    background: rgba(255,255,255,.04); border: 1px solid var(--border); border-radius: 10px;
-    padding: .8rem 1.05rem; color: var(--white); font-size: .89rem; font-family: inherit; outline: none; transition: border-color .2s; width: 100%;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OS SEO | SEO for Contractors & Local Businesses</title>
+  <meta name="description" content="OS SEO helps roofing, paving, home-service and local businesses get found on Google, generate more enquiries and turn search visibility into real business growth.">
+  <link rel="canonical" href="https://seowithomar.com/">
+  <meta property="og:title" content="OS SEO | More Visibility. More Business.">
+  <meta property="og:description" content="SEO for contractors and local businesses focused on rankings, enquiries and measurable growth.">
+  <meta property="og:url" content="https://seowithomar.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/home.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"OS SEO",
+    "url":"https://seowithomar.com/",
+    "email":"omar@seowithomar.com",
+    "telephone":"+201221403257",
+    "founder":{"@type":"Person","name":"Omar Salah"},
+    "areaServed":["Ireland","United Kingdom","Canada","Australia"],
+    "description":"SEO services for contractors, home-service businesses and local companies."
   }
-  .booking-form input:focus, .booking-form textarea:focus, .booking-form select:focus { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(0,229,255,.1); }
-  .booking-form select option { background: var(--navy2); }
-  .booking-form textarea { resize: vertical; min-height: 85px; }
-  .price-preview { background: rgba(79,107,255,.1); border: 1px solid rgba(79,107,255,.35); border-radius: 12px; padding: 1.1rem; margin-top: .6rem; }
-  .price-preview h4 { font-size: .85rem; color: var(--muted); margin-bottom: .35rem; }
-  .price-preview .total { font-family: 'Space Grotesk',sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--accent2); }
-  .price-preview .note { font-size: .76rem; color: var(--muted); margin-top: .35rem; }
-  .submit-btn { background: linear-gradient(135deg,var(--accent),var(--accent3)); color: #fff; border: none; padding: .95rem; border-radius: 10px; font-weight: 700; font-size: .96rem; cursor: pointer; transition: all .2s; font-family: inherit; width: 100%; box-shadow: 0 6px 20px rgba(79,107,255,.3); }
-  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(79,107,255,.45); }
-  .confirm-msg { display: none; background: rgba(46,230,166,.1); border: 1px solid rgba(46,230,166,.35); color: var(--green); padding: 1.1rem; border-radius: 10px; text-align: center; font-size: .9rem; margin-top: 1rem; }
-
-  .blog-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.4rem; }
-  .blog-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all .3s; cursor: pointer; }
-  .blog-card:hover { border-color: var(--border-strong); transform: translateY(-5px); }
-  .blog-thumb { height: 165px; display: flex; align-items: center; justify-content: center; font-size: 3.2rem; }
-  .blog-body { padding: 1.3rem; }
-  .blog-tag { font-size: .73rem; font-weight: 700; color: var(--accent2); text-transform: uppercase; letter-spacing: 1px; margin-bottom: .45rem; }
-  .blog-title { font-size: .96rem; font-weight: 700; line-height: 1.4; margin-bottom: .45rem; }
-  .blog-date { font-size: .76rem; color: var(--muted); }
-
-  @media(max-width:860px){
-    .ai-grid { grid-template-columns: 1fr; }
-    .booking-grid { grid-template-columns: 1fr; }
-    .service-selector { grid-template-columns: 1fr; }
-    .hero { padding: 4rem 1.2rem 3rem; }
-    .stats-bar { gap: 1.6rem; }
-  }
-</style>
+  </script>
 </head>
 <body>
-
-<!-- ═══ HEADER ═══ -->
-<header class="site-header" id="site-header" role="banner">
-  <a class="site-logo" href="/" aria-label="OS SEO — Home">
-    <img src="images/logo.webp" alt="OS SEO — Professional SEO Services" width="100" height="40" loading="eager"
-      onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
-    <span class="logo-text" style="display:none;align-items:center;gap:8px" aria-hidden="true">
-      <span class="logo-dot"></span>ai<span>SEO</span>a
-    </span>
-  </a>
-
-  <nav class="main-nav" aria-label="Primary navigation">
-    <ul>
-      <li><a href="/" data-en="Home" data-ar="الرئيسية">Home</a></li>
-      <li><a href="/about/" data-en="About" data-ar="من نحن">About</a></li>
-
-      <!-- Services Mega Menu -->
-      <li class="nav-dd-li" id="dd-services">
-        <button class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false"
-          aria-controls="mega-services" onclick="toggleMega('dd-services',event)">
-          <span data-en="Services" data-ar="الخدمات">Services</span>
-          <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="mega-menu" id="mega-services" role="menu" aria-label="SEO Services">
-          <div class="mega-services-grid">
-            <a class="mega-item" href="/services/technical-seo-audit/" role="menuitem">
-              <div class="mega-icon" aria-hidden="true">🔍</div>
-              <div class="mega-text">
-                <strong data-en="Technical SEO Audit" data-ar="تدقيق سيو تقني">Technical SEO Audit</strong>
-                <span data-en="Fix crawl errors & Core Web Vitals" data-ar="إصلاح أخطاء الزحف والأداء">Fix crawl errors & Core Web Vitals</span>
-              </div>
-            </a>
-            <a class="mega-item" href="/services/local-seo/" role="menuitem">
-              <div class="mega-icon" aria-hidden="true">📍</div>
-              <div class="mega-text">
-                <strong data-en="Local SEO" data-ar="السيو المحلي">Local SEO</strong>
-                <span data-en="Rank #1 on Google Maps" data-ar="تصدر #1 في خرائط جوجل">Rank #1 on Google Maps</span>
-              </div>
-            </a>
-            <a class="mega-item" href="/services/international-seo/" role="menuitem">
-              <div class="mega-icon" aria-hidden="true">🌍</div>
-              <div class="mega-text">
-                <strong data-en="International SEO" data-ar="السيو الدولي">International SEO</strong>
-                <span data-en="Rank in every global market" data-ar="تصدر في كل الأسواق العالمية">Rank in every global market</span>
-              </div>
-            </a>
-            <a class="mega-item" href="/services/ai-powered-seo/" role="menuitem">
-              <div class="mega-icon" aria-hidden="true">🤖</div>
-              <div class="mega-text">
-                <strong data-en="AI-Powered SEO" data-ar="سيو بالذكاء الاصطناعي">AI-Powered SEO</strong>
-                <span data-en="Scale rankings 10x with AI tools" data-ar="توسّع الترتيب 10 مرات بالذكاء الاصطناعي">Scale rankings 10x with AI tools</span>
-              </div>
-            </a>
-            <a class="mega-item" href="/services/content-strategy/" role="menuitem">
-              <div class="mega-icon" aria-hidden="true">📝</div>
-              <div class="mega-text">
-                <strong data-en="Content Strategy" data-ar="استراتيجية المحتوى">Content Strategy</strong>
-                <span data-en="Build topical authority & rank" data-ar="بناء السلطة الموضوعية والترتيب">Build topical authority & rank</span>
-              </div>
-            </a>
-            <a class="mega-item" href="/services/link-building/" role="menuitem">
-              <div class="mega-icon" aria-hidden="true">🔗</div>
-              <div class="mega-text">
-                <strong data-en="Link Building" data-ar="بناء الروابط">Link Building</strong>
-                <span data-en="White-hat authority backlinks" data-ar="روابط خلفية آمنة وموثوقة">White-hat authority backlinks</span>
-              </div>
-            </a>
-          </div>
-          <div class="mega-footer">
-            <span style="font-size:.78rem;color:var(--muted)" data-en="6 Professional SEO Services" data-ar="6 خدمات SEO احترافية">6 Professional SEO Services</span>
-            <a class="mega-all" href="/services/" role="menuitem" data-en="View All Services →" data-ar="عرض كل الخدمات ←">View All Services →</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Locations Mega Menu -->
-      <li class="nav-dd-li" id="dd-locations">
-        <button class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false"
-          aria-controls="mega-locations" onclick="toggleMega('dd-locations',event)">
-          <span data-en="Locations" data-ar="المواقع">Locations</span>
-          <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="mega-menu" id="mega-locations" role="menu" aria-label="Locations we serve" style="min-width:380px">
-          <p style="font-size:.74rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:.75rem" data-en="Popular Locations" data-ar="الأماكن الشائعة">Popular Locations</p>
-          <div class="mega-locations-grid">
-            <a class="loc-item" href="/locations/united-states/" role="menuitem"><span class="loc-flag">🇺🇸</span><span data-en="United States" data-ar="الولايات المتحدة">United States</span></a>
-            <a class="loc-item" href="/locations/united-kingdom/" role="menuitem"><span class="loc-flag">🇬🇧</span><span data-en="United Kingdom" data-ar="المملكة المتحدة">United Kingdom</span></a>
-            <a class="loc-item" href="/locations/canada/" role="menuitem"><span class="loc-flag">🇨🇦</span><span data-en="Canada" data-ar="كندا">Canada</span></a>
-            <a class="loc-item" href="/locations/australia/" role="menuitem"><span class="loc-flag">🇦🇺</span><span data-en="Australia" data-ar="أستراليا">Australia</span></a>
-            <a class="loc-item" href="/locations/saudi-arabia/" role="menuitem"><span class="loc-flag">🇸🇦</span><span data-en="Saudi Arabia" data-ar="السعودية">Saudi Arabia</span></a>
-            <a class="loc-item" href="/locations/uae/" role="menuitem"><span class="loc-flag">🇦🇪</span><span data-en="UAE" data-ar="الإمارات">UAE</span></a>
-            <a class="loc-item" href="/locations/egypt/" role="menuitem"><span class="loc-flag">🇪🇬</span><span data-en="Egypt" data-ar="مصر">Egypt</span></a>
-          </div>
-          <div class="mega-footer">
-            <span style="font-size:.78rem;color:var(--muted)" data-en="12+ countries served" data-ar="خدمة 12+ دولة">12+ countries served</span>
-            <a class="mega-all" href="/locations/" role="menuitem" data-en="View All Locations →" data-ar="عرض كل المواقع ←">View All Locations →</a>
-          </div>
-        </div>
-      </li>
-
-      <li><a href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a></li>
-      <li><a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a></li>
-      <li><a href="/faq/" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
-      <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="nav-right">
-    <!-- Search -->
-    <button class="nav-search-btn" onclick="toggleSearch()" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">
-      <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    </button>
-
-    <!-- Lang -->
-    <div class="lang-toggle" role="group" aria-label="Language switch">
-      <span class="lang-opt active" data-lang="en" onclick="setLang('en')" tabindex="0" role="button" aria-pressed="true">EN</span>
-      <span class="lang-opt" data-lang="ar" onclick="setLang('ar')" tabindex="0" role="button" aria-pressed="false">AR</span>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="OS SEO home"><img src="/images/logo.svg" alt="OS SEO — More Visibility. More Business." width="174" height="42"></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#industries">Industries</a></li>
+        <li><a href="/locations/">Locations</a></li>
+        <li><a href="/portfolio/">Case Studies</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-switch" type="button" id="langButton" aria-label="Switch language">EN / AR</button>
+      <a class="btn btn-primary nav-audit" href="#contact">Get a Free Audit →</a>
+      <button class="mobile-toggle" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-
-    <!-- CTA -->
-    <a class="nav-cta" href="#booking" data-en="Free Audit" data-ar="تدقيق مجاني">Free Audit</a>
-
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger-btn" onclick="toggleDrawer()"
-      aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-      <span></span><span></span><span></span>
-    </button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="container">
+      <a href="/">Home</a><a href="/#services">Services</a><a href="/#industries">Industries</a><a href="/locations/">Locations</a><a href="/portfolio/">Case Studies</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/#contact">Contact</a>
+    </div>
   </div>
 </header>
 
-
-<!-- ═══ SEARCH OVERLAY ═══ -->
-<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Search" aria-modal="true">
-  <div class="search-box">
-    <input type="search" id="search-input" placeholder="Search services, locations, articles…" aria-label="Search the site" autocomplete="off"/>
-    <button class="search-close" onclick="toggleSearch()" aria-label="Close search">✕</button>
-  </div>
-  <p class="search-hint" data-en="Press Enter to search or Escape to close" data-ar="اضغط Enter للبحث أو Escape للإغلاق">Press Enter to search or Escape to close</p>
-</div>
-
-
-<!-- ═══ MOBILE DRAWER ═══ -->
-<div class="mobile-drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()" aria-hidden="true"></div>
-<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
-  <div class="drawer-header">
-    <a class="site-logo" href="/" onclick="toggleDrawer()" aria-label="OS SEO — Home">
-      <img src="images/logo.webp" alt="OS SEO" width="80" height="32" loading="lazy"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
-      <span class="logo-text" style="display:none;align-items:center;gap:6px;font-size:1.2rem"><span class="logo-dot"></span>OS SEO</span>
-    </a>
-    <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button>
-  </div>
-
-  <a class="drawer-link" href="/" data-en="Home" data-ar="الرئيسية">Home</a>
-  <a class="drawer-link" href="/about/" data-en="About" data-ar="من نحن">About</a>
-
-  <!-- Services accordion -->
-  <div class="drawer-acc" id="dacc-services">
-    <button class="drawer-acc-btn" onclick="toggleDrawerAcc('dacc-services')" aria-expanded="false" aria-controls="dacc-services-content">
-      <span data-en="Services" data-ar="الخدمات">Services</span>
-      <svg class="drawer-acc-chevron" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-    <div class="drawer-acc-content" id="dacc-services-content">
-      <a href="/services/technical-seo-audit/" data-en="🔍 Technical SEO Audit" data-ar="🔍 تدقيق سيو تقني">🔍 Technical SEO Audit</a>
-      <a href="/services/local-seo/" data-en="📍 Local SEO" data-ar="📍 السيو المحلي">📍 Local SEO</a>
-      <a href="/services/international-seo/" data-en="🌍 International SEO" data-ar="🌍 السيو الدولي">🌍 International SEO</a>
-      <a href="/services/ai-powered-seo/" data-en="🤖 AI-Powered SEO" data-ar="🤖 سيو بالذكاء الاصطناعي">🤖 AI-Powered SEO</a>
-      <a href="/services/content-strategy/" data-en="📝 Content Strategy" data-ar="📝 استراتيجية المحتوى">📝 Content Strategy</a>
-      <a href="/services/link-building/" data-en="🔗 Link Building" data-ar="🔗 بناء الروابط">🔗 Link Building</a>
-      <a href="/services/" class="drawer-acc-all" data-en="View All Services →" data-ar="عرض كل الخدمات ←">View All Services →</a>
-    </div>
-  </div>
-
-  <!-- Locations accordion -->
-  <div class="drawer-acc" id="dacc-locations">
-    <button class="drawer-acc-btn" onclick="toggleDrawerAcc('dacc-locations')" aria-expanded="false" aria-controls="dacc-locations-content">
-      <span data-en="Locations" data-ar="المواقع">Locations</span>
-      <svg class="drawer-acc-chevron" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-    <div class="drawer-acc-content" id="dacc-locations-content">
-      <a href="/locations/united-states/" data-en="🇺🇸 United States" data-ar="🇺🇸 الولايات المتحدة">🇺🇸 United States</a>
-      <a href="/locations/united-kingdom/" data-en="🇬🇧 United Kingdom" data-ar="🇬🇧 المملكة المتحدة">🇬🇧 United Kingdom</a>
-      <a href="/locations/canada/" data-en="🇨🇦 Canada" data-ar="🇨🇦 كندا">🇨🇦 Canada</a>
-      <a href="/locations/australia/" data-en="🇦🇺 Australia" data-ar="🇦🇺 أستراليا">🇦🇺 Australia</a>
-      <a href="/locations/saudi-arabia/" data-en="🇸🇦 Saudi Arabia" data-ar="🇸🇦 السعودية">🇸🇦 Saudi Arabia</a>
-      <a href="/locations/uae/" data-en="🇦🇪 UAE" data-ar="🇦🇪 الإمارات">🇦🇪 UAE</a>
-      <a href="/locations/egypt/" data-en="🇪🇬 Egypt" data-ar="🇪🇬 مصر">🇪🇬 Egypt</a>
-      <a href="/locations/" class="drawer-acc-all" data-en="View All Locations →" data-ar="عرض كل المواقع ←">View All Locations →</a>
-    </div>
-  </div>
-
-  <a class="drawer-link" href="/portfolio/" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a>
-  <a class="drawer-link" href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a>
-  <a class="drawer-link" href="/faq/" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a>
-  <a class="drawer-link" href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
-
-  <div class="drawer-lang">
-    <button class="drawer-lang-btn" onclick="setLang('en')" id="drawer-en"
-      style="background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04101f">EN</button>
-    <button class="drawer-lang-btn" onclick="setLang('ar')" id="drawer-ar"
-      style="background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--border)">AR</button>
-  </div>
-
-  <a class="btn-primary" href="#booking" style="margin-top:1rem;text-align:center;display:block"
-    data-en="Get Free SEO Audit" data-ar="احصل على تدقيق مجاني">Get Free SEO Audit</a>
-</nav>
-
-
-
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero-wrapper">
-<div class="hero">
-  <div class="badge"><span class="badge-dot"></span> <span data-en="Available for new clients" data-ar="متاح لعملاء جدد">Available for new clients</span></div>
-  <h1>
-    <span data-en="Rank Higher." data-ar="تصدّر جوجل.">Rank Higher.</span><br>
-    <span data-en="Grow " data-ar="انمُ ">Grow </span><em id="typed-text"></em><span class="typed-cursor"></span> <span data-en="Faster." data-ar="أسرع.">Faster.</span>
-  </h1>
-  <p data-en="I help businesses in Europe, Australia &amp; beyond dominate Google with data-driven SEO strategies that generate real, measurable growth." data-ar="أساعد الشركات في أوروبا وأستراليا والعالم على التصدر في جوجل من خلال استراتيجيات SEO قائمة على البيانات تحقق نمواً حقيقياً وملموساً.">I help businesses in Europe, Australia & beyond dominate Google with data-driven SEO strategies that generate real, measurable growth.</p>
-  <div class="hero-btns">
-    <a class="btn-primary" href="#booking" data-en="Get a Free SEO Audit" data-ar="احصل على تدقيق مجاني">Get a Free SEO Audit</a>
-    <a class="btn-outline" href="portfolio.html" data-en="View Our Work" data-ar="شاهد أعمالنا">View Our Work</a>
-  </div>
-  </div>
-</section>
-
-<!-- ═══════════════ STATS ═══════════════ -->
-<div class="stats-bar">
-  <div class="stat"><div class="stat-num"><span class="val" id="c1">0</span>+</div><div class="stat-label" data-en="Clients Worldwide" data-ar="عملاء حول العالم">Clients Worldwide</div></div>
-  <div class="stat"><div class="stat-num"><span class="val" id="c2">0</span>%</div><div class="stat-label" data-en="Avg. Traffic Increase" data-ar="متوسط نمو الزيارات">Avg. Traffic Increase</div></div>
-  <div class="stat"><div class="stat-num">#<span class="val" id="c3">0</span></div><div class="stat-label" data-en="Google Rankings" data-ar="تصدر نتائج جوجل">Google Rankings</div></div>
-  <div class="stat"><div class="stat-num"><span class="val" id="c4">0</span>+</div><div class="stat-label" data-en="Keywords Ranked" data-ar="كلمات مفتاحية متصدرة">Keywords Ranked</div></div>
-</div>
-
-<!-- ═══════════════ SERVICES ═══════════════ -->
-<section class="section fade-in" id="services">
-  <div class="section-tag" data-en="What We Do" data-ar="ماذا نقدم">What We Do</div>
-  <div class="section-title" data-en="SEO Services That Actually Work" data-ar="خدمات SEO تحقق نتائج فعلية">SEO Services That Actually Work</div>
-  <div class="section-sub" data-en="No fluff. No shortcuts. Just proven strategies that push your website to page 1 and keep it there." data-ar="بدون حشو وبدون اختصارات. فقط استراتيجيات مجرّبة تضع موقعك في الصفحة الأولى وتحافظ عليه هناك.">No fluff. No shortcuts. Just proven strategies that push your website to page 1 and keep it there.</div>
-  <div class="services-grid">
-    <div class="card"><div class="svc-icon">🔍</div><div class="svc-title" data-en="Technical SEO Audit" data-ar="تدقيق SEO تقني">Technical SEO Audit</div><div class="svc-desc" data-en="Deep-dive audits covering Core Web Vitals, crawl errors, indexing & site architecture." data-ar="تدقيق شامل يغطي مؤشرات الأداء الأساسية وأخطاء الفهرسة وبنية الموقع.">Deep-dive audits covering Core Web Vitals, crawl errors, indexing & site architecture.</div><span class="svc-price" data-en="From $299" data-ar="يبدأ من 299$">From $299</span></div>
-    <div class="card"><div class="svc-icon">📝</div><div class="svc-title" data-en="Content Strategy" data-ar="استراتيجية المحتوى">Content Strategy</div><div class="svc-desc" data-en="Keyword research + content plans that attract the right audience and convert them." data-ar="بحث الكلمات المفتاحية وخطط محتوى تجذب الجمهور المناسب وتحوّله لعملاء.">Keyword research + content plans that attract the right audience and convert them.</div><span class="svc-price" data-en="From $199/mo" data-ar="يبدأ من 199$/شهر">From $199/mo</span></div>
-    <div class="card"><div class="svc-icon">🔗</div><div class="svc-title" data-en="Link Building" data-ar="بناء الروابط">Link Building</div><div class="svc-desc" data-en="High-authority backlinks using white-hat methods — sustainable and Google-approved." data-ar="روابط خلفية موثوقة بأساليب آمنة ومستدامة ومقبولة من جوجل.">High-authority backlinks using white-hat methods — sustainable and Google-approved.</div><span class="svc-price" data-en="From $399/mo" data-ar="يبدأ من 399$/شهر">From $399/mo</span></div>
-    <div class="card"><div class="svc-icon">📍</div><div class="svc-title" data-en="Local SEO" data-ar="السيو المحلي">Local SEO</div><div class="svc-desc" data-en="Dominate Google Maps and local search in your target cities across Europe & Australia." data-ar="تصدّر خرائط جوجل والبحث المحلي في مدنك المستهدفة عبر أوروبا وأستراليا.">Dominate Google Maps and local search in your target cities across Europe & Australia.</div><span class="svc-price" data-en="From $249/mo" data-ar="يبدأ من 249$/شهر">From $249/mo</span></div>
-    <div class="card"><div class="svc-icon">🤖</div><div class="svc-title" data-en="AI-Powered SEO" data-ar="سيو بالذكاء الاصطناعي">AI-Powered SEO</div><div class="svc-desc" data-en="Leveraging AI tools to automate audits, generate optimized content & scale results faster." data-ar="استخدام أدوات الذكاء الاصطناعي لأتمتة التدقيق وإنشاء محتوى محسّن وتسريع النتائج.">Leveraging AI tools to automate audits, generate optimized content & scale results faster.</div><span class="svc-price" data-en="From $499/mo" data-ar="يبدأ من 499$/شهر">From $499/mo</span></div>
-    <div class="card"><div class="svc-icon">🌍</div><div class="svc-title" data-en="International SEO" data-ar="السيو الدولي">International SEO</div><div class="svc-desc" data-en="Hreflang, geo-targeting & multilingual optimization for global market expansion." data-ar="إعداد Hreflang والاستهداف الجغرافي والتحسين متعدد اللغات للتوسع العالمي.">Hreflang, geo-targeting & multilingual optimization for global market expansion.</div><span class="svc-price" data-en="From $599/mo" data-ar="يبدأ من 599$/شهر">From $599/mo</span></div>
-  </div>
-</section>
-
-<!-- ═══════════════ AI & SEO ═══════════════ -->
-<section class="section fade-in" id="ai-seo" style="padding-top:0">
-  <div class="ai-section">
-    <div class="ai-grid">
-      <div>
-        <div class="section-tag">AI + SEO</div>
-        <div class="section-title" style="font-size:1.8rem" data-en="The Future of SEO Is Already Here" data-ar="مستقبل السيو موجود الآن">The Future of SEO Is Already Here</div>
-        <div class="ai-features">
-          <div class="ai-feature"><span class="ai-dot"></span><div><strong data-en="AI Content at Scale" data-ar="محتوى ذكي بمقياس واسع">AI Content at Scale</strong><p data-en="Generate SEO-optimized content 10x faster using advanced AI tools, without losing quality." data-ar="إنشاء محتوى محسّن لمحركات البحث أسرع 10 مرات باستخدام أدوات الذكاء الاصطناعي المتقدمة.">Generate SEO-optimized content 10x faster using advanced AI tools, without losing quality.</p></div></div>
-          <div class="ai-feature"><span class="ai-dot"></span><div><strong data-en="Automated Technical Audits" data-ar="تدقيق تقني تلقائي">Automated Technical Audits</strong><p data-en="AI-powered crawlers detect issues instantly — errors fixed before they impact rankings." data-ar="زواحف بالذكاء الاصطناعي تكشف المشاكل فوراً قبل أن تؤثر على ترتيبك.">AI-powered crawlers detect issues instantly — errors fixed before they impact rankings.</p></div></div>
-          <div class="ai-feature"><span class="ai-dot"></span><div><strong data-en="Predictive Keyword Research" data-ar="بحث تنبؤي للكلمات المفتاحية">Predictive Keyword Research</strong><p data-en="AI models predict keyword trends before they peak — giving you first-mover advantage." data-ar="نماذج ذكاء اصطناعي تتوقع اتجاهات الكلمات المفتاحية قبل ذروتها لتمنحك أفضلية السبق.">AI models predict keyword trends before they peak — giving you first-mover advantage.</p></div></div>
-          <div class="ai-feature"><span class="ai-dot"></span><div><strong data-en="Smart Competitor Analysis" data-ar="تحليل ذكي للمنافسين">Smart Competitor Analysis</strong><p data-en="Real-time competitor monitoring with AI-generated gap reports and action plans." data-ar="مراقبة لحظية للمنافسين مع تقارير فجوات وخطط عمل مولّدة بالذكاء الاصطناعي.">Real-time competitor monitoring with AI-generated gap reports and action plans.</p></div></div>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-en="SEO FOR CONTRACTORS & LOCAL BUSINESSES" data-ar="SEO للمقاولين والشركات المحلية">SEO FOR CONTRACTORS & LOCAL BUSINESSES</span>
+        <h1 data-en-html="Get More Calls.<br><span class='text-gold'>Win More Business.</span>" data-ar-html="مكالمات أكثر.<br><span class='text-gold'>أعمال أكثر.</span>">Get More Calls.<br><span class="text-gold">Win More Business.</span></h1>
+        <p data-en="I help roofing, paving, home-service and local businesses get found on Google and turn search visibility into real enquiries — with practical SEO built around your market." data-ar="أساعد شركات الأسقف والرصف والخدمات المنزلية والشركات المحلية على الظهور في جوجل وتحويل الزيارات إلى استفسارات حقيقية من خلال SEO عملي مبني على سوقك.">I help roofing, paving, home-service and local businesses get found on Google and turn search visibility into real enquiries — with practical SEO built around your market.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact" data-en="Get a Free SEO Audit →" data-ar="احصل على تدقيق SEO مجاني ←">Get a Free SEO Audit →</a>
+          <a class="btn btn-outline" href="/portfolio/" data-en="See My Work" data-ar="شاهد أعمالي">See My Work</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item"><div class="proof-icon">↗</div><div><strong data-en="Local visibility" data-ar="ظهور محلي">Local visibility</strong><span data-en="Reach customers in your service areas" data-ar="الوصول للعملاء في مناطق خدمتك">Reach customers in your service areas</span></div></div>
+          <div class="proof-item"><div class="proof-icon">☎</div><div><strong data-en="More enquiries" data-ar="استفسارات أكثر">More enquiries</strong><span data-en="Focus on calls, forms and booked work" data-ar="التركيز على المكالمات والنماذج والحجوزات">Focus on calls, forms and booked work</span></div></div>
+          <div class="proof-item"><div class="proof-icon">✓</div><div><strong data-en="Clear strategy" data-ar="استراتيجية واضحة">Clear strategy</strong><span data-en="No jargon. Priorities you can act on." data-ar="بدون تعقيد. أولويات قابلة للتنفيذ.">No jargon. Priorities you can act on.</span></div></div>
         </div>
       </div>
-      <div class="ai-visual">
-        <span class="comment"># AI SEO Audit Report</span><br>
-        ✅ Core Web Vitals: <span style="color:#2EE6A6">PASSED</span><br>
-        ✅ Mobile Score: <span style="color:#2EE6A6">98/100</span><br>
-        ⚡ Keywords Found: <span style="color:#FBBF24">1,240</span><br>
-        🔗 Backlinks: <span style="color:#00E5FF">+340 this month</span><br>
-        📈 Ranking Velocity: <span style="color:#2EE6A6">↑ 34%</span><br>
-        🤖 AI Content Score: <span style="color:#2EE6A6">A+</span><br><br>
-        <span class="comment"># Recommendations:</span><br>
-        → Fix 3 crawl errors<br>
-        → Target 12 new keywords<br>
-        → Build 8 authority links<br>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ RESULTS ═══════════════ -->
-<section class="stripe fade-in">
-  <div class="section" id="results" style="padding-top:3.8rem;padding-bottom:3.8rem">
-    <div class="section-tag" data-en="Real Results" data-ar="نتائج حقيقية">Real Results</div>
-    <div class="section-title" data-en="Numbers That Speak" data-ar="أرقام تتحدث عن نفسها">Numbers That Speak</div>
-    <div class="results-grid">
-      <div class="result-card"><div class="result-num">+340%</div><div class="result-label" data-en="Organic Traffic — E-commerce UK" data-ar="زيارات عضوية — متجر بريطاني">Organic Traffic — E-commerce UK</div></div>
-      <div class="result-card"><div class="result-num">#1</div><div class="result-label" data-en="Google Rankings for Competitive KWs" data-ar="تصدر جوجل لكلمات تنافسية">Google Rankings for Competitive KWs</div></div>
-      <div class="result-card"><div class="result-num">4.2x</div><div class="result-label" data-en="ROI from SEO Investment" data-ar="عائد الاستثمار في السيو">ROI from SEO Investment</div></div>
-      <div class="result-card"><div class="result-num">6 mo</div><div class="result-label" data-en="Average Time to Page 1" data-ar="متوسط الوقت للصفحة الأولى">Average Time to Page 1</div></div>
-    </div>
-    <div class="testimonials">
-      <div class="testi"><div class="stars">★★★★★</div><div class="testi-text" data-en='"Our organic traffic tripled in 5 months. We now rank #1 for our main keywords in Australia."' data-ar='"تضاعفت زياراتنا العضوية 3 مرات في 5 أشهر. الآن نتصدر جوجل في أستراليا."'>"Our organic traffic tripled in 5 months. We now rank #1 for our main keywords in Australia."</div><div class="testi-author"><div class="avatar" style="background:rgba(79,107,255,.2);color:#7C93FF">JM</div><div><div style="font-weight:700;font-size:.88rem">James M.</div><div style="color:var(--muted);font-size:.78rem" data-en="CEO, Melbourne SaaS Co." data-ar="الرئيس التنفيذي، شركة ملبورن">CEO, Melbourne SaaS Co.</div></div></div></div>
-      <div class="testi"><div class="stars">★★★★★</div><div class="testi-text" data-en='"Fixed years of technical issues in weeks. Our European rankings shot up immediately."' data-ar='"تم حل سنوات من المشاكل التقنية في أسابيع. تصدرنا فوراً في أوروبا."'>"Fixed years of technical issues in weeks. Our European rankings shot up immediately."</div><div class="testi-author"><div class="avatar" style="background:rgba(0,229,255,.2);color:#00E5FF">SP</div><div><div style="font-weight:700;font-size:.88rem">Sophie P.</div><div style="color:var(--muted);font-size:.78rem" data-en="Marketing Dir., Germany" data-ar="مديرة تسويق، ألمانيا">Marketing Dir., Germany</div></div></div></div>
-      <div class="testi"><div class="stars">★★★★★</div><div class="testi-text" data-en='"We grew from 2k to 18k monthly visitors in under a year. Exceptional work."' data-ar='"نمت زياراتنا من 2 إلى 18 ألف زائر شهرياً في أقل من سنة. عمل استثنائي."'>"We grew from 2k to 18k monthly visitors in under a year. Exceptional work."</div><div class="testi-author"><div class="avatar" style="background:rgba(168,85,247,.2);color:#C084FC">RT</div><div><div style="font-weight:700;font-size:.88rem">Reza T.</div><div style="color:var(--muted);font-size:.78rem" data-en="Founder, London Agency" data-ar="مؤسس، وكالة لندن">Founder, London Agency</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ PROCESS ═══════════════ -->
-<section class="section fade-in" id="process">
-  <div class="section-tag" data-en="How It Works" data-ar="كيف نعمل">How It Works</div>
-  <div class="section-title" data-en="A Clear, Proven Process" data-ar="منهجية واضحة ومجرّبة">A Clear, Proven Process</div>
-  <div class="section-sub" data-en="Four structured steps — from audit to scale — designed to maximize your results." data-ar="أربع خطوات منظمة — من التدقيق إلى التوسع — مصممة لتعظيم نتائجك.">Four structured steps — from audit to scale — designed to maximize your results.</div>
-  <div class="process-steps">
-    <div class="step"><div class="step-num">01</div><div><h3 data-en="Free SEO Audit" data-ar="تدقيق سيو مجاني">Free SEO Audit</h3><p data-en="I analyze your website, competitors &amp; keyword opportunities — giving you a clear picture of where you stand." data-ar="أحلل موقعك ومنافسيك وفرص الكلمات المفتاحية لأعطيك صورة واضحة عن موقعك الحالي.">I analyze your website, competitors & keyword opportunities — giving you a clear picture of where you stand.</p></div></div>
-    <div class="step"><div class="step-num">02</div><div><h3 data-en="Custom Strategy" data-ar="استراتيجية مخصصة">Custom Strategy</h3><p data-en="A tailored roadmap covering technical fixes, content plan &amp; link strategy — built for your specific market." data-ar="خارطة طريق مخصصة تشمل الإصلاحات التقنية وخطة المحتوى واستراتيجية الروابط، مبنية لسوقك.">A tailored roadmap covering technical fixes, content plan & link strategy — built for your specific market.</p></div></div>
-    <div class="step"><div class="step-num">03</div><div><h3 data-en="Implementation" data-ar="التنفيذ">Implementation</h3><p data-en="Precision execution — on-page optimization, technical improvements, content creation &amp; outreach." data-ar="تنفيذ دقيق يشمل تحسين الصفحات والتحسينات التقنية وإنشاء المحتوى والتواصل الخارجي.">Precision execution — on-page optimization, technical improvements, content creation & outreach.</p></div></div>
-    <div class="step"><div class="step-num">04</div><div><h3 data-en="Track, Report &amp; Scale" data-ar="التتبع والتقارير والتوسع">Track, Report & Scale</h3><p data-en="Monthly transparent reports with ranking movements, traffic growth &amp; ROI. We double down on what works." data-ar="تقارير شهرية شفافة تعرض حركة الترتيب ونمو الزيارات وعائد الاستثمار، ونضاعف الجهد على ما ينجح.">Monthly transparent reports with ranking movements, traffic growth & ROI. We double down on what works.</p></div></div>
-  </div>
-</section>
-
-<!-- ═══════════════ BOOKING SYSTEM ═══════════════ -->
-<section class="booking-section fade-in" id="booking">
-  <div class="booking-inner">
-    <div class="section-tag" data-en="Apply for a Service" data-ar="قدّم على خدمة">Apply for a Service</div>
-    <div class="section-title" data-en="Request Your SEO Service" data-ar="اطلب خدمة السيو الخاصة بك">Request Your SEO Service</div>
-    <div class="section-sub" data-en="Select a service, fill in your details &amp; submit. You'll receive a confirmation email with next steps — no commitment required." data-ar="اختر خدمة، أدخل بياناتك وأرسل الطلب. ستصلك رسالة تأكيد بالخطوات التالية — بدون أي التزام.">Select a service, fill in your details & submit. You'll receive a confirmation email with next steps — no commitment required.</div>
-    <div class="booking-grid">
-      <div>
-        <p style="font-size:.85rem;font-weight:700;color:var(--muted);margin-bottom:.85rem;text-transform:uppercase;letter-spacing:1px" data-en="1. Choose a Service" data-ar="١. اختر خدمة">1. Choose a Service</p>
-        <div class="service-selector" id="service-selector">
-          <div class="service-opt selected" data-price="0" data-service="Free SEO Audit" onclick="selectService(this)">
-            <h4 data-en="Free Audit" data-ar="تدقيق مجاني">Free Audit</h4><div class="price" data-en="$0 — Free" data-ar="0$ — مجاني">$0 — Free</div><div class="desc" data-en="Full website SEO review" data-ar="مراجعة شاملة لسيو موقعك">Full website SEO review</div>
-          </div>
-          <div class="service-opt" data-price="299" data-service="Technical SEO" onclick="selectService(this)">
-            <h4 data-en="Technical SEO" data-ar="سيو تقني">Technical SEO</h4><div class="price" data-en="From $299" data-ar="يبدأ من 299$">From $299</div><div class="desc" data-en="One-time full audit + fixes" data-ar="تدقيق شامل لمرة واحدة + إصلاحات">One-time full audit + fixes</div>
-          </div>
-          <div class="service-opt" data-price="399" data-service="Link Building" onclick="selectService(this)">
-            <h4 data-en="Link Building" data-ar="بناء روابط">Link Building</h4><div class="price" data-en="From $399/mo" data-ar="يبدأ من 399$/شهر">From $399/mo</div><div class="desc" data-en="Authority backlinks monthly" data-ar="روابط موثوقة شهرياً">Authority backlinks monthly</div>
-          </div>
-          <div class="service-opt" data-price="199" data-service="Content Strategy" onclick="selectService(this)">
-            <h4 data-en="Content Strategy" data-ar="استراتيجية محتوى">Content Strategy</h4><div class="price" data-en="From $199/mo" data-ar="يبدأ من 199$/شهر">From $199/mo</div><div class="desc" data-en="Keywords + content plan" data-ar="كلمات مفتاحية + خطة محتوى">Keywords + content plan</div>
-          </div>
-          <div class="service-opt" data-price="499" data-service="AI-Powered SEO" onclick="selectService(this)">
-            <h4 data-en="AI SEO Package" data-ar="باقة سيو بالذكاء الاصطناعي">AI SEO Package</h4><div class="price" data-en="From $499/mo" data-ar="يبدأ من 499$/شهر">From $499/mo</div><div class="desc" data-en="AI tools + full management" data-ar="أدوات ذكاء اصطناعي + إدارة كاملة">AI tools + full management</div>
-          </div>
-          <div class="service-opt" data-price="599" data-service="Full SEO Management" onclick="selectService(this)">
-            <h4 data-en="Full Management" data-ar="إدارة كاملة">Full Management</h4><div class="price" data-en="From $599/mo" data-ar="يبدأ من 599$/شهر">From $599/mo</div><div class="desc" data-en="Everything included" data-ar="كل شيء مشمول">Everything included</div>
+      <div class="hero-visual" aria-label="Google local search growth illustration">
+        <div class="search-board">
+          <div class="search-box-ui"><span class="g-dot"></span><span>roofing near me</span><span class="search-spacer">⌕</span></div>
+          <div class="business-result">
+            <div class="result-top"><div class="result-logo">OS</div><div><strong>Your Business</strong><div class="stars">★★★★★ <span style="color:#82909c">Local result</span></div></div><div class="call-badge">☎</div></div>
+            <div class="ghost-lines"><span></span><span></span><span></span></div>
           </div>
         </div>
-        <div class="price-preview" style="margin-top:1.1rem">
-          <h4 id="preview-label" data-en="Selected Service" data-ar="الخدمة المختارة">Selected Service</h4>
-          <div class="total" id="preview-price" data-en="Free" data-ar="مجاني">Free</div>
-          <div class="note" id="preview-note" data-en="✓ No commitment — we'll review your website first" data-ar="✓ بدون أي التزام — سنراجع موقعك أولاً">✓ No commitment — we'll review your website first</div>
-        </div>
-        <div style="margin-top:1.6rem">
-          <p style="font-size:.85rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.85rem" data-en="Working Hours" data-ar="ساعات العمل">Working Hours</p>
-          <div id="open-status" style="margin-bottom:.8rem"></div>
-          <div class="hours-grid" id="hours-grid"></div>
-        </div>
-      </div>
-      <div>
-        <p style="font-size:.85rem;font-weight:700;color:var(--muted);margin-bottom:.85rem;text-transform:uppercase;letter-spacing:1px" data-en="2. Your Details" data-ar="٢. بياناتك">2. Your Details</p>
-        <form class="booking-form" onsubmit="return false;">
-          <input type="text" id="b-name" data-en-placeholder="Full Name *" data-ar-placeholder="الاسم الكامل *" placeholder="Full Name *"/>
-          <input type="email" id="b-email" data-en-placeholder="Email Address *" data-ar-placeholder="البريد الإلكتروني *" placeholder="Email Address *"/>
-          <input type="text" id="b-website" data-en-placeholder="Your Website URL *" data-ar-placeholder="رابط موقعك *" placeholder="Your Website URL *"/>
-          <input type="text" id="b-country" data-en-placeholder="Country (UK, AU, DE, SA...)" data-ar-placeholder="الدولة (السعودية، الإمارات...)" placeholder="Country (UK, AU, DE, SA...)"/>
-          <select id="b-budget">
-            <option value="" disabled selected data-en="Monthly Budget Range" data-ar="نطاق الميزانية الشهرية">Monthly Budget Range</option>
-            <option data-en="Under $500/mo" data-ar="أقل من 500$/شهر">Under $500/mo</option>
-            <option data-en="$500 – $1,000/mo" data-ar="500$ – 1000$/شهر">$500 – $1,000/mo</option>
-            <option data-en="$1,000 – $3,000/mo" data-ar="1000$ – 3000$/شهر">$1,000 – $3,000/mo</option>
-            <option data-en="$3,000+/mo" data-ar="أكثر من 3000$/شهر">$3,000+/mo</option>
-          </select>
-          <textarea id="b-msg" data-en-placeholder="Tell me about your goals, current challenges, target market..." data-ar-placeholder="أخبرني عن أهدافك وتحدياتك الحالية والسوق المستهدف..." placeholder="Tell me about your goals, current challenges, target market..."></textarea>
-          <button type="button" class="submit-btn" onclick="submitBooking()" data-en="Submit &amp; Get Confirmation →" data-ar="إرسال والحصول على تأكيد ←">Submit & Get Confirmation →</button>
-          <div class="confirm-msg" id="confirm-msg">
-            <span data-en="✅ Thank you! Your request has been received." data-ar="✅ شكراً لك! تم استلام طلبك.">✅ Thank you! Your request has been received.</span><br>
-            <strong data-en="Please allow 24–48 hours for us to review your website." data-ar="يرجى الانتظار 24-48 ساعة لمراجعة موقعك.">Please allow 24–48 hours for us to review your website.</strong><br>
-            <span data-en="A confirmation email is on its way." data-ar="رسالة تأكيد في طريقها إليك.">A confirmation email is on its way.</span>
-          </div>
-        </form>
+        <div class="growth-card"><small>Search visibility</small><strong>Growing ↑</strong><span style="font-size:.74rem;color:#6d7a87">Built around valuable local searches.</span><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="omar-card"><img src="/images/omar-photo.jpeg" alt="Omar Salah, SEO specialist" width="48" height="48"><div><strong>Omar Salah</strong><span>SEO Specialist • OS SEO</span></div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══════════════ BLOG PREVIEW ═══════════════ -->
-<section class="section fade-in" id="blog-preview">
-  <div class="section-tag" data-en="From the Blog" data-ar="من المدونة">From the Blog</div>
-  <div class="section-title" data-en="Latest SEO Insights" data-ar="آخر رؤى السيو">Latest SEO Insights</div>
-  <div class="section-sub" data-en="Tips, strategies &amp; case studies to help you grow your organic traffic." data-ar="نصائح واستراتيجيات ودراسات حالة تساعدك على نمو زياراتك العضوية.">Tips, strategies & case studies to help you grow your organic traffic.</div>
-  <div class="blog-grid">
-    <a class="blog-card" href="blog.html">
-      <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(79,107,255,.2),rgba(0,229,255,.12))">🤖</div>
-      <div class="blog-body"><div class="blog-tag" data-en="AI &amp; SEO" data-ar="الذكاء الاصطناعي والسيو">AI & SEO</div><div class="blog-title" data-en="How AI is Changing SEO in 2025 — What You Need to Know" data-ar="كيف يغيّر الذكاء الاصطناعي السيو في 2025">How AI is Changing SEO in 2025 — What You Need to Know</div><div class="blog-date" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div></div>
-    </a>
-    <a class="blog-card" href="blog.html">
-      <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(46,230,166,.15),rgba(0,229,255,.1))">🔗</div>
-      <div class="blog-body"><div class="blog-tag" data-en="Link Building" data-ar="بناء الروابط">Link Building</div><div class="blog-title" data-en="10 White-Hat Link Building Strategies That Still Work in 2025" data-ar="10 استراتيجيات لبناء الروابط لا تزال فعّالة في 2025">10 White-Hat Link Building Strategies That Still Work in 2025</div><div class="blog-date" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div></div>
-    </a>
-    <a class="blog-card" href="blog.html">
-      <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(79,107,255,.1))">📊</div>
-      <div class="blog-body"><div class="blog-tag" data-en="Technical SEO" data-ar="سيو تقني">Technical SEO</div><div class="blog-title" data-en="Core Web Vitals 2025: The Complete Guide to Passing Google's Test" data-ar="مؤشرات الأداء الأساسية 2025: الدليل الكامل">Core Web Vitals 2025: The Complete Guide to Passing Google's Test</div><div class="blog-date" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div></div>
-    </a>
-  </div>
-  <div style="text-align:center;margin-top:2.2rem"><a class="btn-outline" href="blog.html" data-en="View All Posts →" data-ar="عرض جميع المقالات ←">View All Posts →</a></div>
-</section>
-
-<!-- ═══ NEWSLETTER ═══ -->
-<section class="newsletter-section" aria-labelledby="newsletter-heading">
-  <div class="newsletter-inner">
-    <div class="section-tag" style="justify-content:center;margin-bottom:.5rem" data-en="Stay Updated" data-ar="ابقَ على اطلاع">Stay Updated</div>
-    <h2 id="newsletter-heading" data-en="Get SEO Tips & Strategy Updates" data-ar="احصل على نصائح SEO وتحديثات الاستراتيجية">Get SEO Tips & Strategy Updates</h2>
-    <p data-en="Join 500+ business owners getting weekly SEO insights, algorithm updates and growth strategies — directly to their inbox." data-ar="انضم إلى أكثر من 500 صاحب عمل يحصلون على رؤى SEO أسبوعية وتحديثات الخوارزمية واستراتيجيات النمو مباشرة في بريدهم.">Join 500+ business owners getting weekly SEO insights, algorithm updates and growth strategies — directly to their inbox.</p>
-    <div class="newsletter-form">
-      <input type="email" id="nl-email" placeholder="Your email address" aria-label="Email address for newsletter"
-        data-en-placeholder="Your email address" data-ar-placeholder="بريدك الإلكتروني"/>
-      <button onclick="subscribeNewsletter()" data-en="Subscribe" data-ar="اشترك">Subscribe</button>
+  <div class="trust-strip">
+    <div class="container trust-inner">
+      <span class="trust-label" data-en="Built for service businesses that need leads — not vanity metrics." data-ar="مبني للشركات التي تحتاج عملاء محتملين — وليس أرقامًا شكلية.">Built for service businesses that need leads — not vanity metrics.</span>
+      <span class="trust-pill" data-en="Contractor SEO experience" data-ar="خبرة SEO للمقاولين">Contractor SEO experience</span>
+      <span class="trust-pill" data-en="Local & technical SEO" data-ar="SEO محلي وتقني">Local & technical SEO</span>
+      <span class="trust-pill" data-en="Transparent reporting" data-ar="تقارير واضحة">Transparent reporting</span>
     </div>
-    <div class="newsletter-success" id="nl-success">✅ <span data-en="You're on the list! Check your inbox." data-ar="تم تسجيلك! تحقق من بريدك.">You're on the list! Check your inbox.</span></div>
   </div>
-</section>
 
-
-<!-- ═══ FOOTER ═══ -->
-<footer class="site-footer" id="contact" role="contentinfo">
-  <div class="footer-main">
-
-    <!-- Col 1: Brand -->
-    <div class="footer-brand">
-      <div class="site-logo">
-        <img src="images/logo.webp" alt="OS SEO logo" width="100" height="40" loading="lazy"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
-        <span class="logo-text" style="display:none;align-items:center;gap:8px"><span class="logo-dot"></span>ai<span style="color:var(--accent2)">SEO</span>a</span>
-      </div>
-      <p data-en="Professional SEO specialist helping businesses across Europe, Australia & the Arab world rank higher on Google and grow organic revenue." data-ar="متخصص SEO محترف يساعد الشركات في أوروبا وأستراليا والعالم العربي على التصدر في جوجل وتنمية إيراداتهم العضوية.">Professional SEO specialist helping businesses across Europe, Australia & the Arab world rank higher on Google and grow organic revenue.</p>
-      <p class="footer-mission" data-en="Mission: Make world-class SEO accessible to every business, in every language." data-ar="المهمة: جعل SEO الاحترافي في متناول كل شركة وبكل لغة.">Mission: Make world-class SEO accessible to every business, in every language.</p>
-      <div class="footer-social">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="OS SEO on LinkedIn">in</a>
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="OS SEO on X (Twitter)">𝕏</a>
-        <a href="mailto:omar@seowithomar.com" aria-label="Email OS SEO">✉</a>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-en="SERVICES" data-ar="الخدمات">SERVICES</span><h2 data-en-html="Everything You Need to <span class='text-gold'>Grow From Search.</span>" data-ar-html="كل ما تحتاجه <span class='text-gold'>للنمو من البحث.</span>">Everything You Need to <span class="text-gold">Grow From Search.</span></h2><p data-en="A focused SEO system that improves visibility, strengthens your website and turns more searches into enquiries." data-ar="نظام SEO مركز يحسن ظهورك ويقوي موقعك ويحول المزيد من عمليات البحث إلى استفسارات.">A focused SEO system that improves visibility, strengthens your website and turns more searches into enquiries.</p></div><a class="btn btn-outline" href="/services/">View All Services →</a></div>
+      <div class="card-grid">
+        <article class="service-card"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></svg></div><h3>Local SEO</h3><p data-en="Improve Google Maps and local organic visibility in the service areas that matter most." data-ar="تحسين ظهور خرائط جوجل والنتائج المحلية في أهم مناطق خدمتك.">Improve Google Maps and local organic visibility in the service areas that matter most.</p><a class="link-arrow" href="/services/local-seo/">Learn more →</a></article>
+        <article class="service-card"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Technical SEO</h3><p data-en="Fix crawl, indexing, structure and performance issues that hold valuable pages back." data-ar="إصلاح مشاكل الزحف والفهرسة والبنية والأداء التي تعيق صفحاتك المهمة.">Fix crawl, indexing, structure and performance issues that hold valuable pages back.</p><a class="link-arrow" href="/services/technical-seo-audit/">Learn more →</a></article>
+        <article class="service-card"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M5 19h14M7 16V9m5 7V5m5 11v-4"/></svg></div><h3>Content Strategy</h3><p data-en="Map services, locations and search intent into useful pages that support rankings and sales." data-ar="تحويل الخدمات والمناطق ونية البحث إلى صفحات مفيدة تدعم الترتيب والمبيعات.">Map services, locations and search intent into useful pages that support rankings and sales.</p><a class="link-arrow" href="/services/content-strategy/">Learn more →</a></article>
+        <article class="service-card"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1"/></svg></div><h3>Link Building</h3><p data-en="Build relevant authority through practical white-hat links, citations and digital mentions." data-ar="بناء سلطة ذات صلة من خلال روابط آمنة واستشهادات وذكر رقمي حقيقي.">Build relevant authority through practical white-hat links, citations and digital mentions.</p><a class="link-arrow" href="/services/link-building/">Learn more →</a></article>
       </div>
     </div>
+  </section>
 
-    <!-- Col 2: Services -->
-    <nav class="footer-col" aria-label="SEO Services">
-      <h3 data-en="Services" data-ar="الخدمات">Services</h3>
-      <a href="/services/technical-seo-audit/" data-en="Technical SEO Audit" data-ar="تدقيق سيو تقني">Technical SEO Audit</a>
-      <a href="/services/local-seo/" data-en="Local SEO" data-ar="السيو المحلي">Local SEO</a>
-      <a href="/services/international-seo/" data-en="International SEO" data-ar="السيو الدولي">International SEO</a>
-      <a href="/services/ai-powered-seo/" data-en="AI-Powered SEO" data-ar="سيو بالذكاء الاصطناعي">AI-Powered SEO</a>
-      <a href="/services/content-strategy/" data-en="Content Strategy" data-ar="استراتيجية المحتوى">Content Strategy</a>
-      <a href="/services/link-building/" data-en="Link Building" data-ar="بناء الروابط">Link Building</a>
-      <a href="/services/" class="fc-all" data-en="View All Services →" data-ar="عرض كل الخدمات ←">View All Services →</a>
-    </nav>
+  <section class="section alt" id="industries">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-en="INDUSTRIES" data-ar="القطاعات">INDUSTRIES</span><h2 data-en-html="SEO Built Around <span class='text-gold'>High-Value Local Services.</span>" data-ar-html="SEO مبني حول <span class='text-gold'>الخدمات المحلية عالية القيمة.</span>">SEO Built Around <span class="text-gold">High-Value Local Services.</span></h2><p data-en="My strongest hands-on experience is with contractor and local-service websites where rankings need to turn into calls, quote requests and booked work." data-ar="أقوى خبرتي العملية مع مواقع المقاولين والخدمات المحلية حيث يجب أن يتحول الترتيب إلى مكالمات وطلبات عروض وحجوزات.">My strongest hands-on experience is with contractor and local-service websites where rankings need to turn into calls, quote requests and booked work.</p></div></div>
+      <div class="industries-grid">
+        <article class="industry-card"><div class="industry-art roof-art"></div><div class="industry-body"><h3>Roofing SEO</h3><p>Local rankings, roof repair/service pages and service-area growth.</p></div></article>
+        <article class="industry-card"><div class="industry-art pave-art"></div><div class="industry-body"><h3>Paving & Driveways</h3><p>Service + location structures built around commercial local searches.</p></div></article>
+        <article class="industry-card"><div class="industry-art land-art"></div><div class="industry-body"><h3>Landscaping SEO</h3><p>Local content architecture for landscaping and outdoor services.</p></div></article>
+        <article class="industry-card"><div class="industry-art home-art"></div><div class="industry-body"><h3>Home Services</h3><p>SEO strategy for local home-improvement and property-service businesses.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-    <!-- Col 3: Locations -->
-    <nav class="footer-col" aria-label="Locations we serve">
-      <h3 data-en="Locations" data-ar="المواقع">Locations</h3>
-      <a href="/locations/united-states/" data-en="United States" data-ar="الولايات المتحدة">United States</a>
-      <a href="/locations/united-kingdom/" data-en="United Kingdom" data-ar="المملكة المتحدة">United Kingdom</a>
-      <a href="/locations/canada/" data-en="Canada" data-ar="كندا">Canada</a>
-      <a href="/locations/australia/" data-en="Australia" data-ar="أستراليا">Australia</a>
-      <a href="/locations/saudi-arabia/" data-en="Saudi Arabia" data-ar="السعودية">Saudi Arabia</a>
-      <a href="/locations/uae/" data-en="UAE" data-ar="الإمارات">UAE</a>
-      <a href="/locations/egypt/" data-en="Egypt" data-ar="مصر">Egypt</a>
-      <a href="/locations/" class="fc-all" data-en="View All Locations →" data-ar="عرض كل المواقع ←">View All Locations →</a>
-    </nav>
+  <section class="section" id="locations">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-en="LOCATIONS" data-ar="الدول">LOCATIONS</span><h2 data-en-html="Local SEO Across <span class='text-gold'>Key Markets.</span>" data-ar-html="SEO محلي في <span class='text-gold'>أسواق رئيسية.</span>">Local SEO Across <span class="text-gold">Key Markets.</span></h2><p data-en="Country and city strategies are built around how people actually search in each market — not copy-and-paste location pages." data-ar="استراتيجيات الدول والمدن مبنية على طريقة البحث الفعلية في كل سوق — وليس نسخ صفحات المواقع.">Country and city strategies are built around how people actually search in each market — not copy-and-paste location pages.</p></div><a class="btn btn-outline" href="/locations/">View All Locations →</a></div>
+      <div class="locations-grid">
+        <article class="location-card"><div class="flag">🇮🇪</div><h3>Ireland</h3><p>Contractor and local SEO opportunities across Dublin, Wexford, Cork and beyond.</p><a href="/locations/ireland/" aria-label="SEO services in Ireland"></a><span class="arrow-circle">→</span></article>
+        <article class="location-card"><div class="flag">🇬🇧</div><h3>United Kingdom</h3><p>Local SEO strategies for service businesses in competitive UK markets.</p><a href="/locations/united-kingdom/" aria-label="SEO services in the United Kingdom"></a><span class="arrow-circle">→</span></article>
+        <article class="location-card"><div class="flag">🇨🇦</div><h3>Canada</h3><p>Country and city SEO structures for Canadian local businesses.</p><a href="/locations/canada/" aria-label="SEO services in Canada"></a><span class="arrow-circle">→</span></article>
+        <article class="location-card"><div class="flag">🇦🇺</div><h3>Australia</h3><p>Search growth for local service businesses across major Australian markets.</p><a href="/locations/australia/" aria-label="SEO services in Australia"></a><span class="arrow-circle">→</span></article>
+      </div>
+    </div>
+  </section>
 
-    <!-- Col 4: Resources + Contact -->
-    <div class="footer-col">
-      <h3 data-en="Resources" data-ar="الموارد">Resources</h3>
-      <a href="/about/" data-en="About Omar Salah" data-ar="عن عمر صلاح">About Omar Salah</a>
-      <a href="/blog/" data-en="SEO Blog" data-ar="مدونة SEO">SEO Blog</a>
-      <a href="/portfolio/" data-en="Case Studies" data-ar="دراسات الحالة">Case Studies</a>
-      <a href="/faq/" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a>
-      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
-      <a href="/privacy/" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
-      <a href="/sitemap.xml" data-en="Sitemap" data-ar="خريطة الموقع">Sitemap</a>
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-en="PROCESS" data-ar="طريقة العمل">PROCESS</span><h2 data-en-html="Simple Process. <span class='text-gold'>Commercial Priorities.</span>" data-ar-html="خطوات بسيطة. <span class='text-gold'>أولويات تجارية.</span>">Simple Process. <span class="text-gold">Commercial Priorities.</span></h2></div></div>
+      <div class="process">
+        <div class="process-step"><span class="step-no">1</span><h3>Free Opportunity Review</h3><p>I review visibility, pages, competitors and obvious missed opportunities.</p></div>
+        <div class="process-step"><span class="step-no">2</span><h3>Prioritised Strategy</h3><p>You get a clear plan based on impact, effort and commercial intent.</p></div>
+        <div class="process-step"><span class="step-no">3</span><h3>Implementation</h3><p>Technical, on-page, local and content work gets executed in the right order.</p></div>
+        <div class="process-step"><span class="step-no">4</span><h3>Measure & Improve</h3><p>Track visibility, enquiries and what needs to change next.</p></div>
+      </div>
+    </div>
+  </section>
 
-      <div class="footer-contact-box" style="margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--border)">
-        <h3 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h3>
-        <div class="footer-contact-item">
-          <span class="icon" aria-hidden="true">✉</span>
-          <div>
-            <a href="mailto:omar@seowithomar.com">omar@seowithomar.com</a>
-            <div class="footer-hours" data-en="Response within 24h" data-ar="رد خلال 24 ساعة">Response within 24h</div>
-          </div>
-        </div>
-        <div class="footer-contact-item">
-          <span class="icon" aria-hidden="true">📞</span>
-          <div>
-            <a href="tel:+201221403257">+201221403257</a>
-            <div class="footer-hours" data-en="Mon–Fri, 9am–6pm EET" data-ar="الإثنين–الجمعة، 9ص–6م">Mon–Fri, 9am–6pm EET</div>
-          </div>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-en="SELECTED EXPERIENCE" data-ar="خبرات مختارة">SELECTED EXPERIENCE</span><h2 data-en-html="Hands-On Work With <span class='text-gold'>Contractor Websites.</span>" data-ar-html="عمل مباشر مع <span class='text-gold'>مواقع المقاولين.</span>">Hands-On Work With <span class="text-gold">Contractor Websites.</span></h2><p data-en="Examples of the type of work I have handled across roofing, paving and related local-service websites. Specific performance figures are shared only where verified." data-ar="أمثلة على نوع العمل الذي نفذته لمواقع الأسقف والرصف والخدمات المحلية. يتم عرض أرقام الأداء فقط عندما تكون موثقة.">Examples of the type of work I have handled across roofing, paving and related local-service websites. Specific performance figures are shared only where verified.</p></div><a class="btn btn-outline" href="/portfolio/">View Portfolio →</a></div>
+      <div class="experience-grid">
+        <article class="experience-card"><span class="experience-tag">Ireland</span><h3>Roofing & Guttering</h3><p>Local SEO and on-page work for service-area roofing websites.</p><ul><li>Service & location page optimisation</li><li>Internal linking and local intent</li><li>Technical/on-page fixes</li></ul></article>
+        <article class="experience-card"><span class="experience-tag">Ireland / US</span><h3>Paving & Driveways</h3><p>SEO structures for paving, concrete and driveway contractors.</p><ul><li>Keyword-to-page mapping</li><li>Commercial service content</li><li>Local landing-page architecture</li></ul></article>
+        <article class="experience-card"><span class="experience-tag">Canada</span><h3>Roofing & Local Services</h3><p>Search-focused site structures built around high-value local queries.</p><ul><li>City/service targeting</li><li>Technical review</li><li>Local relevance improvements</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <span class="eyebrow" data-en="GET STARTED" data-ar="ابدأ الآن">GET STARTED</span>
+        <h2 data-en-html="Let’s Turn Search Into <span class='text-gold'>Real Enquiries.</span>" data-ar-html="لنحوّل البحث إلى <span class='text-gold'>استفسارات حقيقية.</span>">Let’s Turn Search Into <span class="text-gold">Real Enquiries.</span></h2>
+        <p data-en="Send me your website. I’ll review the biggest SEO opportunities and tell you what I would prioritise first — with no obligation." data-ar="أرسل لي موقعك. سأراجع أكبر فرص SEO وأخبرك بما سأعطيه الأولوية أولاً — بدون أي التزام.">Send me your website. I’ll review the biggest SEO opportunities and tell you what I would prioritise first — with no obligation.</p>
+        <div class="contact-methods">
+          <a class="contact-method" href="https://wa.me/201221403257" target="_blank" rel="noopener"><span class="method-icon">☎</span><span><strong>WhatsApp / Call</strong><span>+20 122 140 3257</span></span></a>
+          <a class="contact-method" href="mailto:omar@seowithomar.com"><span class="method-icon">✉</span><span><strong>Email</strong><span>omar@seowithomar.com</span></span></a>
+          <a class="contact-method" href="#audit-form"><span class="method-icon">↗</span><span><strong data-en="Free SEO Audit" data-ar="تدقيق SEO مجاني">Free SEO Audit</strong><span data-en="Tell me about your website below" data-ar="أخبرني عن موقعك بالأسفل">Tell me about your website below</span></span></a>
         </div>
       </div>
+      <form class="contact-form" id="audit-form" action="https://formspree.io/f/mlgkydbg" method="POST">
+        <h3 data-en="Get Your Free SEO Audit" data-ar="احصل على تدقيق SEO مجاني">Get Your Free SEO Audit</h3>
+        <p data-en="Share a few details and I’ll review your website and current search visibility." data-ar="شارك بعض التفاصيل وسأراجع موقعك وظهورك الحالي في البحث.">Share a few details and I’ll review your website and current search visibility.</p>
+        <input type="hidden" name="service" value="Free SEO Audit">
+        <div class="form-grid">
+          <div class="field"><label for="b-name">Your Name *</label><input id="b-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="b-email">Your Email *</label><input id="b-email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field full"><label for="b-website">Website *</label><input id="b-website" name="website" type="url" placeholder="https://yourwebsite.com" required></div>
+          <div class="field"><label for="b-country">Country / Market</label><input id="b-country" name="country" placeholder="Ireland, UK, Canada..."></div>
+          <div class="field"><label for="b-budget">Main Goal</label><select id="b-budget" name="goal"><option>More local leads</option><option>Higher Google rankings</option><option>Technical SEO fixes</option><option>SEO strategy / audit</option><option>Other</option></select></div>
+          <div class="field full"><label for="b-msg">Tell me about the business</label><textarea id="b-msg" name="message" placeholder="What services do you offer and where do you want to rank?"></textarea></div>
+        </div>
+        <button class="btn btn-gold submit-btn" type="submit" data-en="Get My Free Audit →" data-ar="احصل على التدقيق المجاني ←">Get My Free Audit →</button>
+        <div class="form-note" data-en="No spam. No obligation. Your details stay private." data-ar="بدون رسائل مزعجة أو التزام. بياناتك تظل خاصة.">No spam. No obligation. Your details stay private.</div>
+      </form>
     </div>
+  </section>
+</main>
 
-  </div>
-
-  <!-- Trust bar -->
-  <div class="footer-trust" role="list" aria-label="Our SEO commitments">
-    <div class="trust-item" role="listitem" data-en="Google-Friendly SEO" data-ar="SEO صديق لجوجل">Google-Friendly SEO</div>
-    <div class="trust-item" role="listitem" data-en="AI Search Optimized" data-ar="محسّن لبحث الذكاء الاصطناعي">AI Search Optimized</div>
-    <div class="trust-item" role="listitem" data-en="International SEO" data-ar="SEO دولي">International SEO</div>
-    <div class="trust-item" role="listitem" data-en="Technical SEO" data-ar="SEO تقني">Technical SEO</div>
-    <div class="trust-item" role="listitem" data-en="Core Web Vitals Optimized" data-ar="محسّن لمؤشرات الأداء">Core Web Vitals Optimized</div>
-    <div class="trust-item" role="listitem" data-en="Arabic SEO Specialist" data-ar="متخصص SEO عربي">Arabic SEO Specialist</div>
-  </div>
-
-  <!-- Bottom -->
-  <div class="footer-bottom">
-    <p data-en="© 2026 OS SEO — All rights reserved. Designed & developed by Omar Salah." data-ar="© 2026 OS SEO — جميع الحقوق محفوظة. تصميم وتطوير عمر صلاح.">© 2026 OS SEO — All rights reserved. Designed & developed by Omar Salah.</p>
-    <nav class="footer-bottom-links" aria-label="Secondary navigation">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter / X</a>
-      <a href="/privacy/" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
-      <a href="/sitemap.xml">Sitemap</a>
-    </nav>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="/images/logo.svg" alt="OS SEO" width="168"><p data-en="SEO for contractors and local businesses focused on visibility, enquiries and sustainable growth." data-ar="SEO للمقاولين والشركات المحلية مع التركيز على الظهور والاستفسارات والنمو المستدام.">SEO for contractors and local businesses focused on visibility, enquiries and sustainable growth.</p></div>
+      <div><h3>Services</h3><div class="footer-links"><a href="/services/local-seo/">Local SEO</a><a href="/services/technical-seo-audit/">Technical SEO</a><a href="/services/content-strategy/">Content Strategy</a><a href="/services/link-building/">Link Building</a></div></div>
+      <div><h3>Company</h3><div class="footer-links"><a href="/about/">About</a><a href="/portfolio/">Case Studies</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a></div></div>
+      <div><h3>Contact</h3><div class="footer-links"><a href="mailto:omar@seowithomar.com">omar@seowithomar.com</a><a href="tel:+201221403257">+20 122 140 3257</a><a href="https://wa.me/201221403257" target="_blank" rel="noopener">WhatsApp</a><a href="#contact">Free SEO Audit</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 OS SEO. All rights reserved.</span><span><a href="/sitemap.xml">Sitemap</a> · <a href="/privacy/">Privacy</a></span></div>
   </div>
 </footer>
 
-
-
-<script src="aiseoa.js"></script>
 <script>
-/* ── Sticky ── */
 (function(){
-  const h = document.getElementById('site-header');
-  window.addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>50),{passive:true});
+  const menuBtn=document.getElementById('menuButton');
+  const panel=document.getElementById('mobilePanel');
+  menuBtn.addEventListener('click',()=>{const open=panel.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+  panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{panel.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+
+  let lang='en';
+  function setLang(next){
+    lang=next;document.documentElement.lang=next;document.body.dir=next==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=next==='ar'?el.dataset.ar:el.dataset.en;});
+    document.querySelectorAll('[data-en-html]').forEach(el=>{el.innerHTML=next==='ar'?el.dataset.arHtml:el.dataset.enHtml;});
+    document.getElementById('langButton').textContent=next==='ar'?'AR / EN':'EN / AR';
+  }
+  document.getElementById('langButton').addEventListener('click',()=>setLang(lang==='en'?'ar':'en'));
 })();
-
-/* ── Mega Menu ── */
-function toggleMega(id, e){
-  if(e) e.preventDefault();
-  const li = document.getElementById(id);
-  const isOpen = li.classList.contains('open');
-  closeAllMega();
-  if(!isOpen){
-    li.classList.add('open');
-    li.querySelector('.nav-dd-trigger').setAttribute('aria-expanded','true');
-  }
-}
-function closeAllMega(){
-  document.querySelectorAll('.nav-dd-li.open').forEach(li=>{
-    li.classList.remove('open');
-    li.querySelector('.nav-dd-trigger').setAttribute('aria-expanded','false');
-  });
-}
-document.addEventListener('click', e=>{
-  if(!e.target.closest('.nav-dd-li')) closeAllMega();
-});
-document.addEventListener('keydown', e=>{
-  if(e.key==='Escape'){ closeAllMega(); closeSearch(); closeDrawer(); }
-});
-
-/* ── Search ── */
-function toggleSearch(){
-  const ov = document.getElementById('search-overlay');
-  const btn = document.querySelector('.nav-search-btn');
-  const isOpen = ov.classList.contains('open');
-  ov.classList.toggle('open');
-  btn.setAttribute('aria-expanded', String(!isOpen));
-  if(!isOpen) setTimeout(()=>document.getElementById('search-input').focus(), 50);
-  else document.getElementById('search-input').blur();
-}
-function closeSearch(){ document.getElementById('search-overlay').classList.remove('open'); }
-document.getElementById('search-overlay').addEventListener('click', e=>{
-  if(e.target===e.currentTarget) closeSearch();
-});
-document.getElementById('search-input').addEventListener('keydown', e=>{
-  if(e.key==='Enter'){
-    const q = e.target.value.trim();
-    if(q) window.location.href = '/?s=' + encodeURIComponent(q);
-  }
-});
-
-/* ── Mobile Drawer ── */
-function toggleDrawer(){
-  const drawer = document.getElementById('mobile-drawer');
-  const overlay = document.getElementById('drawer-overlay');
-  const btn = document.getElementById('hamburger-btn');
-  const isOpen = drawer.classList.contains('open');
-  drawer.classList.toggle('open');
-  overlay.classList.toggle('open');
-  btn.classList.toggle('open');
-  btn.setAttribute('aria-expanded', String(!isOpen));
-  document.body.style.overflow = isOpen ? '' : 'hidden';
-}
-function closeDrawer(){
-  document.getElementById('mobile-drawer').classList.remove('open');
-  document.getElementById('drawer-overlay').classList.remove('open');
-  document.getElementById('hamburger-btn').classList.remove('open');
-  document.getElementById('hamburger-btn').setAttribute('aria-expanded','false');
-  document.body.style.overflow = '';
-}
-
-/* ── Drawer Accordion ── */
-function toggleDrawerAcc(id){
-  const el = document.getElementById(id);
-  const btn = el.querySelector('.drawer-acc-btn');
-  const isOpen = el.classList.contains('open');
-  el.classList.toggle('open');
-  btn.setAttribute('aria-expanded', String(!isOpen));
-}
-
-/* ── Active Nav ── */
-(function(){
-  const path = window.location.pathname;
-  document.querySelectorAll('.main-nav a, .mobile-drawer a').forEach(a=>{
-    const href = a.getAttribute('href');
-    if(!href) return;
-    if(href===path || (path==='/' && href==='/')){
-      a.classList.add('active');
-      a.setAttribute('aria-current','page');
-    }
-  });
-})();
-
-/* ── Lang keyboard ── */
-document.querySelectorAll('.lang-opt').forEach(opt=>{
-  opt.addEventListener('keydown', e=>{
-    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); setLang(opt.dataset.lang); }
-  });
-});
-
-/* ── Newsletter ── */
-function subscribeNewsletter(){
-  const email = document.getElementById('nl-email').value.trim();
-  if(!email||!email.includes('@')){
-    alert('Please enter a valid email address.');
-    return;
-  }
-  document.getElementById('nl-success').style.display = 'block';
-  document.getElementById('nl-email').value = '';
-}
 </script>
 </body>
 </html>
