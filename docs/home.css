@@ -37,13 +37,17 @@ img{max-width:100%;display:block}
 .mobile-panel{display:none;padding:14px 0 22px;border-top:1px solid var(--line);background:#fff}.mobile-panel.open{display:block}.mobile-panel a{display:block;padding:10px 0;text-decoration:none;font-weight:750;color:var(--ink)}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#fff 0%,#fff 47%,#f1f6f8 100%);padding:72px 0 44px;border-bottom:1px solid var(--line)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#fff 0%,#fff 52%,#f5f1e9 100%);padding:72px 0 44px;border-bottom:1px solid var(--line)}
 .hero::after{content:"";position:absolute;right:-220px;top:-220px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(210,154,67,.13),rgba(210,154,67,0) 68%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:58px;align-items:center;position:relative;z-index:1}
-.hero h1{font-size:clamp(3.15rem,6.6vw,5.7rem);line-height:.96;letter-spacing:-.055em;color:var(--ink);margin:18px 0 22px;max-width:760px}
+.hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(3rem,5.7vw,5.2rem);line-height:.97;letter-spacing:-.052em;color:var(--ink);margin:18px 0 22px;max-width:760px}
 .hero-copy>p{font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:650px;color:#506173}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .hero-proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:31px;padding-top:25px;border-top:1px solid var(--line)}
+.hero-photo-wrap{position:relative;margin:0;min-height:500px;border-radius:30px;overflow:hidden;border:1px solid rgba(13,34,56,.1);box-shadow:0 30px 70px rgba(13,34,56,.16);background:#eef2f3}
+.hero-photo{width:100%;height:100%;min-height:500px;display:block;object-fit:cover;object-position:62% center}
+.hero-photo-wrap::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);pointer-events:none;border-radius:inherit}
+.hero-photo-note{position:absolute;left:22px;bottom:20px;background:rgba(7,31,53,.88);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:9px 14px;font-size:.76rem;font-weight:800;letter-spacing:.02em;box-shadow:0 8px 24px rgba(7,31,53,.16)}
 .proof-item{display:flex;align-items:center;gap:10px}.proof-icon{width:38px;height:38px;border-radius:50%;background:var(--gold-soft);display:grid;place-items:center;color:var(--gold-2);font-weight:900}.proof-item strong{display:block;color:var(--ink);font-size:.9rem}.proof-item span{display:block;color:var(--muted);font-size:.78rem}
 .hero-visual{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center}
 .search-board{width:min(100%,485px);background:#fff;border:1px solid rgba(13,34,56,.10);box-shadow:var(--shadow);border-radius:24px;padding:20px;position:relative;z-index:2}
@@ -85,3 +89,8 @@ img{max-width:100%;display:block}
 @media(max-width:680px){
   .container{width:min(100% - 28px,1180px)}.section{padding:64px 0}.nav-wrap{height:68px}.brand img{width:145px}.nav-audit{display:none}.hero{padding:54px 0 30px}.hero h1{font-size:clamp(2.7rem,14vw,4.4rem)}.hero-grid{gap:32px}.hero-visual{min-height:405px}.search-board{padding:14px}.growth-card{right:-3px;bottom:44px;width:180px;padding:14px}.growth-card strong{font-size:1.45rem}.omar-card{left:2px;bottom:6px}.hero-proof{gap:16px}.proof-item{width:100%}.trust-inner{justify-content:flex-start;gap:12px 20px}.section-head{display:block}.card-grid,.industries-grid,.locations-grid,.experience-grid,.process{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-form{padding:20px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:6px}
 }
+
+/* Homepage hero photo override */
+.hero .hero-visual{display:none}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr}.hero-photo-wrap,.hero-photo{min-height:430px}.hero-photo{object-position:64% center}}
+@media(max-width:620px){.hero-photo-wrap{min-height:355px;border-radius:22px}.hero-photo{min-height:355px;object-position:66% center}.hero-photo-note{left:14px;bottom:14px;font-size:.67rem;padding:8px 11px}.hero h1{font-size:clamp(2.55rem,13vw,4rem)}}
