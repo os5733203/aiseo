@@ -46,3 +46,5 @@ https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicat
 - تقارير CONTENT-PRESERVATION.json وFINAL-VALIDATION.json مرفقة. لم تُرسل رسالة اختبار فعلية إلى Formspree.
 
 تحديث المقالات: أُضيفت 10 مقالات إنجليزية لأستراليا وأيرلندا وكندا، مع روابط سياقية وصور تحريرية وBlogPosting وبيانات تواصل مرتبطة بسياق المقال. التفاصيل في 10-POSTS-READ-ME-AR.txt.
+
+تحديث الصور: لكل مقال جديد صورة فوتوغرافية WebP داخل الصفحة والكارت، بنسخة أصغر للموبايل ونسخة JPEG للمشاركة. الصور محفوظة محليًا ضمن الموقع، مع مصدر الصورة واسم المصور داخل المقال وملف ARTICLE-PHOTO-CREDITS.json. الصور توضيحية وليست صور مشروعات عملاء عمر.
