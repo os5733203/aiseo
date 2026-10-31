@@ -1,11 +1,11 @@
 {
-  "route_count": 121,
-  "indexable_routes": 103,
-  "arabic_routes": 44,
+  "route_count": 137,
+  "indexable_routes": 117,
+  "arabic_routes": 46,
   "original_html_routes_retained": 60,
-  "local_links_assets_fragments_checked": 7918,
-  "schema_blocks_parsed": 110,
+  "local_links_assets_fragments_checked": 9270,
+  "schema_blocks_parsed": 124,
   "FAQ_questions_matched_to_visible_content": 184,
-  "sitemap_urls": 103,
+  "sitemap_urls": 117,
   "errors": []
 }

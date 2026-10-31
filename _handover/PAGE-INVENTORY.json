@@ -407,6 +407,86 @@
     "lang": "ar",
     "file": "blog/posts/ai-seo/geo-aeo-seo-guide-ar/index.html"
   },
+  "/blog/posts/australia/seo-audit-small-business/": {
+    "title": "SEO Audit for Australian Small Businesses: What to Fix First | OS SEO",
+    "description": "Plan an SEO audit for your Australian small business. Compare evidence, implementation and enquiry priorities before investing in more traffic.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/australia/seo-audit-small-business/index.html"
+  },
+  "/blog/posts/australia/geo-aeo-service-businesses/": {
+    "title": "GEO and AEO in Australia: A Buyer’s Guide for Service Businesses | OS SEO",
+    "description": "Compare GEO and AEO services in Australia. Learn what a useful visibility review, answer-led content plan and implementation scope should include.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/australia/geo-aeo-service-businesses/index.html"
+  },
+  "/blog/posts/australia/hotel-seo-direct-bookings/": {
+    "title": "Hotel SEO in Australia: Improve Your Direct Booking Journey | OS SEO",
+    "description": "Improve hotel SEO in Australia with useful room pages, destination content and a tested booking journey. Plan practical work for your property.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/australia/hotel-seo-direct-bookings/index.html"
+  },
+  "/blog/posts/ireland/roofing-seo-service-pages/": {
+    "title": "Roofing SEO in Ireland: Service Pages That Support Better Enquiries | OS SEO",
+    "description": "Plan roofing SEO in Ireland around genuine services, coverage, project evidence and working contact routes. A practical guide for roofing businesses.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/ireland/roofing-seo-service-pages/index.html"
+  },
+  "/blog/posts/ireland/seo-website-redesign-checklist/": {
+    "title": "Website Redesign in Ireland: An SEO and Enquiry Preservation Checklist | OS SEO",
+    "description": "Plan a website redesign in Ireland while protecting useful URLs, content, forms and tracking. Use this checklist before launching your new design.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/ireland/seo-website-redesign-checklist/index.html"
+  },
+  "/blog/posts/ireland/website-traffic-no-enquiries/": {
+    "title": "Website Traffic but No Enquiries? A Diagnostic for Irish Businesses | OS SEO",
+    "description": "Find why your Irish business website gets visits but few enquiries. Check landing-page intent, forms, booking actions and lead measurement in order.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/ireland/website-traffic-no-enquiries/index.html"
+  },
+  "/blog/posts/canada/ontario-local-seo-page-strategy/": {
+    "title": "Local SEO in Ontario: Build Useful Service and City Pages | OS SEO",
+    "description": "Build a practical local SEO page strategy for Ontario. Connect genuine service coverage, province and city pages, evidence and relevant enquiries.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/canada/ontario-local-seo-page-strategy/index.html"
+  },
+  "/blog/posts/canada/wordpress-seo-technical-fixes/": {
+    "title": "WordPress SEO in Canada: Fix the Problems Before Rebuilding | OS SEO",
+    "description": "Review WordPress SEO issues on your Canadian website. Decide what to repair, what to measure and when a rebuild is justified by the actual constraints.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/canada/wordpress-seo-technical-fixes/index.html"
+  },
+  "/blog/posts/canada/seo-pricing-proposal-comparison/": {
+    "title": "SEO Pricing in Canada: How to Compare Proposals and Scope | OS SEO",
+    "description": "Compare SEO pricing in Canada by scope, deliverables, implementation and reporting. Use a practical checklist to choose the right provider for your business.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/canada/seo-pricing-proposal-comparison/index.html"
+  },
+  "/blog/posts/canada/aeo-b2b-service-businesses/": {
+    "title": "AEO for Canadian B2B Services: Turn Expertise into Useful Answers | OS SEO",
+    "description": "Plan AEO content for a Canadian B2B service business. Map buyer questions to expert answers, evidence, useful pages and a relevant enquiry route.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/canada/aeo-b2b-service-businesses/index.html"
+  },
   "/blog/": {
     "title": "SEO, GEO & AEO Insights — English & Arabic | OS SEO",
     "description": "Practical SEO guides by Omar Salah: technical SEO, local search, GEO, AEO, website performance and content, in English and Arabic.",
@@ -438,6 +518,38 @@
     "noindex": true,
     "lang": "en",
     "file": "blog/posts/page/1/index.html"
+  },
+  "/blog/categories/australia/": {
+    "title": "Australia SEO Articles & Guides | OS SEO",
+    "description": "Practical Australia SEO articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/australia/index.html"
+  },
+  "/blog/categories/australia/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/australia/page/1/index.html"
+  },
+  "/blog/categories/canada/": {
+    "title": "Canada SEO Articles & Guides | OS SEO",
+    "description": "Practical Canada SEO articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/canada/index.html"
+  },
+  "/blog/categories/canada/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/canada/page/1/index.html"
   },
   "/blog/categories/technical-seo/": {
     "title": "Technical SEO Articles & Guides | OS SEO",
@@ -918,6 +1030,22 @@
     "noindex": false,
     "lang": "ar",
     "file": "ar/blog/posts/page/2/index.html"
+  },
+  "/ar/blog/categories/australia/": {
+    "title": "مقالات السيو في أستراليا. | OS SEO",
+    "description": "تعرّف على السيو في أستراليا مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/australia/index.html"
+  },
+  "/ar/blog/categories/canada/": {
+    "title": "مقالات السيو في كندا. | OS SEO",
+    "description": "تعرّف على السيو في كندا مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/canada/index.html"
   },
   "/ar/blog/categories/technical-seo/": {
     "title": "مقالات السيو التقني. | OS SEO",

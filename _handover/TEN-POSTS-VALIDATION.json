@@ -1,0 +1,194 @@
+{
+  "new_articles": 10,
+  "total_words": 8260,
+  "contextual_internal_links": 74,
+  "all_new_articles_have_incoming_links": true,
+  "all_in_main_and_blog_sitemaps": true,
+  "all_article_lead_routes_include_market_and_source": true,
+  "articles": [
+    {
+      "market": "Australia",
+      "url": "https://seowithomar.com/blog/posts/australia/seo-audit-small-business/",
+      "word_count": 909,
+      "contextual_internal_links": 7,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/australia/",
+        "/ar/services/technical-seo-audit/",
+        "/blog/",
+        "/blog/categories/australia/",
+        "/blog/posts/australia/geo-aeo-service-businesses/",
+        "/locations/australia/",
+        "/services/technical-seo-audit/"
+      ]
+    },
+    {
+      "market": "Australia",
+      "url": "https://seowithomar.com/blog/posts/australia/geo-aeo-service-businesses/",
+      "word_count": 886,
+      "contextual_internal_links": 6,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/australia/",
+        "/ar/services/aeo/",
+        "/ar/services/geo/",
+        "/blog/",
+        "/blog/categories/australia/",
+        "/blog/posts/australia/hotel-seo-direct-bookings/",
+        "/locations/australia/",
+        "/services/aeo/",
+        "/services/geo/"
+      ]
+    },
+    {
+      "market": "Australia",
+      "url": "https://seowithomar.com/blog/posts/australia/hotel-seo-direct-bookings/",
+      "word_count": 789,
+      "contextual_internal_links": 7,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/australia/",
+        "/ar/industries/hotels/",
+        "/ar/services/website-development/",
+        "/blog/",
+        "/blog/categories/australia/",
+        "/blog/posts/australia/seo-audit-small-business/",
+        "/industries/hotels/",
+        "/locations/australia/",
+        "/services/website-development/"
+      ]
+    },
+    {
+      "market": "Ireland",
+      "url": "https://seowithomar.com/blog/posts/ireland/roofing-seo-service-pages/",
+      "word_count": 778,
+      "contextual_internal_links": 8,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/",
+        "/ar/blog/categories/ireland/",
+        "/ar/industries/roofing/",
+        "/ar/services/local-seo/",
+        "/blog/",
+        "/blog/categories/",
+        "/blog/categories/ireland/",
+        "/blog/posts/ireland/website-traffic-no-enquiries/",
+        "/industries/roofing/",
+        "/locations/ireland/",
+        "/services/local-seo/"
+      ]
+    },
+    {
+      "market": "Ireland",
+      "url": "https://seowithomar.com/blog/posts/ireland/seo-website-redesign-checklist/",
+      "word_count": 797,
+      "contextual_internal_links": 6,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/",
+        "/ar/blog/categories/ireland/",
+        "/ar/services/website-development/",
+        "/blog/",
+        "/blog/categories/",
+        "/blog/categories/ireland/",
+        "/blog/posts/ireland/roofing-seo-service-pages/",
+        "/blog/posts/ireland/website-traffic-no-enquiries/",
+        "/locations/ireland/",
+        "/services/website-development/"
+      ]
+    },
+    {
+      "market": "Ireland",
+      "url": "https://seowithomar.com/blog/posts/ireland/website-traffic-no-enquiries/",
+      "word_count": 837,
+      "contextual_internal_links": 8,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/",
+        "/ar/blog/categories/ireland/",
+        "/ar/services/content-strategy/",
+        "/blog/",
+        "/blog/categories/",
+        "/blog/categories/ireland/",
+        "/blog/posts/australia/seo-audit-small-business/",
+        "/blog/posts/ireland/roofing-seo-service-pages/",
+        "/blog/posts/ireland/seo-website-redesign-checklist/",
+        "/locations/ireland/",
+        "/services/content-strategy/"
+      ]
+    },
+    {
+      "market": "Canada",
+      "url": "https://seowithomar.com/blog/posts/canada/ontario-local-seo-page-strategy/",
+      "word_count": 789,
+      "contextual_internal_links": 9,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/canada/",
+        "/ar/services/local-seo/",
+        "/blog/",
+        "/blog/categories/canada/",
+        "/blog/posts/canada/aeo-b2b-service-businesses/",
+        "/blog/posts/canada/seo-pricing-proposal-comparison/",
+        "/blog/posts/canada/wordpress-seo-technical-fixes/",
+        "/locations/canada/",
+        "/locations/canada/ontario/",
+        "/services/local-seo/"
+      ]
+    },
+    {
+      "market": "Canada",
+      "url": "https://seowithomar.com/blog/posts/canada/wordpress-seo-technical-fixes/",
+      "word_count": 819,
+      "contextual_internal_links": 8,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/canada/",
+        "/ar/services/technical-seo-audit/",
+        "/blog/",
+        "/blog/categories/canada/",
+        "/blog/posts/canada/ontario-local-seo-page-strategy/",
+        "/blog/posts/canada/seo-pricing-proposal-comparison/",
+        "/locations/canada/",
+        "/services/technical-seo-audit/"
+      ]
+    },
+    {
+      "market": "Canada",
+      "url": "https://seowithomar.com/blog/posts/canada/seo-pricing-proposal-comparison/",
+      "word_count": 825,
+      "contextual_internal_links": 8,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/canada/",
+        "/blog/",
+        "/blog/categories/canada/",
+        "/blog/posts/canada/aeo-b2b-service-businesses/",
+        "/blog/posts/canada/ontario-local-seo-page-strategy/",
+        "/blog/posts/canada/wordpress-seo-technical-fixes/",
+        "/locations/canada/",
+        "/locations/canada/ontario/"
+      ]
+    },
+    {
+      "market": "Canada",
+      "url": "https://seowithomar.com/blog/posts/canada/aeo-b2b-service-businesses/",
+      "word_count": 831,
+      "contextual_internal_links": 7,
+      "incoming_pages": [
+        "/ar/blog/",
+        "/ar/blog/categories/canada/",
+        "/ar/services/aeo/",
+        "/ar/services/content-strategy/",
+        "/ar/services/geo/",
+        "/blog/",
+        "/blog/categories/canada/",
+        "/blog/posts/canada/seo-pricing-proposal-comparison/",
+        "/locations/canada/",
+        "/services/aeo/",
+        "/services/content-strategy/",
+        "/services/geo/"
+      ]
+    }
+  ]
+}

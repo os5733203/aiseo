@@ -6,6 +6,8 @@ RewriteEngine On
 RewriteRule ^aiseo/?$ / [R=301,L]
 RewriteRule ^aiseo/(.*)$ /$1 [R=301,L]
 RewriteRule ^blog/categories/ai\-seo/page/1/?$ /blog/categories/ai-seo/ [R=301,L]
+RewriteRule ^blog/categories/australia/page/1/?$ /blog/categories/australia/ [R=301,L]
+RewriteRule ^blog/categories/canada/page/1/?$ /blog/categories/canada/ [R=301,L]
 RewriteRule ^blog/categories/ireland/page/1/?$ /blog/categories/ireland/ [R=301,L]
 RewriteRule ^blog/categories/link\-building/page/1/?$ /blog/categories/link-building/ [R=301,L]
 RewriteRule ^blog/categories/local\-seo/page/1/?$ /blog/categories/local-seo/ [R=301,L]

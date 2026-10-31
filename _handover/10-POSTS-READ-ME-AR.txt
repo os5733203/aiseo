@@ -1,0 +1,54 @@
+OS SEO — تحديث المقالات العشرة
+
+المحتوى: 3 مقالات لأستراليا، 3 لأيرلندا، 4 لكندا. جميعها بالإنجليزية.
+
+الرفع إلى GitHub
+شغّل نفس كود PowerShell المستخدم سابقًا واختر ملف ZIP الخاص بهذه النسخة.
+الكود يفك الضغط وينسخ المحتويات إلى فرع main، ثم يعمل commit وpush.
+ملف index.html موجود مباشرة داخل ZIP، فلا ترفع الأرشيف كملف داخل المستودع.
+هذا ملف الموقع كاملًا مع التحديث، وليس نسخة المعاينة الخاصة.
+إذا أجريت تعديلات يدوية بعد آخر نسخة، احتفظ بها أو ادمجها قبل استبدال الملفات المتطابقة.
+
+التحقق بعد النشر
+1. انتظر نجاح GitHub Pages في Actions.
+2. افتح /blog/ وتحقق من ظهور المقالات العشرة وروابطها.
+3. اختبر دعوة التواصل في مقال واحد: تنتقل الدولة والخدمة وسياق المقال إلى النموذج.
+4. أعد إرسال sitemap.xml في Search Console. يمكن طلب فهرسة الصفحات الأهم؛ لا يوجد ضمان للفهرسة أو عدد العملاء.
+
+الربط الداخلي
+كل مقال يرتبط بخدمات وصفحة الدولة ومقالات مكملة، كما توجد روابط إليه من المدونة وصفحات مناسبة.
+لم تُنشأ مكاتب محلية وهمية أو نتائج عملاء أو أحجام بحث غير متاحة.
+خريطة الكلمات والروابط: TEN-POSTS-PLAN.csv.
+تفاصيل التحقق: TEN-POSTS-VALIDATION.json.
+
+المقالات
+
+Australia — SEO Audit for Australian Small Businesses: What to Fix First
+https://seowithomar.com/blog/posts/australia/seo-audit-small-business/
+
+Australia — GEO and AEO in Australia: A Buyer’s Guide for Service Businesses
+https://seowithomar.com/blog/posts/australia/geo-aeo-service-businesses/
+
+Australia — Hotel SEO in Australia: Improve Your Direct Booking Journey
+https://seowithomar.com/blog/posts/australia/hotel-seo-direct-bookings/
+
+Ireland — Roofing SEO in Ireland: Service Pages That Support Better Enquiries
+https://seowithomar.com/blog/posts/ireland/roofing-seo-service-pages/
+
+Ireland — Website Redesign in Ireland: An SEO and Enquiry Preservation Checklist
+https://seowithomar.com/blog/posts/ireland/seo-website-redesign-checklist/
+
+Ireland — Website Traffic but No Enquiries? A Diagnostic for Irish Businesses
+https://seowithomar.com/blog/posts/ireland/website-traffic-no-enquiries/
+
+Canada — Local SEO in Ontario: Build Useful Service and City Pages
+https://seowithomar.com/blog/posts/canada/ontario-local-seo-page-strategy/
+
+Canada — WordPress SEO in Canada: Fix the Problems Before Rebuilding
+https://seowithomar.com/blog/posts/canada/wordpress-seo-technical-fixes/
+
+Canada — SEO Pricing in Canada: How to Compare Proposals and Scope
+https://seowithomar.com/blog/posts/canada/seo-pricing-proposal-comparison/
+
+Canada — AEO for Canadian B2B Services: Turn Expertise into Useful Answers
+https://seowithomar.com/blog/posts/canada/aeo-b2b-service-businesses/

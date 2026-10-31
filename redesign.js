@@ -29,6 +29,24 @@
   // An explicit URL takes precedence over a stored visual preference.
   applyLanguage(lang);
   const form=document.getElementById('audit-form');
+  if(form){
+    const params=new URLSearchParams(window.location.search);
+    const market=params.get('market');
+    const country=form.querySelector('[name="country"]');
+    if(country&&['Australia','Ireland','Canada'].includes(market)){country.value=market;country.defaultValue=market;}
+    const article=params.get('source');
+    const validSources=['au-audit','au-geo','au-hotels','ie-roofing','ie-redesign','ie-enquiries','ca-ontario','ca-wordpress','ca-pricing','ca-aeo'];
+    if(validSources.includes(article)){
+      const source=document.createElement('input');source.type='hidden';source.name='article_source';source.value=article;form.append(source);
+      const requested=params.get('service');
+      if(requested&&requested.length<=90){
+        const field=document.createElement('input');field.type='hidden';field.name='requested_service';field.value=requested;form.append(field);
+        const value=/GEO|AEO/i.test(requested)?'GEO & AEO':/redesign|development/i.test(requested)?'New website':'SEO';
+        const option=Array.from(form.querySelectorAll('[name="service"]')).find(input=>input.value===value);
+        if(option){form.querySelectorAll('[name="service"]').forEach(input=>{input.checked=input===option;input.defaultChecked=input===option;});}
+      }
+    }
+  }
   function syncContact(){
     if(!form)return;
     const whatsapp=form.querySelector('[name="preferred_contact"]:checked')?.value==='WhatsApp';

@@ -42,7 +42,7 @@
     {
       "route": "/locations/canada/",
       "original_characters": 30850,
-      "restored_main_characters": 31024,
+      "restored_main_characters": 31402,
       "original_content_links": 29,
       "retained_content_links": 29
     },
@@ -77,21 +77,21 @@
     {
       "route": "/locations/ireland/",
       "original_characters": 17016,
-      "restored_main_characters": 17193,
+      "restored_main_characters": 17534,
       "original_content_links": 25,
       "retained_content_links": 25
     },
     {
       "route": "/locations/australia/",
       "original_characters": 28085,
-      "restored_main_characters": 28268,
+      "restored_main_characters": 28588,
       "original_content_links": 25,
       "retained_content_links": 25
     },
     {
       "route": "/locations/canada/ontario/",
       "original_characters": 8224,
-      "restored_main_characters": 8423,
+      "restored_main_characters": 8671,
       "original_content_links": 20,
       "retained_content_links": 20
     },
@@ -126,7 +126,7 @@
     {
       "route": "/services/local-seo/",
       "original_characters": 6000,
-      "restored_main_characters": 6228,
+      "restored_main_characters": 6486,
       "original_content_links": 10,
       "retained_content_links": 10
     },
@@ -140,14 +140,14 @@
     {
       "route": "/services/technical-seo-audit/",
       "original_characters": 6594,
-      "restored_main_characters": 6814,
+      "restored_main_characters": 7067,
       "original_content_links": 10,
       "retained_content_links": 10
     },
     {
       "route": "/services/content-strategy/",
       "original_characters": 6724,
-      "restored_main_characters": 6958,
+      "restored_main_characters": 7224,
       "original_content_links": 10,
       "retained_content_links": 10
     },
