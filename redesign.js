@@ -55,11 +55,22 @@
       group.hidden=!active;const input=group.querySelector('input');input.disabled=!active;input.required=active;input.setCustomValidity('');
     });
   }
+  function syncWebsite(){
+    if(!form)return;
+    const website=form.querySelector('[name="website"]');
+    if(!website)return;
+    const optional=form.querySelector('[name="service"]:checked')?.value==='New website';
+    website.required=!optional;
+    const mark=form.querySelector('#website-required');if(mark)mark.hidden=optional;
+    const help=form.querySelector('#website-help');
+    if(help)help.textContent=lang==='ar'?(optional?'اختياري للموقع الجديد. يمكنك إضافة رابط إن كان متاحًا.':'أضف رابط موقعك الحالي حتى أتمكن من مراجعته.'):(optional?'Optional for a new website. Add a URL if you already have one.':'Add your existing website URL so I can review it.');
+  }
   if(form){
     form.querySelectorAll('[name="preferred_contact"]').forEach(r=>r.addEventListener('change',syncContact));
     const phone=form.querySelector('[name="whatsapp"]');
     if(phone)phone.addEventListener('input',()=>{phone.setCustomValidity('');});
-    syncContact();
+    syncContact();syncWebsite();
+    form.querySelectorAll('[name="service"]').forEach(r=>r.addEventListener('change',syncWebsite));
   }
   document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
     const category=button.dataset.filter;
@@ -86,7 +97,7 @@
     try{
       const response=await fetch(form.action,{method:'POST',body:(()=>{const data=new FormData(form);if(phone&&!phone.disabled)data.set('whatsapp_link','https://wa.me/'+phone.value.replace(/\D/g,''));return data;})(),headers:{Accept:'application/json'}});
       if(!response.ok)throw new Error('Submission failed');
-      status.textContent=lang==='ar'?'تم إرسال استفسارك بنجاح. شكرًا لتواصلك.':'Your enquiry has been sent. Thank you for getting in touch.';form.reset();syncContact();
+      status.textContent=lang==='ar'?'تم إرسال استفسارك بنجاح. شكرًا لتواصلك.':'Your enquiry has been sent. Thank you for getting in touch.';form.reset();syncContact();syncWebsite();
     }catch(error){status.classList.add('error');status.textContent=lang==='ar'?'لم يتم تأكيد الإرسال. حاول مجددًا أوتواصل عبر البريد أوواتساب.':'Your enquiry could not be confirmed. Please retry or use email or WhatsApp.';}
     finally{button.disabled=false;form.removeAttribute('aria-busy');}
   });
