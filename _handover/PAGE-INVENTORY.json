@@ -1,0 +1,970 @@
+{
+  "/": {
+    "title": "SEO, GEO & AEO Services + Website Development | OS SEO",
+    "description": "Work directly with Omar Salah for technical and local SEO, GEO, AEO and SEO-friendly website development. Practical support across industries and markets.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "index.html"
+  },
+  "/services/geo/": {
+    "title": "GEO Services & AI Search Visibility | OS SEO",
+    "description": "GEO services help make your business, expertise and useful content easier to understand in generative search. Work directly with Omar Salah for a scoped plan and hands-on implementation.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/geo/index.html"
+  },
+  "/services/aeo/": {
+    "title": "AEO Services & Answer Engine Optimisation | OS SEO",
+    "description": "Answer engine optimisation connects real questions with accurate, understandable content. Work directly with Omar Salah for a scoped plan and hands-on implementation.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/aeo/index.html"
+  },
+  "/services/website-development/": {
+    "title": "SEO-Friendly Website Design & Development | OS SEO",
+    "description": "I plan, design and build responsive websites around your services and customer journeys. Work directly with Omar Salah for a scoped plan and hands-on implementation.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/website-development/index.html"
+  },
+  "/services/technical-seo-audit/": {
+    "title": "Technical SEO Audit Services | OS SEO — Fix Crawl Errors & Rank Higher",
+    "description": "OS SEO's Technical SEO Audit service identifies and fixes crawl errors, Core Web Vitals failures, indexing issues and site architecture problems — with a prioritised action plan. From $299.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/technical-seo-audit/index.html"
+  },
+  "/services/local-seo/": {
+    "title": "Local SEO Services | OS SEO — Rank #1 on Google Maps",
+    "description": "OS SEO's Local SEO service optimises your Google Business Profile, builds 60+ local citations and manages reviews to rank #1 in Google Maps in your target cities. From $249/mo.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/local-seo/index.html"
+  },
+  "/services/content-strategy/": {
+    "title": "Content Strategy Services | OS SEO — Build Topical Authority & Rank",
+    "description": "OS SEO's Content Strategy service builds pillar-cluster content architectures with SEO-optimised articles that rank on Google and attract qualified organic traffic. From $199/mo.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/content-strategy/index.html"
+  },
+  "/services/link-building/": {
+    "title": "Link Building Services | OS SEO — White-Hat Backlinks That Rank",
+    "description": "OS SEO's link building service acquires high-authority, editorially placed backlinks through white-hat outreach — guest posts, digital PR and resource pages. From $399/mo.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/link-building/index.html"
+  },
+  "/services/international-seo/": {
+    "title": "International SEO Services | OS SEO — Rank in Every Market",
+    "description": "OS SEO's International SEO service implements hreflang, geo-targeting and multilingual content to rank in multiple countries simultaneously. Specialising in Arabic, European and English markets. From $599/mo.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/international-seo/index.html"
+  },
+  "/services/ai-powered-seo/": {
+    "title": "AI-Powered SEO Services | OS SEO — Scale Rankings With AI Tools",
+    "description": "OS SEO uses AI tools to automate technical audits, generate SEO-optimised content at scale and monitor rankings 24/7 — delivering SEO results 10x faster. From $499/mo.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/ai-powered-seo/index.html"
+  },
+  "/services/": {
+    "title": "SEO Services by OS SEO | Technical, Local, AI & International SEO",
+    "description": "OS SEO offers 6 professional SEO services: Technical SEO Audits, Link Building, Local SEO, AI-Powered SEO, Content Strategy and International SEO. Serving businesses in Europe, Australia and the Arab world. Free audit available.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "services/index.html"
+  },
+  "/locations/ireland/": {
+    "title": "SEO Services Ireland — OS SEO | Dublin, Cork, Galway & Beyond",
+    "description": "Professional SEO services for Irish businesses in Dublin, Cork, Galway, Limerick and beyond. OS SEO specialises in Tech, SaaS, Legal, Medical, Home Services and E-commerce SEO across Ireland. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/ireland/index.html"
+  },
+  "/locations/united-kingdom/": {
+    "title": "SEO Services United Kingdom — OS SEO | London, Manchester, Birmingham & Beyond",
+    "description": "Professional SEO services for UK businesses in London, Manchester, Birmingham, Leeds, Edinburgh and beyond. OS SEO specialises in Local SEO, Google Maps, Technical SEO, E-E-A-T, and GEO/AEO for the British market. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/united-kingdom/index.html"
+  },
+  "/locations/canada/": {
+    "title": "SEO Services Canada — OS SEO | Toronto, Vancouver, Montreal & Beyond",
+    "description": "Professional SEO services for Canadian businesses in Toronto, Vancouver, Montreal, Calgary, Ottawa and beyond. OS SEO specialises in bilingual Local SEO, Google Maps, Technical SEO, and AEO/GEO for the Canadian market. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/canada/index.html"
+  },
+  "/locations/australia/": {
+    "title": "SEO Services Australia — OS SEO | Sydney, Melbourne, Brisbane & Beyond",
+    "description": "Professional SEO services for Australian businesses in Sydney, Melbourne, Brisbane, Perth, Adelaide and beyond. OS SEO specialises in Local SEO, Google Maps, Technical SEO, and Content Strategy for the Australian market. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/australia/index.html"
+  },
+  "/locations/egypt/": {
+    "title": "خدمات السيو في مصر — OS SEO | القاهرة، الإسكندرية، الجيزة وأكثر",
+    "description": "خدمات سيو احترافية ثنائية اللغة للشركات المصرية في القاهرة والإسكندرية والجيزة والمدن الرئيسية. OS SEO متخصص في السيو المحلي وخرائط جوجل والسيو التقني وGEO وAEO للسوق المصري. تدقيق مجاني متاح.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/egypt/index.html"
+  },
+  "/locations/saudi-arabia/": {
+    "title": "SEO Services Saudi Arabia — OS SEO | Riyadh, Jeddah, Dammam & Beyond",
+    "description": "Professional bilingual SEO services for Saudi businesses in Riyadh, Jeddah, Dammam, Khobar, Makkah and Madinah. OS SEO specialises in Arabic-first Local SEO, Google Maps, Technical SEO, and AEO/GEO aligned with Vision 2030. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/saudi-arabia/index.html"
+  },
+  "/locations/uae/": {
+    "title": "SEO Services UAE — OS SEO | Dubai, Abu Dhabi, Sharjah & Beyond",
+    "description": "Professional bilingual SEO services for businesses in Dubai, Abu Dhabi, Sharjah and across the Emirates. OS SEO specialises in Arabic-first Local SEO, Google Maps, Technical SEO, AEO and GEO for the UAE market. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/uae/index.html"
+  },
+  "/locations/germany/": {
+    "title": "SEO Services Germany | Local SEO & GEO | OS SEO",
+    "description": "Remote SEO services for businesses targeting Germany. Local SEO, technical reviews, GEO, AEO and website development with Omar Salah.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/germany/index.html"
+  },
+  "/locations/france/": {
+    "title": "SEO Services France | Local SEO & GEO | OS SEO",
+    "description": "Remote SEO services for businesses targeting France. Local SEO, technical reviews, GEO, AEO and website development with Omar Salah.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/france/index.html"
+  },
+  "/locations/netherlands/": {
+    "title": "SEO Services Netherlands | Local SEO & GEO | OS SEO",
+    "description": "Remote SEO services for businesses targeting Netherlands. Local SEO, technical reviews, GEO, AEO and website development with Omar Salah.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/netherlands/index.html"
+  },
+  "/locations/canada/ontario/": {
+    "title": "Local SEO Ontario — OS SEO | Toronto, Ottawa, London & Beyond",
+    "description": "Local SEO services for businesses across Ontario. Google Business Profile optimisation, Google Maps rankings, and technical SEO for Toronto, Ottawa, London, Oshawa, Sudbury, Mississauga and more. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/canada/ontario/index.html"
+  },
+  "/locations/canada/oshawa/": {
+    "title": "Local SEO Oshawa — OS SEO | Durham Region Google Maps Rankings",
+    "description": "Local SEO services for businesses in Oshawa and Durham Region. Google Business Profile optimisation, Google Maps rankings, and technical SEO for the East GTA. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/canada/oshawa/index.html"
+  },
+  "/locations/canada/london-ontario/": {
+    "title": "Local SEO London Ontario — OS SEO | Google Maps & Search Rankings",
+    "description": "Local SEO services for businesses in London, Ontario. Google Business Profile optimisation, Google Maps rankings, and technical SEO for Southwestern Ontario's commercial hub. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/canada/london-ontario/index.html"
+  },
+  "/locations/canada/sudbury/": {
+    "title": "Local SEO Sudbury — OS SEO | Northern Ontario Google Maps Rankings",
+    "description": "Local SEO services for businesses in Sudbury and Northern Ontario. Google Business Profile optimisation, Google Maps rankings, and technical SEO for Sudbury, Cornwall, and Muskoka. Free audit available.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/canada/sudbury/index.html"
+  },
+  "/locations/canada/grande-prairie/": {
+    "title": "Local SEO Grande Prairie & Website Support | OS SEO",
+    "description": "Local SEO support for businesses targeting Grande Prairie, Canada. Review service pages, Google Business Profile eligibility, technical SEO and enquiry tracking.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/canada/grande-prairie/index.html"
+  },
+  "/locations/": {
+    "title": "SEO Services by Location — OS SEO | International SEO for Every Market",
+    "description": "OS SEO delivers country-specific SEO services across the UK, Australia, Germany, France, Netherlands, Canada and beyond. Explore how we help businesses rank higher in every market they target.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "locations/index.html"
+  },
+  "/industries/hotels/": {
+    "title": "Hotels & Hospitality SEO & Website Development | OS SEO",
+    "description": "Hotel search journeys connect destination discovery, room comparisons, practical questions and booking decisions. A useful website makes room types, location details, facilities and booking routes easy to understand.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "industries/hotels/index.html"
+  },
+  "/industries/tailoring/": {
+    "title": "Tailoring & Fashion SEO & Website Development | OS SEO",
+    "description": "Tailoring websites need to explain the differences between services, show genuine work and help customers understand the fitting or appointment process. Search visibility works best when the website answers those decisions clearly.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "industries/tailoring/index.html"
+  },
+  "/industries/roofing/": {
+    "title": "Roofing & Home Services SEO & Website Development | OS SEO",
+    "description": "Roofing and home-service search often starts with a practical problem. Clear service descriptions, real coverage, project evidence and easy contact routes help the right customer decide whether to enquire.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "industries/roofing/index.html"
+  },
+  "/industries/": {
+    "title": "Industry SEO & Website Services | OS SEO",
+    "description": "SEO, GEO, AEO and website development for hotels, tailoring, roofing, home services and other businesses. Practical support shaped around your customers.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "industries/index.html"
+  },
+  "/about/": {
+    "title": "About — Omar Salah | OS SEO",
+    "description": "Omar Salah — SEO Specialist & Founder of OS SEO. 5 years helping businesses worldwide rank on Google.",
+    "type": "AboutPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "about/index.html"
+  },
+  "/portfolio/": {
+    "title": "Portfolio — OS SEO Case Studies",
+    "description": "SEO Case Studies by Omar Salah — Real results, real clients, real growth.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "portfolio/index.html"
+  },
+  "/faq/": {
+    "title": "SEO Services FAQ — Pricing, Timelines & Process | OS SEO",
+    "description": "How much does SEO cost? How long does it take? Get clear answers about OS SEO's pricing, process, timelines, and guarantees before you start a project.",
+    "type": "FAQPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "faq/index.html"
+  },
+  "/contact/": {
+    "title": "Contact Omar Salah — SEO & Website Projects | OS SEO",
+    "description": "Contact Omar Salah directly about SEO, GEO, AEO or website development. Send an enquiry or use WhatsApp on +20 122 140 3257.",
+    "type": "ContactPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "contact/index.html"
+  },
+  "/privacy/": {
+    "title": "Privacy & Enquiry Information | OS SEO",
+    "description": "How OS SEO uses enquiry form information, language preferences and external contact services. Contact Omar Salah with privacy questions.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "privacy/index.html"
+  },
+  "/blog/posts/link-building/first-article/": {
+    "title": "5 طرق آمنة لبناء الروابط الخلفية: دليل عملي | OS SEO",
+    "description": "بناء الروابط الخلفية (Backlinks) لا يزال من أقوى عوامل الترتيب في جوجل، لكن يجب أن يتم بطريقة آمنة بعيداً عن الأساليب المخالفة.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/link-building/first-article/index.html"
+  },
+  "/blog/posts/local-seo/local_seo_checklist_2026_en/": {
+    "title": "Local SEO Checklist 2026: 12 Steps to Rank in Google Maps | OS SEO",
+    "description": "If your business serves a specific geographic area — a clinic, restaurant, service company, or even a local e-commerce store with a physical address — Local SEO is your most powerf",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/local-seo/local_seo_checklist_2026_en/index.html"
+  },
+  "/blog/posts/local-seo/local_seo_checklist_2026/": {
+    "title": "قائمة السيو المحلي 2026: 12 خطوة لتتصدر خرائط جوجل | OS SEO",
+    "description": "لو نشاطك التجاري يخدم منطقة جغرافية محددة — عيادة، مطعم، شركة خدمات، أو حتى متجر إلكتروني بعنوان فعلي — فإن السيو المحلي (Local SEO) هو أقوى أداة تملكها لجذب عملاء حقيقيين جاهزين ل",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/local-seo/local_seo_checklist_2026/index.html"
+  },
+  "/blog/posts/local-seo/first-article/": {
+    "title": "كيف تتصدر خرائط جوجل في مدينتك | OS SEO",
+    "description": "السيو المحلي (Local SEO) هو السبيل الأمثل للشركات التي تخدم منطقة جغرافية محددة لتصدر نتائج البحث المحلية وخرائط جوجل.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/local-seo/first-article/index.html"
+  },
+  "/blog/posts/ai-seo/first-article/": {
+    "title": "الذكاء الاصطناعي في السيو 2026 | OS SEO",
+    "description": "أصبح الذكاء الاصطناعي جزءاً أساسياً من استراتيجيات السيو الحديثة، من تحليل البيانات إلى توليد المحتوى.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/ai-seo/first-article/index.html"
+  },
+  "/blog/posts/ireland/dublin-local-seo-services/": {
+    "title": "SEO in Dublin: How Local Businesses Can Rank Higher on Google in 2026 | OS SEO",
+    "description": "If you run a business in Dublin and you’re not showing up in the Google Map Pack or the top organic results for your services, you are losing customers to competitors who are. Dubl",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/ireland/dublin-local-seo-services/index.html"
+  },
+  "/blog/posts/technical-seo/first-article/": {
+    "title": "أساسيات السيو التقني: من الفهرسة إلى التنفيذ | OS SEO",
+    "description": "افحص الصفحات المهمة في Search Console قبل تغيير المحتوى. فرق بين منع الزحف ووسم noindex واختيار Canonical مختلف وصفحة متاحة لم تُفهرس بعد. لكل حالة دليل وخطوة مختلفة، ولا يعني نجاح",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/technical-seo/first-article/index.html"
+  },
+  "/blog/posts/technical-seo/core_web_vitals_optimization_2026_en/": {
+    "title": "Core Web Vitals Optimization: How to Improve Website Speed and Google Rankings | OS SEO",
+    "description": "Core Web Vitals have become one of the most important ranking factors in modern SEO. Google uses these metrics to measure real user experience on your website, focusing on loading ",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/technical-seo/core_web_vitals_optimization_2026_en/index.html"
+  },
+  "/blog/posts/technical-seo/website_crawlability_indexing_2026/": {
+    "title": "قابلية الزحف والفهرسة: كيفية حل مشاكل الأرشفة وظهور موقعك في نتائج جوجل | OS SEO",
+    "description": "يُعد موضوع قابلية الزحف (Crawlability) و الفهرسة (Indexing) من أهم أساسيات السيو التقني، لأنه ببساطة يحدد ما إذا كان موقعك سيظهر في نتائج البحث أم لا.",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/technical-seo/website_crawlability_indexing_2026/index.html"
+  },
+  "/blog/posts/technical-seo/core_web_vitals_optimization_2026/": {
+    "title": "تحسين Core Web Vitals: كيفية تحسين سرعة الموقع وترتيب جوجل | OS SEO",
+    "description": "أصبحت مؤشرات Core Web Vitals من أهم عوامل الترتيب في محركات البحث\nالحديثة. تستخدم جوجل هذه المؤشرات لقياس تجربة المستخدم الفعلية داخل\nالموقع، من حيث سرعة التحميل، التفاعل، واستقرار",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/technical-seo/core_web_vitals_optimization_2026/index.html"
+  },
+  "/blog/posts/technical-seo/technical_seo_audit_guide_2026/": {
+    "title": "دليل التدقيق التقني للسيو: كيفية إصلاح مشاكل الموقع وتحسين ترتيب جوجل | OS SEO",
+    "description": "يُعتبر السيو التقني (Technical SEO) الأساس الحقيقي لأي استراتيجية تحسين محركات بحث ناجحة. فحتى لو كان المحتوى قويًا والروابط الخلفية جيدة، فإن وجود مشاكل تقنية في الموقع يمكن أن يم",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/technical-seo/technical_seo_audit_guide_2026/index.html"
+  },
+  "/blog/posts/technical-seo/website_crawlability_indexing_2026_en/": {
+    "title": "Website Crawlability and Indexing: How to Fix SEO Issues and Get Pages Ranked | OS SEO",
+    "description": "Crawlability and indexing are the foundation of how search engines understand and display your website. If Google cannot properly crawl your pages, or if your pages are not indexed",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/technical-seo/website_crawlability_indexing_2026_en/index.html"
+  },
+  "/blog/posts/technical-seo/technical_seo_audit_guide_2026_en/": {
+    "title": "Technical SEO Audit: A Complete Guide to Improve Website Performance and Rankings | OS SEO",
+    "description": "Technical SEO is the foundation of every successful SEO strategy. While content and backlinks are important ranking factors, a website with technical problems can struggle to appea",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/technical-seo/technical_seo_audit_guide_2026_en/index.html"
+  },
+  "/blog/posts/ai-seo/geo-aeo-seo-guide/": {
+    "title": "SEO, GEO and AEO: What Your Website Actually Needs | OS SEO",
+    "description": "SEO improves the technical and content foundations of organic search. GEO, or generative engine optimisation, considers how a business is represented in AI-generated answers. AEO, ",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/ai-seo/geo-aeo-seo-guide/index.html"
+  },
+  "/blog/posts/ai-seo/geo-aeo-seo-guide-ar/": {
+    "title": "SEO وGEO وAEO: ما الذي يحتاجه موقعك فعلًا؟ | OS SEO",
+    "description": "يحسن SEO الأساس التقني والمحتوى للبحث العضوي. يراجع GEO أوتحسين البحث التوليدي تمثيل النشاط في الإجابات المولدة. ويركز AEO أوتحسين محركات الإجابة على إجابات واضحة ومفيدة لأسئلة الع",
+    "type": "BlogPosting",
+    "noindex": false,
+    "lang": "ar",
+    "file": "blog/posts/ai-seo/geo-aeo-seo-guide-ar/index.html"
+  },
+  "/blog/": {
+    "title": "SEO, GEO & AEO Insights — English & Arabic | OS SEO",
+    "description": "Practical SEO guides by Omar Salah: technical SEO, local search, GEO, AEO, website performance and content, in English and Arabic.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/index.html"
+  },
+  "/blog/posts/page/2/": {
+    "title": "More SEO Articles — Page 2 | OS SEO",
+    "description": "More English and Arabic SEO articles from OS SEO, covering website performance, indexing, local search and useful content.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/posts/page/2/index.html"
+  },
+  "/blog/posts/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/posts/index.html"
+  },
+  "/blog/posts/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/posts/page/1/index.html"
+  },
+  "/blog/categories/technical-seo/": {
+    "title": "Technical SEO Articles & Guides | OS SEO",
+    "description": "Practical Technical SEO articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/technical-seo/index.html"
+  },
+  "/blog/categories/technical-seo/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/technical-seo/page/1/index.html"
+  },
+  "/blog/categories/local-seo/": {
+    "title": "Local SEO Articles & Guides | OS SEO",
+    "description": "Practical Local SEO articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/local-seo/index.html"
+  },
+  "/blog/categories/local-seo/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/local-seo/page/1/index.html"
+  },
+  "/blog/categories/ireland/": {
+    "title": "Ireland SEO Articles & Guides | OS SEO",
+    "description": "Practical Ireland SEO articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/ireland/index.html"
+  },
+  "/blog/categories/ireland/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/ireland/page/1/index.html"
+  },
+  "/blog/categories/link-building/": {
+    "title": "Link Building Articles & Guides | OS SEO",
+    "description": "Practical Link Building articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/link-building/index.html"
+  },
+  "/blog/categories/link-building/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/link-building/page/1/index.html"
+  },
+  "/blog/categories/ai-seo/": {
+    "title": "GEO, AEO & AI SEO Articles & Guides | OS SEO",
+    "description": "Practical GEO, AEO & AI SEO articles by Omar Salah, with clear explanations, related services and useful website guidance.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/ai-seo/index.html"
+  },
+  "/blog/categories/ai-seo/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/categories/ai-seo/page/1/index.html"
+  },
+  "/blog/categories/": {
+    "title": "SEO Article Categories | OS SEO",
+    "description": "Browse OS SEO articles by technical SEO, local SEO, Ireland, link building and AI search topics.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "en",
+    "file": "blog/categories/index.html"
+  },
+  "/blog/tags/dublin-seo-services/": {
+    "title": "Dublin SEO Services — Topic Archive | OS SEO",
+    "description": "Dublin and Ireland local SEO articles tagged Dublin SEO Services.",
+    "type": "CollectionPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/dublin-seo-services/index.html"
+  },
+  "/blog/tags/dublin-seo-services/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/dublin-seo-services/page/1/index.html"
+  },
+  "/blog/tags/local-seo-ireland/": {
+    "title": "Local SEO Ireland — Topic Archive | OS SEO",
+    "description": "Dublin and Ireland local SEO articles tagged Local SEO Ireland.",
+    "type": "CollectionPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/local-seo-ireland/index.html"
+  },
+  "/blog/tags/local-seo-ireland/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/local-seo-ireland/page/1/index.html"
+  },
+  "/blog/tags/seo-dublin/": {
+    "title": "SEO Dublin — Topic Archive | OS SEO",
+    "description": "Dublin and Ireland local SEO articles tagged SEO Dublin.",
+    "type": "CollectionPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/seo-dublin/index.html"
+  },
+  "/blog/tags/seo-dublin/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/seo-dublin/page/1/index.html"
+  },
+  "/blog/tags/google-business-profile-dublin/": {
+    "title": "Google Business Profile Dublin — Topic Archive | OS SEO",
+    "description": "Dublin and Ireland local SEO articles tagged Google Business Profile Dublin.",
+    "type": "CollectionPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/google-business-profile-dublin/index.html"
+  },
+  "/blog/tags/google-business-profile-dublin/page/1/": {
+    "title": "Continue to OS SEO",
+    "description": "This page has moved to the current OS SEO URL.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/google-business-profile-dublin/page/1/index.html"
+  },
+  "/blog/tags/": {
+    "title": "SEO Topic Tags | OS SEO",
+    "description": "Browse the topic tags used in OS SEO articles.",
+    "type": "CollectionPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/tags/index.html"
+  },
+  "/404.html": {
+    "title": "Page Not Found | OS SEO",
+    "description": "The requested page could not be found. Explore OS SEO services, articles or contact Omar Salah.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "404.html"
+  },
+  "/blog/404.html": {
+    "title": "Page Not Found | OS SEO",
+    "description": "The requested page could not be found. Explore OS SEO services, articles or contact Omar Salah.",
+    "type": "WebPage",
+    "noindex": true,
+    "lang": "en",
+    "file": "blog/404.html"
+  },
+  "/ar/": {
+    "title": "خدمات SEO وGEO وAEO وتصميم المواقع | OS SEO",
+    "description": "SEO وGEO وAEO، ومواقع تُبنى من الصفر. استراتيجية واضحة، وتصميم مدروس، وتنفيذ فعلي لمرحلة جديدة من نمو عملك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/index.html"
+  },
+  "/ar/services/geo/": {
+    "title": "تحسين حضور نشاطك في البحث بالذكاء الاصطناعي. | OS SEO",
+    "description": "خدمات GEO تساعد على فهم نشاطك وخبرتك ومحتواك في البحث التوليدي. أراجع ما تقوله إجابات الذكاء الاصطناعي عن علامتك، ثم أحسن الموقع والأدلة التي تدعم معلوماتك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/geo/index.html"
+  },
+  "/ar/services/aeo/": {
+    "title": "إجابات مفيدة مبنية على أسئلة عملائك. | OS SEO",
+    "description": "تحسين محركات الإجابة يربط الأسئلة الحقيقية بمحتوى دقيق وواضح. أساعد الأعمال على تنظيم معلومات الخدمات والشروحات حتى يجد الزائر ومحركات البحث الإجابة والخطوة المناسبة.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/aeo/index.html"
+  },
+  "/ar/services/website-development/": {
+    "title": "مواقع تُبنى من الصفر، مع الاهتمام بالبحث. | OS SEO",
+    "description": "أخطط وأصمم وأبني مواقع متجاوبة حسب خدماتك ورحلة عملائك. نختار ووردبريس أو شوبيفاي أو موقعًا مخصصًا حسب المشروع، مع مراعاة أساسيات السيو من البداية.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/website-development/index.html"
+  },
+  "/ar/services/technical-seo-audit/": {
+    "title": "تدقيق SEO تقني يصلح موقعك فعلاً | OS SEO",
+    "description": "تعرّف على تدقيق السيو التقني مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/technical-seo-audit/index.html"
+  },
+  "/ar/services/local-seo/": {
+    "title": "تصدّر خرائط جوجل في مدينتك | OS SEO",
+    "description": "تعرّف على خدمات السيو المحلي مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/local-seo/index.html"
+  },
+  "/ar/services/content-strategy/": {
+    "title": "محتوى يتصدر ويحوّل | OS SEO",
+    "description": "تعرّف على استراتيجية محتوى السيو مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/content-strategy/index.html"
+  },
+  "/ar/services/link-building/": {
+    "title": "ابنِ سلطة حقيقية بروابط خلفية آمنة | OS SEO",
+    "description": "تعرّف على بناء الروابط بشكل موثوق مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/link-building/index.html"
+  },
+  "/ar/services/international-seo/": {
+    "title": "تصدّر في كل سوق تدخله | OS SEO",
+    "description": "تعرّف على خدمات السيو الدولي مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/international-seo/index.html"
+  },
+  "/ar/services/ai-powered-seo/": {
+    "title": "SEO بسرعة 10 أضعاف مع الذكاء الاصطناعي | OS SEO",
+    "description": "تعرّف على السيو المدعوم بالذكاء الاصطناعي مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/ai-powered-seo/index.html"
+  },
+  "/ar/services/": {
+    "title": "خدمات SEO تحقق نتائج فعلية | OS SEO",
+    "description": "تعرّف على الخدمات مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/services/index.html"
+  },
+  "/ar/locations/ireland/": {
+    "title": "خدمات سيو للأعمال التي تستهدف أيرلندا. | OS SEO",
+    "description": "أقدم دعمًا عن بُعد في SEO وGEO وAEO وبناء المواقع للأعمال التي تستهدف أيرلندا. نبدأ بالخدمات الفعلية ومواقع العملاء والصفحات الموجودة. هذه صفحة سوق مستهدف، وليست ادعاء بوجود مكتب م",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/ireland/index.html"
+  },
+  "/ar/locations/united-kingdom/": {
+    "title": "سيو للشركات البريطانية التي تتنافس في أحد أشد أسواق العالم تنافساً | OS SEO",
+    "description": "تعرّف على السيو في المملكة المتحدة مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/united-kingdom/index.html"
+  },
+  "/ar/locations/canada/": {
+    "title": "خدمات سيو للأعمال التي تستهدف كندا. | OS SEO",
+    "description": "أقدم دعمًا عن بُعد في SEO وGEO وAEO وبناء المواقع للأعمال التي تستهدف كندا. نبدأ بالخدمات الفعلية ومواقع العملاء والصفحات الموجودة. هذه صفحة سوق مستهدف، وليست ادعاء بوجود مكتب محلي",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/canada/index.html"
+  },
+  "/ar/locations/australia/": {
+    "title": "خدمات سيو للأعمال التي تستهدف أستراليا. | OS SEO",
+    "description": "أقدم دعمًا عن بُعد في SEO وGEO وAEO وبناء المواقع للأعمال التي تستهدف أستراليا. نبدأ بالخدمات الفعلية ومواقع العملاء والصفحات الموجودة. هذه صفحة سوق مستهدف، وليست ادعاء بوجود مكتب ",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/australia/index.html"
+  },
+  "/ar/locations/egypt/": {
+    "title": "سيو ثنائي اللغة للشركات المصرية في أكبر سوق رقمي في أفريقيا | OS SEO",
+    "description": "تعرّف على السيو في مصر مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/egypt/index.html"
+  },
+  "/ar/locations/saudi-arabia/": {
+    "title": "سيو ثنائي اللغة للشركات السعودية مبني لـ رؤية 2030 | OS SEO",
+    "description": "تعرّف على السيو في السعودية مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/saudi-arabia/index.html"
+  },
+  "/ar/locations/uae/": {
+    "title": "سيو ثنائي اللغة للشركات الإماراتية في أكثر أسواق العالم اتصالاً | OS SEO",
+    "description": "تعرّف على السيو في الإمارات مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/uae/index.html"
+  },
+  "/ar/locations/germany/": {
+    "title": "خدمات سيو للأعمال التي تستهدف ألمانيا. | OS SEO",
+    "description": "أقدم دعمًا عن بُعد في SEO وGEO وAEO وبناء المواقع للأعمال التي تستهدف ألمانيا. نبدأ بالخدمات الفعلية ومواقع العملاء والصفحات الموجودة. هذه صفحة سوق مستهدف، وليست ادعاء بوجود مكتب م",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/germany/index.html"
+  },
+  "/ar/locations/france/": {
+    "title": "خدمات سيو للأعمال التي تستهدف فرنسا. | OS SEO",
+    "description": "أقدم دعمًا عن بُعد في SEO وGEO وAEO وبناء المواقع للأعمال التي تستهدف فرنسا. نبدأ بالخدمات الفعلية ومواقع العملاء والصفحات الموجودة. هذه صفحة سوق مستهدف، وليست ادعاء بوجود مكتب محل",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/france/index.html"
+  },
+  "/ar/locations/netherlands/": {
+    "title": "خدمات سيو للأعمال التي تستهدف هولندا. | OS SEO",
+    "description": "أقدم دعمًا عن بُعد في SEO وGEO وAEO وبناء المواقع للأعمال التي تستهدف هولندا. نبدأ بالخدمات الفعلية ومواقع العملاء والصفحات الموجودة. هذه صفحة سوق مستهدف، وليست ادعاء بوجود مكتب مح",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/netherlands/index.html"
+  },
+  "/ar/locations/canada/ontario/": {
+    "title": "سيو محلي للأعمال في أونتاريو. | OS SEO",
+    "description": "أساعد الأعمال التي تستهدف أونتاريو على مراجعة الموقع وصفحات الخدمات ورحلة الاستفسار. الهدف ربط عرضك ومناطق عملك بالعملاء المناسبين. يُقدم الدعم عن بُعد.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/canada/ontario/index.html"
+  },
+  "/ar/locations/canada/oshawa/": {
+    "title": "سيو محلي للأعمال في أوشاوا. | OS SEO",
+    "description": "أساعد الأعمال التي تستهدف أوشاوا على مراجعة الموقع وصفحات الخدمات ورحلة الاستفسار. الهدف ربط عرضك ومناطق عملك بالعملاء المناسبين. يُقدم الدعم عن بُعد.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/canada/oshawa/index.html"
+  },
+  "/ar/locations/canada/london-ontario/": {
+    "title": "سيو محلي للأعمال في لندن أونتاريو. | OS SEO",
+    "description": "أساعد الأعمال التي تستهدف لندن أونتاريو على مراجعة الموقع وصفحات الخدمات ورحلة الاستفسار. الهدف ربط عرضك ومناطق عملك بالعملاء المناسبين. يُقدم الدعم عن بُعد.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/canada/london-ontario/index.html"
+  },
+  "/ar/locations/canada/sudbury/": {
+    "title": "سيو محلي للأعمال في سادبري. | OS SEO",
+    "description": "أساعد الأعمال التي تستهدف سادبري على مراجعة الموقع وصفحات الخدمات ورحلة الاستفسار. الهدف ربط عرضك ومناطق عملك بالعملاء المناسبين. يُقدم الدعم عن بُعد.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/canada/sudbury/index.html"
+  },
+  "/ar/locations/canada/grande-prairie/": {
+    "title": "سيو محلي للأعمال في غراند بريري. | OS SEO",
+    "description": "أساعد الأعمال التي تستهدف غراند بريري على مراجعة الموقع وصفحات الخدمات ورحلة الاستفسار. الهدف ربط عرضك ومناطق عملك بالعملاء المناسبين. يُقدم الدعم عن بُعد.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/canada/grande-prairie/index.html"
+  },
+  "/ar/locations/": {
+    "title": "خدمات سيو مخصصة لـ كل سوق | OS SEO",
+    "description": "تعرّف على الدول والمدن مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/locations/index.html"
+  },
+  "/ar/industries/hotels/": {
+    "title": "ساعد الضيوف على فهم الإقامة قبل الحجز. | OS SEO",
+    "description": "تربط رحلة بحث الفندق بين اكتشاف الوجهة ومقارنة الغرف والأسئلة العملية والحجز. يوضح الموقع أنواع الغرف والموقع والمرافق وطريقة الحجز.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/industries/hotels/index.html"
+  },
+  "/ar/industries/tailoring/": {
+    "title": "وضّح الحرفة ورحلة حجز الموعد. | OS SEO",
+    "description": "تحتاج مواقع الخياطة إلى توضيح الفروق بين الخدمات وعرض العمل الحقيقي وشرح القياس والمواعيد. يدعم ذلك اكتشاف الخدمة واتخاذ القرار.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/industries/tailoring/index.html"
+  },
+  "/ar/industries/roofing/": {
+    "title": "اربط البحث المحلي بالخدمات التي تنفذها. | OS SEO",
+    "description": "يبدأ البحث عن التسقيف والخدمات المنزلية عادة بمشكلة عملية. تساعد أوصاف الخدمات والتغطية والأعمال الحقيقية ووسائل التواصل العميل على اتخاذ القرار.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/industries/roofing/index.html"
+  },
+  "/ar/industries/": {
+    "title": "قطاعات مختلفة. ونفس الاهتمام بالتفاصيل. | OS SEO",
+    "description": "تعرّف على القطاعات مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/industries/index.html"
+  },
+  "/ar/about/": {
+    "title": "Omar Salah | OS SEO",
+    "description": "تعرّف على عن عمر صلاح مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "AboutPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/about/index.html"
+  },
+  "/ar/portfolio/": {
+    "title": "نتائج حقيقية. عملاء حقيقيون. | OS SEO",
+    "description": "تعرّف على نماذج الأعمال مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/portfolio/index.html"
+  },
+  "/ar/faq/": {
+    "title": "الأسئلة الشائعة عن خدمات السيو | OS SEO",
+    "description": "تعرّف على الأسئلة الشائعة مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "FAQPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/faq/index.html"
+  },
+  "/ar/contact/": {
+    "title": "خلينا نفهم خطوتك القادمة. | OS SEO",
+    "description": "تعرّف على التواصل مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "ContactPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/contact/index.html"
+  },
+  "/ar/privacy/": {
+    "title": "توضيح استخدام بيانات استفسارك. | OS SEO",
+    "description": "تعرّف على الخصوصية مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "WebPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/privacy/index.html"
+  },
+  "/ar/blog/": {
+    "title": "نصائح عملية لموقع أفضل. | OS SEO",
+    "description": "تعرّف على المقالات مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/index.html"
+  },
+  "/ar/blog/posts/page/2/": {
+    "title": "المزيد من مقالات OS SEO. | OS SEO",
+    "description": "تعرّف على مقالات أخرى مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/posts/page/2/index.html"
+  },
+  "/ar/blog/categories/technical-seo/": {
+    "title": "مقالات السيو التقني. | OS SEO",
+    "description": "تعرّف على السيو التقني مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/technical-seo/index.html"
+  },
+  "/ar/blog/categories/local-seo/": {
+    "title": "مقالات السيو المحلي. | OS SEO",
+    "description": "تعرّف على السيو المحلي مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/local-seo/index.html"
+  },
+  "/ar/blog/categories/ireland/": {
+    "title": "مقالات السيو في أيرلندا. | OS SEO",
+    "description": "تعرّف على السيو في أيرلندا مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/ireland/index.html"
+  },
+  "/ar/blog/categories/link-building/": {
+    "title": "مقالات بناء الروابط. | OS SEO",
+    "description": "تعرّف على بناء الروابط مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/link-building/index.html"
+  },
+  "/ar/blog/categories/ai-seo/": {
+    "title": "مقالات GEO وAEO والذكاء الاصطناعي. | OS SEO",
+    "description": "تعرّف على GEO وAEO والذكاء الاصطناعي مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/ai-seo/index.html"
+  },
+  "/ar/blog/categories/": {
+    "title": "اختر الموضوع الذي تحتاجه. | OS SEO",
+    "description": "تعرّف على تصنيفات المقالات مع عمر صلاح: أولويات واضحة، محتوى مفيد وتنفيذ يناسب نشاطك.",
+    "type": "CollectionPage",
+    "noindex": false,
+    "lang": "ar",
+    "file": "ar/blog/categories/index.html"
+  }
+}

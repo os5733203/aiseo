@@ -1,0 +1,24 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/header.html
+  X-Robots-Tag: noindex, follow
+
+/footer.html
+  X-Robots-Tag: noindex, follow
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/redesign.css
+  Cache-Control: public, max-age=3600
+
+/site-pages.css
+  Cache-Control: public, max-age=3600
+
+/redesign.js
+  Cache-Control: public, max-age=3600
+
+/site-motion.js
+  Cache-Control: public, max-age=3600

@@ -1,0 +1,162 @@
+{
+  "restored_pages": 22,
+  "source_content_links_retained": 366,
+  "forms_checked": 4,
+  "full_case_studies_retained": 6,
+  "pages": [
+    {
+      "route": "/locations/",
+      "original_characters": 12184,
+      "restored_main_characters": 14438,
+      "original_content_links": 26,
+      "retained_content_links": 26
+    },
+    {
+      "route": "/faq/",
+      "original_characters": 7189,
+      "restored_main_characters": 7032,
+      "original_content_links": 29,
+      "retained_content_links": 29
+    },
+    {
+      "route": "/about/",
+      "original_characters": 3273,
+      "restored_main_characters": 3453,
+      "original_content_links": 3,
+      "retained_content_links": 3
+    },
+    {
+      "route": "/services/",
+      "original_characters": 4499,
+      "restored_main_characters": 4745,
+      "original_content_links": 9,
+      "retained_content_links": 9
+    },
+    {
+      "route": "/portfolio/",
+      "original_characters": 1320,
+      "restored_main_characters": 4734,
+      "original_content_links": 1,
+      "retained_content_links": 1
+    },
+    {
+      "route": "/locations/canada/",
+      "original_characters": 30850,
+      "restored_main_characters": 31024,
+      "original_content_links": 29,
+      "retained_content_links": 29
+    },
+    {
+      "route": "/locations/saudi-arabia/",
+      "original_characters": 20768,
+      "restored_main_characters": 25100,
+      "original_content_links": 25,
+      "retained_content_links": 25
+    },
+    {
+      "route": "/locations/uae/",
+      "original_characters": 21050,
+      "restored_main_characters": 27063,
+      "original_content_links": 25,
+      "retained_content_links": 25
+    },
+    {
+      "route": "/locations/egypt/",
+      "original_characters": 19781,
+      "restored_main_characters": 26193,
+      "original_content_links": 25,
+      "retained_content_links": 25
+    },
+    {
+      "route": "/locations/united-kingdom/",
+      "original_characters": 23969,
+      "restored_main_characters": 29106,
+      "original_content_links": 25,
+      "retained_content_links": 25
+    },
+    {
+      "route": "/locations/ireland/",
+      "original_characters": 17016,
+      "restored_main_characters": 17193,
+      "original_content_links": 25,
+      "retained_content_links": 25
+    },
+    {
+      "route": "/locations/australia/",
+      "original_characters": 28085,
+      "restored_main_characters": 28268,
+      "original_content_links": 25,
+      "retained_content_links": 25
+    },
+    {
+      "route": "/locations/canada/ontario/",
+      "original_characters": 8224,
+      "restored_main_characters": 8423,
+      "original_content_links": 20,
+      "retained_content_links": 20
+    },
+    {
+      "route": "/locations/canada/london-ontario/",
+      "original_characters": 6533,
+      "restored_main_characters": 6753,
+      "original_content_links": 13,
+      "retained_content_links": 13
+    },
+    {
+      "route": "/locations/canada/oshawa/",
+      "original_characters": 6298,
+      "restored_main_characters": 6494,
+      "original_content_links": 13,
+      "retained_content_links": 13
+    },
+    {
+      "route": "/locations/canada/sudbury/",
+      "original_characters": 6234,
+      "restored_main_characters": 6433,
+      "original_content_links": 13,
+      "retained_content_links": 13
+    },
+    {
+      "route": "/services/link-building/",
+      "original_characters": 5741,
+      "restored_main_characters": 5934,
+      "original_content_links": 10,
+      "retained_content_links": 10
+    },
+    {
+      "route": "/services/local-seo/",
+      "original_characters": 6000,
+      "restored_main_characters": 6228,
+      "original_content_links": 10,
+      "retained_content_links": 10
+    },
+    {
+      "route": "/services/international-seo/",
+      "original_characters": 7140,
+      "restored_main_characters": 7393,
+      "original_content_links": 10,
+      "retained_content_links": 10
+    },
+    {
+      "route": "/services/technical-seo-audit/",
+      "original_characters": 6594,
+      "restored_main_characters": 6814,
+      "original_content_links": 10,
+      "retained_content_links": 10
+    },
+    {
+      "route": "/services/content-strategy/",
+      "original_characters": 6724,
+      "restored_main_characters": 6958,
+      "original_content_links": 10,
+      "retained_content_links": 10
+    },
+    {
+      "route": "/services/ai-powered-seo/",
+      "original_characters": 6304,
+      "restored_main_characters": 6515,
+      "original_content_links": 10,
+      "retained_content_links": 10
+    }
+  ]
+}

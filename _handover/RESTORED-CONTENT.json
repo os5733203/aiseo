@@ -1,0 +1,28 @@
+{
+  "source": "aiseo-main(1).zip",
+  "restored_routes": [
+    "/locations/",
+    "/faq/",
+    "/about/",
+    "/services/",
+    "/portfolio/",
+    "/locations/canada/",
+    "/locations/saudi-arabia/",
+    "/locations/uae/",
+    "/locations/egypt/",
+    "/locations/united-kingdom/",
+    "/locations/ireland/",
+    "/locations/australia/",
+    "/locations/canada/ontario/",
+    "/locations/canada/london-ontario/",
+    "/locations/canada/oshawa/",
+    "/locations/canada/sudbury/",
+    "/services/link-building/",
+    "/services/local-seo/",
+    "/services/international-seo/",
+    "/services/technical-seo-audit/",
+    "/services/content-strategy/",
+    "/services/ai-powered-seo/"
+  ],
+  "experience_years": 5
+}

@@ -1,0 +1,33 @@
+# OS SEO — static production site for seowithomar.com
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^aiseo/?$ / [R=301,L]
+RewriteRule ^aiseo/(.*)$ /$1 [R=301,L]
+RewriteRule ^blog/categories/ai\-seo/page/1/?$ /blog/categories/ai-seo/ [R=301,L]
+RewriteRule ^blog/categories/ireland/page/1/?$ /blog/categories/ireland/ [R=301,L]
+RewriteRule ^blog/categories/link\-building/page/1/?$ /blog/categories/link-building/ [R=301,L]
+RewriteRule ^blog/categories/local\-seo/page/1/?$ /blog/categories/local-seo/ [R=301,L]
+RewriteRule ^blog/categories/technical\-seo/page/1/?$ /blog/categories/technical-seo/ [R=301,L]
+RewriteRule ^blog/posts/?$ /blog/ [R=301,L]
+RewriteRule ^blog/posts/page/1/?$ /blog/ [R=301,L]
+RewriteRule ^blog/tags/dublin\-seo\-services/page/1/?$ /blog/tags/dublin-seo-services/ [R=301,L]
+RewriteRule ^blog/tags/google\-business\-profile\-dublin/page/1/?$ /blog/tags/google-business-profile-dublin/ [R=301,L]
+RewriteRule ^blog/tags/local\-seo\-ireland/page/1/?$ /blog/tags/local-seo-ireland/ [R=301,L]
+RewriteRule ^blog/tags/seo\-dublin/page/1/?$ /blog/tags/seo-dublin/ [R=301,L]
+RewriteRule ^about\.html$ /about/ [R=301,L]
+RewriteRule ^portfolio\.html$ /portfolio/ [R=301,L]
+RewriteRule ^services\.html$ /services/ [R=301,L]
+RewriteRule ^locations\.html$ /locations/ [R=301,L]
+RewriteRule ^faq\.html$ /faq/ [R=301,L]
+RewriteRule ^blog\.html$ /blog/ [R=301,L]
+RewriteRule ^contact\.html$ /contact/ [R=301,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+<FilesMatch "^(header|footer)\.html$">
+Header always set X-Robots-Tag "noindex, follow"
+</FilesMatch>
+</IfModule>

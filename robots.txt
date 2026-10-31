@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_handover/
+
+Sitemap: https://seowithomar.com/sitemap.xml
