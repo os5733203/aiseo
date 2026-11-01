@@ -1,11 +1,12 @@
 # OS SEO - crawler access
-# Public pages, images, CSS and JavaScript remain crawlable.
 User-agent: *
-Allow: /
 
 # Delivery files and an obsolete duplicate upload directory.
 Disallow: /_handover/
 Disallow: /6cba/
+
+# Public pages, images, CSS and JavaScript remain crawlable.
+Allow: /
 
 Sitemap: https://seowithomar.com/sitemap.xml
 Sitemap: https://seowithomar.com/blog/sitemap.xml
