@@ -1,0 +1,31 @@
+/* OS SEO: photographic hero, progressive enhancement, no layout shifts. */
+.hero.hero-immersive .hero-photograph{opacity:0;animation:none;transform:scale(1.025);transition:opacity 1.15s ease,transform 0s 1.2s;pointer-events:none;will-change:auto}
+.hero.hero-immersive .hero-photograph.is-active{opacity:1;transform:scale(1.075);transition:opacity 1.15s ease,transform 9s linear}
+.hero.hero-immersive .hero-photograph:nth-of-type(2){object-position:67% center}
+.hero.hero-immersive .hero-photograph:nth-of-type(3){object-position:72% center}
+.hero.hero-immersive .hero-shade{background:linear-gradient(90deg,#102b22fa 0%,#102b22e8 33%,#102b2278 63%,#102b2225 100%)}
+.hero-slideshow-controls[hidden]{display:none!important}
+.hero-slideshow-controls{position:absolute;inset-inline-end:0;bottom:31px;z-index:5;display:flex;align-items:center;gap:14px;width:390px;padding:13px 15px;border:1px solid #e3e9dc38;border-radius:10px;background:#102b22b8;backdrop-filter:blur(12px);box-shadow:0 10px 35px #00000012;color:#f4f3e9}
+.hero-slide-selector{display:flex;flex:1;gap:8px;min-width:0}
+.hero-slide-selector button{position:relative;display:flex;flex:1;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;min-width:0;min-height:44px;padding:4px 0 9px;border:0;background:none;color:#c2cec1;text-align:start;cursor:pointer;font:inherit}
+.hero-slide-selector .hero-slide-number{font-size:9px;letter-spacing:.13em;opacity:.7;font-variant-numeric:tabular-nums}
+.hero-slide-selector .hero-slide-name{font-size:11px;white-space:nowrap}
+.hero-slide-selector button:after{content:"";position:absolute;inset-inline:0;bottom:0;height:2px;border-radius:2px;background:#e8eddf35}
+.hero-slide-selector button:before{content:"";position:absolute;inset-inline-start:0;bottom:0;height:2px;width:100%;z-index:1;transform:scaleX(0);transform-origin:left;background:#e4c799}
+.hero-slide-selector button[aria-current=true]{color:#f2d5a7}
+.hero-slide-selector button[aria-current=true]:before{transform:scaleX(1)}
+.hero.is-playing .hero-slide-selector button[aria-current=true]:before{animation:os-slide-progress 7s linear both}
+.hero.is-motion-paused .hero-slide-selector button:before{animation-play-state:paused!important}
+.hero-slideshow-toggle{flex:0 0 44px;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #d8e2d34a;border-radius:50%;background:#ffffff09;color:#f0e0c4;cursor:pointer;font-size:15px;line-height:1}
+.hero-slideshow-toggle:hover{background:#ffffff16;border-color:#e4c799}
+.hero-slideshow-controls button:focus-visible{outline:2px solid #e4c799;outline-offset:4px}
+.hero-slideshow-controls .hero-toggle-play{display:none}
+.hero-slideshow-controls button[aria-pressed=true] .hero-toggle-play{display:block}
+.hero-slideshow-controls button[aria-pressed=true] .hero-toggle-pause{display:none}
+[dir=rtl] .hero.hero-immersive .hero-shade{background:linear-gradient(270deg,#102b22fa 0%,#102b22e8 33%,#102b2278 63%,#102b2225 100%)}
+[dir=rtl] .hero-slide-selector button:before{transform-origin:right}
+@keyframes os-slide-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:1100px){.hero-slideshow-controls{width:350px;gap:10px}}
+@media(max-width:920px){.hero-immersive .hero-stage{padding-bottom:158px}.hero-slideshow-controls{inset-inline-end:0;bottom:30px;width:350px}.hero-immersive .scroll-cue{bottom:54px}.hero.hero-immersive .hero-photograph{opacity:0}.hero.hero-immersive .hero-photograph.is-active{opacity:1}}
+@media(max-width:600px){.hero-immersive .hero-stage{padding-bottom:168px}.hero-slideshow-controls{inset-inline:0;bottom:65px;width:auto;padding:10px 12px;gap:12px;background:#102b22c7;border-color:#e3e9dc45}.hero-slide-selector{gap:10px}.hero-slide-selector .hero-slide-name{font-size:10px}.hero-immersive .scroll-cue{bottom:27px}.hero.hero-immersive .hero-photograph.is-active{opacity:.8}.hero.hero-immersive .hero-shade{background:linear-gradient(90deg,#102b22e0,#102b2290),linear-gradient(0deg,#102b22,transparent)}[dir=rtl] .hero.hero-immersive .hero-shade{background:linear-gradient(270deg,#102b22e0,#102b2290),linear-gradient(0deg,#102b22,transparent)}}
+@media(prefers-reduced-motion:reduce){.hero.hero-immersive .hero-photograph{transform:none!important;transition:none!important}.hero .hero-slide-selector button:before{animation:none!important}.hero .hero-slideshow-toggle{display:none}}
