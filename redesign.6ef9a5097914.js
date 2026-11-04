@@ -91,6 +91,13 @@
       if(!phone.validationMessage)phone.value='+'+digits;
     }
     if(!form.reportValidity())return;
+    const token=form.querySelector('[name="cf-turnstile-response"]')?.value;
+    if(!token){
+      const status=document.getElementById('form-status');
+      status.classList.add('error');
+      status.textContent=lang==='ar'?'أكمل التحقق الأمني قبل إرسال الاستفسار.':'Please complete the security verification before submitting.';
+      return;
+    }
     const button=form.querySelector('button[type=submit]');const status=document.getElementById('form-status');
     button.disabled=true;form.setAttribute('aria-busy','true');status.classList.remove('error');
     status.textContent=lang==='ar'?'جاري إرسال استفسارك…':'Sending your enquiry…';
@@ -99,6 +106,6 @@
       if(!response.ok)throw new Error('Submission failed');
       status.textContent=lang==='ar'?'تم إرسال استفسارك بنجاح. شكرًا لتواصلك.':'Your enquiry has been sent. Thank you for getting in touch.';form.reset();syncContact();syncWebsite();
     }catch(error){status.classList.add('error');status.textContent=lang==='ar'?'لم يتم تأكيد الإرسال. حاول مجددًا أوتواصل عبر البريد أوواتساب.':'Your enquiry could not be confirmed. Please retry or use email or WhatsApp.';}
-    finally{button.disabled=false;form.removeAttribute('aria-busy');}
+    finally{button.disabled=false;form.removeAttribute('aria-busy');if(window.turnstile){try{window.turnstile.reset();}catch(_){}}}
   });
 })();
