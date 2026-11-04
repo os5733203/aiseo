@@ -1,0 +1,59 @@
+
+/* OS SEO Premium AI Assistant — isolated styles */
+#osseo-chat-root{--oc-ink:#102337;--oc-muted:#64748b;--oc-accent:#18b8a8;--oc-blue:#173d53;--oc-border:#e3eaf0;font-family:Inter,Arial,sans-serif;position:relative;z-index:2147482000}
+#osseo-chat-root *,#osseo-chat-root *::before,#osseo-chat-root *::after{box-sizing:border-box}
+#osseo-chat-root button,#osseo-chat-root textarea{font:inherit}
+#osseo-chat-root button{cursor:pointer}
+#osseo-chat-launcher{position:fixed;right:25px;bottom:24px;width:66px;height:66px;border:1px solid rgba(255,255,255,.45);border-radius:23px;background:linear-gradient(135deg,#15374d,#0b2337);color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 15px 38px rgba(7,30,44,.27);transition:transform .25s,box-shadow .25s;z-index:2;isolation:isolate}
+#osseo-chat-launcher:before{content:"";position:absolute;inset:-6px;border:1.5px solid rgba(24,184,168,.52);border-radius:28px;animation:oc-pulse 3s ease-out infinite;pointer-events:none}
+#osseo-chat-launcher:hover{transform:translateY(-3px);box-shadow:0 20px 46px rgba(7,30,44,.35)}
+#osseo-chat-launcher svg{width:29px;height:29px}
+#osseo-chat-launcher .oc-status{position:absolute;width:12px;height:12px;background:#33ddac;border:2px solid #113246;border-radius:50%;right:10px;top:10px}
+#osseo-chat-window{position:fixed;right:24px;bottom:103px;width:min(410px,calc(100vw - 30px));height:min(650px,calc(100dvh - 125px));background:#fff;border:1px solid rgba(213,225,234,.9);border-radius:24px;box-shadow:0 28px 88px rgba(10,34,52,.24);overflow:hidden;display:flex;flex-direction:column;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(16px) scale(.97);transform-origin:bottom right;transition:opacity .25s,transform .25s,visibility .25s;z-index:3}
+#osseo-chat-window.oc-open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0) scale(1)}
+.oc-head{background:linear-gradient(115deg,#112e42,#1a4554);color:#fff;display:flex;align-items:center;gap:11px;padding:16px;min-height:84px;flex-shrink:0}
+.oc-avatar{height:45px;width:45px;border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);font-weight:800;letter-spacing:-.06em;flex-shrink:0}
+.oc-head-copy{flex:1;min-width:0}
+.oc-head-title{font-size:16px;font-weight:800;line-height:1.3;letter-spacing:0}
+.oc-head-sub{font-size:11px;color:#c8e3e3;margin-top:4px}
+.oc-head-sub:before{content:"";display:inline-block;width:6px;height:6px;background:#42e1b1;border-radius:50%;margin-inline-end:6px;vertical-align:middle}
+.oc-icon-btn{width:34px;height:34px;border:0;border-radius:11px;background:rgba(255,255,255,.1);color:white;display:grid;place-items:center;flex-shrink:0}
+.oc-icon-btn:hover{background:rgba(255,255,255,.2)}
+.oc-icon-btn svg{width:19px;height:19px}
+.oc-chat-body{overflow-y:auto;overscroll-behavior:contain;flex:1;padding:19px 16px;background:radial-gradient(circle at 100% 0,rgba(24,184,168,.09),transparent 33%),#f6f8fa;scrollbar-color:#c8d5da transparent}
+.oc-time-label{font-size:11px;color:#84939d;text-align:center;margin:0 0 16px}
+.oc-bubble{max-width:89%;font-size:13.5px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;border-radius:17px;padding:12px 14px;margin:0 0 12px;animation:oc-appear .22s ease both}
+.oc-bubble[dir=rtl]{text-align:right}.oc-bubble[dir=ltr]{text-align:left}
+.oc-bot{background:#fff;border:1px solid #e9eef2;color:#203548;border-bottom-left-radius:5px;box-shadow:0 4px 15px rgba(20,50,60,.04)}
+.oc-user{margin-left:auto;background:linear-gradient(135deg,#17605f,#157a71);color:#fff;border-bottom-right-radius:5px}
+.oc-quick{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 15px}
+.oc-quick button{background:#fff;border:1px solid #d5e6e7;color:#205769;border-radius:999px;padding:8px 11px;font-size:11.5px;font-weight:700;transition:background .2s,transform .2s}
+.oc-quick button:hover{background:#e5f7f4;transform:translateY(-1px)}
+.oc-service-card{display:block;width:min(282px,94%);overflow:hidden;background:#fff;border-radius:16px;border:1px solid #e0e9ee;box-shadow:0 6px 20px rgba(20,50,60,.06);margin:-2px 0 14px;animation:oc-appear .25s ease}
+.oc-service-card img{display:block;width:100%;height:102px;object-fit:cover}
+.oc-service-content{padding:12px}
+.oc-service-content strong{display:block;font-size:13px;color:var(--oc-ink);margin-bottom:4px}
+.oc-service-content p{margin:0 0 10px;font-size:11.5px;line-height:1.5;color:var(--oc-muted)}
+.oc-service-content a{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;text-decoration:none!important;color:#11776c!important}
+.oc-service-content a:hover{text-decoration:underline!important}
+.oc-typing{display:flex;gap:4px;align-items:center;padding:14px;width:max-content;background:white;border:1px solid #e9eef2;border-radius:15px;margin:0 0 10px}
+.oc-typing span{width:6px;height:6px;border-radius:50%;background:#77aeb0;animation:oc-dots 1.1s infinite}
+.oc-typing span:nth-child(2){animation-delay:.14s}.oc-typing span:nth-child(3){animation-delay:.28s}
+.oc-footer{padding:11px 12px 12px;background:#fff;border-top:1px solid #e9eef2;flex-shrink:0}
+.oc-input-row{border:1px solid #dce5e9;border-radius:16px;display:flex;align-items:flex-end;padding:6px;background:#fff;transition:border .2s,box-shadow .2s}
+.oc-input-row:focus-within{border-color:#45b8ab;box-shadow:0 0 0 3px rgba(24,184,168,.1)}
+#osseo-chat-input{min-width:0;flex:1;max-height:104px;min-height:36px;resize:none;border:0!important;box-shadow:none!important;outline:none!important;padding:9px 8px;background:transparent!important;color:#203548!important;font-size:13px!important;line-height:1.45}
+#osseo-chat-input::placeholder{color:#95a1ad}
+#osseo-chat-send{width:37px;height:37px;flex-shrink:0;border:0;border-radius:12px;background:#137b72;color:#fff;display:grid;place-items:center}
+#osseo-chat-send:hover{background:#0c5e58}
+#osseo-chat-send:disabled{background:#b2c9c7;cursor:wait}
+#osseo-chat-send svg{width:17px;height:17px}
+.oc-bottom-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:9px 3px 0;color:#8a98a1;font-size:10px}
+.oc-whatsapp{color:#168b61!important;text-decoration:none!important;display:inline-flex;align-items:center;gap:5px;font-weight:800;font-size:11px}
+.oc-whatsapp svg{width:15px;height:15px}
+.oc-bottom-line span{white-space:nowrap}
+@keyframes oc-appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes oc-dots{0%,75%,100%{transform:translateY(0);opacity:.5}40%{transform:translateY(-4px);opacity:1}}
+@keyframes oc-pulse{0%{opacity:.6;transform:scale(.94)}70%,100%{opacity:0;transform:scale(1.18)}}
+@media(max-width:520px){#osseo-chat-launcher{right:16px;bottom:18px;width:58px;height:58px;border-radius:20px}#osseo-chat-window{right:10px;left:10px;bottom:88px;width:auto;height:min(650px,calc(100dvh - 100px));border-radius:20px}.oc-chat-body{padding:15px 12px}.oc-head{padding:13px}}
+@media(prefers-reduced-motion:reduce){#osseo-chat-root *,#osseo-chat-root *::before{animation:none!important;transition:none!important}}
