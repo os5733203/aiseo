@@ -70,6 +70,15 @@
     voiceBtn.disabled = !speechAvailable;
   }
   // The notification is synthesized locally: no paid service or audio downloads.
+  function unlockAudio() {
+    if (!soundOn) return;
+    try {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return;
+      if (!audioContext) audioContext = new AudioContextClass();
+      if (audioContext.state === 'suspended') audioContext.resume().catch(() => {});
+    } catch (_) { /* Browser may block audio. */ }
+  }
   function playNotification() {
     if (!soundOn) return;
     try {
@@ -113,7 +122,7 @@
       window.speechSynthesis.speak(utterance);
     } catch (_) { /* Some browsers or devices do not support speech output. */ }
   }
-  soundBtn.addEventListener('click', () => { soundOn = !soundOn; updateAudioButtons(); });
+  soundBtn.addEventListener('click', () => { soundOn = !soundOn; if (soundOn) unlockAudio(); updateAudioButtons(); });
   voiceBtn.addEventListener('click', () => {
     voiceOn = !voiceOn;
     if (!voiceOn && speechAvailable) window.speechSynthesis.cancel();
@@ -175,6 +184,8 @@
   async function submit(message) {
     const text = String(message || '').trim();
     if (!text || busy) return;
+    unlockAudio();
+    if (speechAvailable) window.speechSynthesis.cancel();
     busy = true; send.disabled = true; input.value = '';
     input.style.height = ''; $('osseo-chat-quick')?.remove();
     bubble(text, 'user');
@@ -203,7 +214,7 @@
       console.warn('OS SEO chat request failed:', error);
     } finally { busy = false; send.disabled = false; input.focus({preventScroll:true}); scroll(); }
   }
-  launcher.addEventListener('click', () => toggle());
+  launcher.addEventListener('click', () => { unlockAudio(); toggle(); });
   close.addEventListener('click', () => toggle(false));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && windowEl.classList.contains('oc-open')) toggle(false); });
   form.addEventListener('submit', e => { e.preventDefault(); submit(input.value); });
