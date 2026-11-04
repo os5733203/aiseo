@@ -18,6 +18,8 @@
       <div class="oc-head">
         <div class="oc-avatar" aria-hidden="true">OS</div>
         <div class="oc-head-copy"><div class="oc-head-title">OS SEO Assistant</div><div class="oc-head-sub">AI-powered • SEO, GEO & AEO</div></div>
+        <button type="button" class="oc-icon-btn oc-audio-btn" id="osseo-chat-sound" aria-label="Mute notification sound" aria-pressed="true" title="Notification sound">♪</button>
+        <button type="button" class="oc-icon-btn oc-audio-btn" id="osseo-chat-voice" aria-label="Turn off spoken answers" aria-pressed="true" title="Spoken answers">🔊</button>
         <button type="button" class="oc-icon-btn" id="osseo-chat-close" aria-label="Close chat">${icons.close}</button>
       </div>
       <div class="oc-chat-body" id="osseo-chat-body" role="log" aria-label="Chat conversation" aria-live="polite" aria-relevant="additions">
@@ -50,6 +52,75 @@
   const form = $('osseo-chat-form');
   const input = $('osseo-chat-input');
   const send = $('osseo-chat-send');
+  const soundBtn = $('osseo-chat-sound');
+  const voiceBtn = $('osseo-chat-voice');
+  const speechAvailable = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  let soundOn = true;
+  let voiceOn = speechAvailable;
+  let audioContext = null;
+  function updateAudioButtons() {
+    soundBtn.textContent = soundOn ? '♪' : '♩';
+    soundBtn.setAttribute('aria-pressed', String(soundOn));
+    soundBtn.setAttribute('aria-label', soundOn ? 'Mute notification sound' : 'Enable notification sound');
+    soundBtn.title = soundOn ? 'Mute notification sound' : 'Enable notification sound';
+    voiceBtn.textContent = voiceOn ? '🔊' : '🔇';
+    voiceBtn.setAttribute('aria-pressed', String(voiceOn));
+    voiceBtn.setAttribute('aria-label', voiceOn ? 'Turn off spoken answers' : 'Turn on spoken answers');
+    voiceBtn.title = voiceOn ? 'Turn off spoken answers' : 'Turn on spoken answers';
+    voiceBtn.disabled = !speechAvailable;
+  }
+  // The notification is synthesized locally: no paid service or audio downloads.
+  function playNotification() {
+    if (!soundOn) return;
+    try {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return;
+      if (!audioContext) audioContext = new AudioContextClass();
+      if (audioContext.state === 'suspended') audioContext.resume().catch(() => {});
+      const start = audioContext.currentTime + 0.02;
+      [740, 980].forEach((frequency, index) => {
+        const oscillator = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        const t = start + index * 0.11;
+        oscillator.type = 'sine';
+        oscillator.frequency.value = frequency;
+        gain.gain.setValueAtTime(0.0001, t);
+        gain.gain.exponentialRampToValueAtTime(0.045, t + 0.025);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.18);
+        oscillator.connect(gain);
+        gain.connect(audioContext.destination);
+        oscillator.start(t);
+        oscillator.stop(t + 0.19);
+      });
+    } catch (_) { /* Audio may be blocked by browser permissions. */ }
+  }
+  function speakReply(reply) {
+    if (!voiceOn || !speechAvailable || !windowEl.classList.contains('oc-open')) return;
+    try {
+      window.speechSynthesis.cancel();
+      const text = String(reply).replace(/https?:\/\/\S+/g, '').replace(/[*#_`]/g, '').slice(0, 1400);
+      if (!text.trim()) return;
+      const arabic = /[\u0600-\u06FF]/.test(text);
+      const language = arabic ? 'ar' : 'en';
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = arabic ? 'ar-EG' : 'en-US';
+      utterance.rate = arabic ? 0.95 : 1;
+      utterance.volume = 0.95;
+      const voices = window.speechSynthesis.getVoices();
+      const voice = voices.find(v => v.lang.toLowerCase().startsWith(language) && v.localService)
+        || voices.find(v => v.lang.toLowerCase().startsWith(language));
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
+    } catch (_) { /* Some browsers or devices do not support speech output. */ }
+  }
+  soundBtn.addEventListener('click', () => { soundOn = !soundOn; updateAudioButtons(); });
+  voiceBtn.addEventListener('click', () => {
+    voiceOn = !voiceOn;
+    if (!voiceOn && speechAvailable) window.speechSynthesis.cancel();
+    updateAudioButtons();
+  });
+  updateAudioButtons();
+
   let busy = false;
   let sessionId;
   try {
@@ -71,7 +142,7 @@
     windowEl.setAttribute('aria-hidden', String(!open));
     launcher.setAttribute('aria-expanded', String(open));
     launcher.setAttribute('aria-label', open ? 'Close OS SEO assistant' : 'Open OS SEO assistant');
-    if (open) { input.focus({preventScroll:true}); scroll(); } else launcher.focus({preventScroll:true});
+    if (open) { input.focus({preventScroll:true}); scroll(); } else { if (speechAvailable) window.speechSynthesis.cancel(); launcher.focus({preventScroll:true}); }
   }
   function scroll() { body.scrollTop = body.scrollHeight; }
   function bubble(text, sender) {
@@ -121,6 +192,8 @@
       const reply = typeof item === 'string' ? item : (item && (item.output || item.text || item.message || item.reply));
       if (typeof reply !== 'string' || !reply.trim()) throw new Error('Missing reply');
       typingEl.remove(); bubble(reply, 'bot');
+      playNotification();
+      speakReply(reply);
       const match = services.find(s => s.test.test(text));
       if (match) card(match);
     } catch (error) {
