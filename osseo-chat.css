@@ -57,3 +57,11 @@
 @keyframes oc-pulse{0%{opacity:.6;transform:scale(.94)}70%,100%{opacity:0;transform:scale(1.18)}}
 @media(max-width:520px){#osseo-chat-launcher{right:16px;bottom:18px;width:58px;height:58px;border-radius:20px}#osseo-chat-window{right:10px;left:10px;bottom:88px;width:auto;height:min(650px,calc(100dvh - 100px));border-radius:20px}.oc-chat-body{padding:15px 12px}.oc-head{padding:13px}}
 @media(prefers-reduced-motion:reduce){#osseo-chat-root *,#osseo-chat-root *::before{animation:none!important;transition:none!important}}
+
+/* Compact accessible audio settings in chatbot header */
+#osseo-chat-root .oc-audio-btn{font-size:17px;line-height:1;min-width:31px;width:31px;height:31px;font-weight:700}
+#osseo-chat-root .oc-audio-btn[aria-pressed="false"]{opacity:.65}
+#osseo-chat-root .oc-audio-btn:disabled{opacity:.32;cursor:not-allowed}
+#osseo-chat-root .oc-head{gap:7px}
+#osseo-chat-root .oc-head-copy{min-width:0}
+@media(max-width:360px){#osseo-chat-root .oc-audio-btn{width:28px;min-width:28px;height:28px;font-size:15px}#osseo-chat-root .oc-head{padding:10px;gap:5px}#osseo-chat-root .oc-head-title{font-size:14px}}
