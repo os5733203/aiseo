@@ -13,7 +13,7 @@
   const root = document.createElement('div');
   root.id = 'osseo-chat-root';
   root.innerHTML = `
-    <button id="osseo-chat-launcher" type="button" aria-label="Open OS SEO assistant" aria-expanded="false" aria-controls="osseo-chat-window"><span class="oc-launcher-logo-shell"><img src="/images/os-seo-logo-mark.png" alt="" class="oc-launcher-logo" loading="eager" decoding="async"></span><span class="oc-status"></span></button>
+    <button id="osseo-chat-launcher" type="button" aria-label="Open OS SEO assistant" aria-expanded="false" aria-controls="osseo-chat-window"><span class="oc-launcher-logo-shell"><img src="/images/os-seo-chat-launcher.webp" alt="" class="oc-launcher-logo" width="64" height="64" decoding="async"></span><span class="oc-launcher-close-mark" aria-hidden="true">${icons.close}</span><span class="oc-status"></span></button>
     <section id="osseo-chat-window" role="dialog" aria-label="OS SEO assistant" aria-modal="false" aria-hidden="true">
       <div class="oc-head">
         <div class="oc-avatar" aria-hidden="true"><img src="/images/os-seo-logo-mark.png" alt="" class="oc-header-logo" decoding="async"></div>
@@ -117,6 +117,7 @@
   function toggle(force) {
     const open = typeof force === 'boolean' ? force : !windowEl.classList.contains('oc-open');
     windowEl.classList.toggle('oc-open', open);
+    root.classList.toggle('oc-chat-is-open',open);
     windowEl.setAttribute('aria-hidden', String(!open));
     launcher.setAttribute('aria-expanded', String(open));
     launcher.setAttribute('aria-label', open ? 'Close OS SEO assistant' : 'Open OS SEO assistant');

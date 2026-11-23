@@ -75,3 +75,22 @@
 #osseo-chat-root .oc-header-logo{display:block;width:100%;height:100%;object-fit:contain}
 #osseo-chat-root .oc-status{right:6px;top:7px;box-shadow:0 0 0 2px #173e51}
 @media(max-width:520px){#osseo-chat-launcher{width:60px;height:60px;border-radius:20px}#osseo-chat-launcher .oc-launcher-logo-shell{width:43px;height:43px;border-radius:14px}}
+
+/* 2026 OS SEO chat launcher — animated brand artwork */
+#osseo-chat-launcher{width:70px;height:70px;border:1px solid rgba(255,255,255,.36);border-radius:23px;background:linear-gradient(150deg,#0e3248,#081f30);box-shadow:0 14px 32px rgba(6,25,36,.25),0 3px 10px rgba(6,25,36,.15);transition:transform .35s cubic-bezier(.2,1.5,.35,1),box-shadow .35s,background .35s;overflow:visible}
+#osseo-chat-launcher:before{border-color:rgba(239,171,48,.38);border-radius:27px}
+#osseo-chat-launcher .oc-launcher-logo-shell{width:58px;height:58px;padding:0;border-radius:18px;overflow:hidden;background:#f9fbfb;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);transition:transform .46s cubic-bezier(.2,1.4,.28,1),opacity .22s}
+#osseo-chat-launcher .oc-launcher-logo{width:100%;height:100%;object-fit:cover;max-width:none;max-height:none}
+#osseo-chat-launcher .oc-launcher-close-mark{position:absolute;inset:0;display:grid;place-items:center;color:#fff;opacity:0;transform:rotate(-75deg) scale(.5);transition:opacity .22s,transform .4s cubic-bezier(.2,1.5,.3,1);pointer-events:none}
+#osseo-chat-launcher .oc-launcher-close-mark svg{width:28px;height:28px}
+#osseo-chat-root.oc-chat-is-open #osseo-chat-launcher{background:linear-gradient(145deg,#10394a,#0a2639);transform:rotate(0deg) scale(1);box-shadow:0 14px 37px rgba(6,25,36,.3)}
+#osseo-chat-root.oc-chat-is-open #osseo-chat-launcher .oc-launcher-logo-shell{opacity:0;transform:rotate(80deg) scale(.45)}
+#osseo-chat-root.oc-chat-is-open #osseo-chat-launcher .oc-launcher-close-mark{opacity:1;transform:rotate(0) scale(1)}
+#osseo-chat-root.oc-chat-is-open #osseo-chat-launcher:before{animation:none;opacity:.35;transform:scale(1)}
+#osseo-chat-root.oc-chat-is-open #osseo-chat-launcher .oc-status{opacity:0;transform:scale(.25)}
+#osseo-chat-launcher .oc-status{transition:opacity .2s,transform .2s;border-color:#0e3248;background:#22c89e}
+#osseo-chat-window{transform:translateY(25px) scale(.94);transform-origin:bottom right;transition:opacity .32s ease,transform .48s cubic-bezier(.2,1.05,.24,1),visibility .32s}
+#osseo-chat-window.oc-open{transform:translateY(0) scale(1)}
+#osseo-chat-launcher:focus-visible{outline:3px solid #dda449;outline-offset:5px}
+@media(max-width:520px){#osseo-chat-launcher{width:62px;height:62px;border-radius:21px}#osseo-chat-launcher .oc-launcher-logo-shell{width:51px;height:51px;border-radius:16px}}
+@media(prefers-reduced-motion:reduce){#osseo-chat-launcher,#osseo-chat-launcher *,#osseo-chat-window{animation:none!important;transition:none!important}}
