@@ -36,6 +36,8 @@
     document.body.classList.remove('os-cinematic-intro-active');
     intro.classList.remove('is-playing');
     intro.classList.add('is-leaving');
+    // Reveal the founder image first, then editorial heading and contact actions.
+    setTimeout(function(){document.body.classList.add('os-hero-revealed');},650);
     try{window.sessionStorage.setItem(key,'1');}catch(e){}
     removal=setTimeout(function(){video.pause();video.removeAttribute('src');video.load();intro.remove();},850);
   }
