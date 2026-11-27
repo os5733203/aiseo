@@ -1,5 +1,48 @@
 (() => {
   'use strict';
+  function trackInteraction(eventName, details = {}) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, {
+      source_path: window.location.pathname.slice(0, 100),
+      ...details,
+      send_to: 'G-ZZGCNRNE8D',
+    });
+  }
+
+  function trackClick(event) {
+    if (!(event.target instanceof Element)) return;
+    const control = event.target.closest('a[href], button, [role="button"]');
+    if (!control || control.matches(':disabled, [aria-disabled="true"]')) return;
+
+    const link = control.matches('a[href]') ? new URL(control.href, window.location.href) : null;
+    const channel = link && (
+      link.protocol === 'mailto:' ? 'email' :
+      link.protocol === 'tel:' ? 'phone' :
+      ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(link.hostname) ? 'whatsapp' : ''
+    );
+    if (channel) {
+      trackInteraction('contact_click', { contact_channel: channel });
+      return;
+    }
+
+    const internal = link && link.origin === window.location.origin;
+    const about = internal && /^\/(?:ar\/)?about\/?$/.test(link.pathname);
+    if (!about && !control.matches('button, [role="button"], .button, .btn') &&
+        !control.closest('header nav, footer nav')) return;
+
+    const label = (control.getAttribute('aria-label') || control.textContent)
+      .replace(/\s+/g, ' ').trim().slice(0, 100);
+    const details = {};
+    if (label && !/@|\d{7}/.test(label)) details.button_label = label;
+    if (internal) details.destination_path = link.pathname.slice(0, 100);
+    trackInteraction(about ? 'about_click' : 'button_click', details);
+  }
+
+  document.addEventListener('click', trackClick, true);
+  document.addEventListener('auxclick', event => {
+    if (event.button === 1) trackClick(event);
+  }, true);
+
   const nav=document.getElementById('site-nav');
   const menu=document.getElementById('menu-toggle');
   const language=document.getElementById('language');
@@ -104,6 +147,7 @@
     try{
       const response=await fetch(form.action,{method:'POST',body:(()=>{const data=new FormData(form);if(phone&&!phone.disabled)data.set('whatsapp_link','https://wa.me/'+phone.value.replace(/\D/g,''));return data;})(),headers:{Accept:'application/json'}});
       if(!response.ok)throw new Error('Submission failed');
+      trackInteraction('generate_lead', { contact_channel: 'form' });
       status.textContent=lang==='ar'?'تم إرسال استفسارك بنجاح. شكرًا لتواصلك.':'Your enquiry has been sent. Thank you for getting in touch.';form.reset();syncContact();syncWebsite();
     }catch(error){status.classList.add('error');status.textContent=lang==='ar'?'لم يتم تأكيد الإرسال. حاول مجددًا أوتواصل عبر البريد أوواتساب.':'Your enquiry could not be confirmed. Please retry or use email or WhatsApp.';}
     finally{button.disabled=false;form.removeAttribute('aria-busy');if(window.turnstile){try{window.turnstile.reset();}catch(_){}}}
